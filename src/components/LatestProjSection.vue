@@ -63,29 +63,29 @@ const Projects = ref([
     {
         id: 1,
         category: 'web development',
-        image: 'src/assets/loginpage.png',
-        title: 'Projeto 1',
-        description: '!',
-        technologies: ['vue.js 3', 'vuex', 'Express'],
-        gitURL: '',
-        webURL: ''
+        image: 'src/assets/tela.png',
+        title: 'Projeto: Tela Login React',
+        description: 'A Tela de login oferece uma interface intuitiva de para efetuar o login',
+        technologies: ['React', 'Vite', 'JavaScript'],
+        gitURL: 'https://github.com/vibrazzi/LoginPage',
+        webURL: 'https://login-page-six-livid.vercel.app/login'
     },
     {
         id: 2,
         category: 'Mobile App',
-        image: 'src/assets/tela.png',
-        title: 'Projeto 2',
-        description: '!',
-        technologies: ['vue.js 3', 'vuex', 'Express'],
+        image: 'src/assets/loginpage.png',
+        title: 'Projeto: Login Page',
+        description: 'A pagina de login oferece uma interface fácil de usar para logar',
+        technologies: ['Angular', 'SASS', 'TypeScript', 'Figma'],
         gitURL: '',
         webURL: ''
     },
     {
         id: 3,
         category: 'web development',
-        image: 'src/assets/project.png',
-        title: 'Projeto 3',
-        description: '!',
+        image: 'src/assets/portifolio.png',
+        title: 'Projeto: Portifólio',
+        description: 'Essa é uma aplicação frontend desenvolvida com Vue.js para exibir um portfólio interativo e moderno',
         technologies: ['vue.js 3', 'vuex', 'Express'],
         gitURL: '',
         webURL: ''
