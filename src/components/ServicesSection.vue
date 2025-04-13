@@ -31,7 +31,7 @@ import {ref} from 'vue';
 const services =ref([
     {
         id:2,
-        icon:'https://img.icons8.com/external-vectorslab-glyph-vectorslab/100/fffeee/external-Technical-Writing-mobile-app-development-vectorslab-glyph-vectorslab.png',
+        icon:'https://img.icons8.com/ios-filled/100/ffffff/google-code.png',
         name:'Desenvolvedor Front-End',
     }, 
     ])
