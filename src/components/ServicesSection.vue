@@ -1,4 +1,3 @@
-
 <template >
     <section class="text-white mt-20" id="services">
         <div class="px-4 xl:pl-16">
@@ -24,15 +23,20 @@
             </div>
         </div>
     </section>
-    
 </template>
 <script setup>
 import {ref} from 'vue';
 const services =ref([
     {
-        id:2,
+        id:1,
         icon:'https://img.icons8.com/ios-filled/100/ffffff/google-code.png',
-        name:'Desenvolvedor Front-End',
-    }, 
+        name:'WEB DEVELOPMENT',
+
+    },
+    {
+        id:6,
+        icon:'https://img.icons8.com/ios-filled/100/ffffff/web-design.png',
+        name:'Web Design',
+    },
     ])
 </script>
