@@ -44,7 +44,7 @@
                                 </svg>
                                 <div class="download-loader text-white hidden"></div>
                             </div>
-                            <a href="./src/assets/curriculo.pdf" download="Profile Webert F Souza" class="pl-2 text-primary"> Download Curriculo</a>
+                            <a href="curriculo.pdf" download="Profile Webert F Souza" class="pl-2 text-primary"> Download Curriculo</a>
                             </div>
                         </button>
                     </div>
