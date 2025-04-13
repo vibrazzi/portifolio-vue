@@ -1,8 +1,11 @@
+
 <template>
     <section class="text-white mt-20" id="contact">
-        <h2 class="text-4xl font-bold text-white text-left mb-4 px-4 xl:pl-16">Entre em contato</h2>
+        <h2 class="text-4xl font-bold text-white text-left mb-4 px-4 xl:pl-16">Contato</h2>
         <div class="grid md:grid-cols-2 gap-4 relative px-4 xl:px-16 mt-8" data-aos="zoom-in-up">
             <div>
+                <p class="text-[#adb7be]">
+                </p>
                 <div class="col-lg-4 col-md-4 mb-lg-0 mt-5">
                     <div class="flex mb-10 items-center">
                         <div class="p-2"
@@ -11,7 +14,7 @@
                             <img src="https://img.icons8.com/metro/50/ffffff/new-post.png" alt="new-post" class="w-6">
                         </div>
                         <div class="ml-5 text-white">
-                            <h4>Email</h4>
+                            <h4>E-mail</h4>
                             <p>webertfernandes16@gmail.com</p>
                         </div>
                     </div>
@@ -22,7 +25,7 @@
                             <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="phone" class="w-6">
                         </div>
                         <div class="ml-5 text-white">
-                            <h4>WhatsApp</h4>
+                            <h4>WhatssApp</h4>
                             <p>(34) 99792-6005</p>
                         </div>
                     </div>
@@ -45,7 +48,7 @@
             overflow: hidden;border: 1px solid #111a3e;backdrop-filter: blur(9px);-webkit-backdrop-filter: blur(9px);">
             <form class="flex flex-col p-2" data-aos="zoom-in-up" >
                 <div class="mb-6">
-                    <label for="email" class="text-white block mb-2 text-sm font-medium">E-mail</label>
+                    <label for="email" class="text-white block mb-2 text-sm font-medium">Seu e-mail</label>
                     <input type="email" id="email" class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                     placeholder="email@gmail.com" name="email">
                 </div>
@@ -57,10 +60,10 @@
                 <div class="mb-6">
                     <label for="message" class="text-white block mb-2 text-sm font-medium">Mensagem</label>
                     <textarea id="Message" class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                    placeholder="Vamos falar sobre... " name="Message"></textarea>
+                    placeholder="Vamos falar sobre..." name="Message"></textarea>
                 </div>
                 <button class="z-1 w-[100%!important] px-6 md:px-7 py-3 rounded-full sm:w-max flex justify-center text-white bg-primary border-2 border-transparent">
-                    Enviar mensagem
+                    Enviar 
                 </button>
             </form>
         </div>

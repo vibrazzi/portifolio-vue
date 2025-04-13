@@ -28,7 +28,7 @@
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">sobre</span>
                     mim
                 </h2>
-                <p class="text-base lg:text-lg mt-8 py-8"> Minha experiência no atendimento ao cliente me ensinou a importância de ouvir as pessoas e compreender suas necessidades, algo que hoje trago para cada projeto que desenvolvo. Busco oportunidades para unir criatividade e tecnologia, contribuindo com soluções que impactem vidas e que sejam verdadeiramente significativas. Estou ansioso para colaborar, aprender e construir algo incrível. Afinal, criar é sobre transformar o mundo ao nosso redor com empatia e inovação.
+                <p class="text-base lg:text-lg mt-8 py-8 text-left"> Desde cedo, sempre fui apaixonado por desafios que envolvem criatividade e inovação, algo que marcou minha trajetória desde quando me dedicava completamente à música. Ao longo dessa jornada, aprendi a importância de criar algo único, tanto que cheguei a lançar duas músicas no Spotify. Foi nesse caminho que descobri minha segunda paixão, o desenvolvimento, ao criar um site para divulgar meu trabalho musical. Hoje, apesar de ter explorado várias áreas da tecnologia, escolhi seguir como Desenvolvedor Front-End, pois me encanta a ideia de criar interfaces que conectam pessoas e entregam experiências incríveis. Além disso, minha experiência de anos na área de atendimento ao cliente me ajudou a desenvolver empatia e uma visão centrada no usuário, competências que acredito serem essenciais para criar produtos que realmente façam a diferença. Estou à procura de uma oportunidade que me permita crescer como profissional e contribuir com minha paixão por tecnologia, enquanto ajudo a transformar a vida das pessoas (e dos animais de estimação) com soluções inovadoras. Sei que tenho muito a agregar, seja trabalhando em equipe, escrevendo códigos limpos ou contribuindo com ideias criativas.
                 </p>
                 <div class="grid grid-cols-3 gap-4 max-w-lg pt-8">
                 </div>
@@ -61,6 +61,12 @@ const education = ref([
         id: 4,
         School: 'Dio',
         program: 'BootCamp Desenvolvedor Front-End',
+        year: '2022'
+    },
+    {
+        id: 4,
+        School: 'Dio',
+        program: 'BootCamp Desenvolvedor Mobile',
         year: '2022'
     },
 ]);

@@ -19,13 +19,13 @@
                 <div class="lg:py-6">
                     <div class="text-center lg:text-left">
                         <h1 class="pt-4 text-white font-bold text-4xl md:text-5xl lg:text-6xl">
-                            Olá, meu nome é<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-500">
-                                Webert Fernandes
+                            Oi, sou<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-500">
+                                Webert
                             </span>😁
                         </h1>
                     </div>
                     <p class="text-gray-300 pt-8 text-center lg:text-left mx-auto max-w-xl">
-                        Sempre fui apaixonado por música, uma jornada que me levou a criar um site para divulgar minhas músicas e conhecer o desenvolvimento. Encantado pela experiência, mergulhei nos estudos e entrei no curso de Análise e Desenvolvimento de Sistemas. Apesar de explorar diversas áreas, me apaixonei pelo Front-End. Além disso, desenvolvi habilidades interpessoais trabalhando com atendimento ao cliente. Agora, busco uma oportunidade para aplicar o que aprendi e evoluir como profissional.
+                        Eu sempre fui apaixonado por música, foi algo que dediquei minha vida inteira, com todo o amor. Tenho até duas músicas no Spotify, algo de que me orgulho muito. No meio dessa jornada, tive a ideia de criar um site para divulgar minhas músicas, e foi assim que tive meu primeiro contato com o desenvolvimento. Foi uma experiência tão incrível! Quanto mais eu aprendia, mais eu me encantava. Isso me motivou a mergulhar de cabeça nesse mundo. Acabei colocando minhas produções musicais de lado para focar nos estudos e entrei no curso de Análise e Desenvolvimento de Sistemas. No curso, explorei várias áreas e aprendi de tudo um pouco. Mas o que realmente conquistou meu coração foi o desenvolvimento Front-End, embora também tenha tido contato com o Back-End. Além disso, eu me considero uma pessoa muito empática, uma habilidade que desenvolvi ao trabalhar por muitos anos com atendimento ao cliente. Agora, estou em busca de uma oportunidade para crescer como profissional e colocar em prática tudo o que aprendi.
                     </p>
                     <div class="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0">
                         <button class="px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center">
@@ -44,7 +44,7 @@
                                 </svg>
                                 <div class="download-loader text-white hidden"></div>
                             </div>
-                            <a href="./src/assets/Profile Webert F Souza.pdf" download="Profile Webert F Souza" class="pl-2 text-primary"> Download Curriculo</a>
+                            <a href="./src/assets/curriculo.pdf" download="Profile Webert F Souza" class="pl-2 text-primary"> Download Curriculo</a>
                             </div>
                         </button>
                     </div>
