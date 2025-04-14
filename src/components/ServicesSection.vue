@@ -30,7 +30,7 @@ const services =ref([
     {
         id:1,
         icon:'https://img.icons8.com/ios-filled/100/ffffff/google-code.png',
-        name:'WEB DEVELOPMENT',
+        name:'DESENVOLVEDOR FRONT-END',
 
     },
     {
