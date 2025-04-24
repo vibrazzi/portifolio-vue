@@ -1,78 +1,86 @@
-
 <template>
     <section class="text-white mt-20" id="contact">
-        <h2 class="text-4xl font-bold text-white text-left mb-4 px-4 xl:pl-16">Contato</h2>
-        <div class="grid md:grid-cols-2 gap-4 relative px-4 xl:px-16 mt-8" data-aos="zoom-in-up">
-            <div>
-                <p class="text-[#adb7be]">
-                </p>
-                <div class="col-lg-4 col-md-4 mb-lg-0 mt-5">
-                    <div class="flex mb-10 items-center">
-                        <div class="p-2"
-                            style="background: #111a3e; width: 50px;height: 46px; display: flex;justify-content: center; border-radius: 50%;
-                        overflow: hidden;border: 1px solid#111a3e;backdrop-filter: blur(9px);-webkit-backdrop-filter: blur(9px);">
-                            <img src="https://img.icons8.com/metro/50/ffffff/new-post.png" alt="new-post" class="w-6">
-                        </div>
-                        <div class="ml-5 text-white">
-                            <h4>E-mail</h4>
-                            <p>webertfernandes16@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="flex mb-10 items-center">
-                        <div class="p-2"
-                            style="background: #111a3e; width: 50px;height: 46px; display: flex;justify-content: center; border-radius: 50%;
-                        overflow: hidden;border: 1px solid#111a3e;backdrop-filter: blur(9px);-webkit-backdrop-filter: blur(9px);">
-                            <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="phone" class="w-6">
-                        </div>
-                        <div class="ml-5 text-white">
-                            <h4>WhatssApp</h4>
-                            <p>(34) 99792-6005</p>
-                        </div>
-                    </div>
-                    <div class="flex mb-10 items-center">
-                        <div class="p-2"
-                            style="background: #111a3e; width: 50px;height: 46px; display: flex;justify-content: center; border-radius: 50%;
-                        overflow: hidden;border: 1px solid#111a3e;backdrop-filter: blur(9px);-webkit-backdrop-filter: blur(9px);">
-                            <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="linkedin"
-                                class="w-6">
-                        </div>
-                        <div class="ml-5 text-white">
-                            <h4>LinkedIn</h4>
-                            <p>https://www.linkedin.com/in/webert-fernandes-2b6463253/</p>
-                        </div>
-                    </div>
-                </div>
+      <h2 class="text-4xl font-bold text-white text-left mb-4 px-4 xl:pl-16">Contato</h2>
+      <div class="grid md:grid-cols-2 gap-4 relative px-4 xl:px-16 mt-8" data-aos="zoom-in-up">
+        <!-- Informações de Contato -->
+        <div>
+          <!-- E-mail -->
+          <div class="flex mb-10 items-center">
+            <div class="p-2" style="background: #111a3e; width: 50px; height: 46px; border-radius: 50%;">
+              <img src="https://img.icons8.com/metro/50/ffffff/new-post.png" alt="E-mail" class="w-6" />
             </div>
-            <div
-            style="background: #111a3e; width: 100%;height: 100%; border-radius: 20px;
-            overflow: hidden;border: 1px solid #111a3e;backdrop-filter: blur(9px);-webkit-backdrop-filter: blur(9px);">
-            <form class="flex flex-col p-2" data-aos="zoom-in-up" >
-                <div class="mb-6">
-                    <label for="email" class="text-white block mb-2 text-sm font-medium">Seu e-mail</label>
-                    <input type="email" id="email" class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                    placeholder="email@gmail.com" name="email">
-                </div>
-                <div class="mb-6">
-                    <label for="subject" class="text-white block mb-2 text-sm font-medium">Assunto</label>
-                    <input type="subject" id="subject" class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                    placeholder="Assunto" name="subject">
-                </div>
-                <div class="mb-6">
-                    <label for="message" class="text-white block mb-2 text-sm font-medium">Mensagem</label>
-                    <textarea id="Message" class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                    placeholder="Vamos falar sobre..." name="Message"></textarea>
-                </div>
-                <button class="z-1 w-[100%!important] px-6 md:px-7 py-3 rounded-full sm:w-max flex justify-center text-white bg-primary border-2 border-transparent">
-                    Enviar 
-                </button>
-            </form>
+            <div class="ml-5 text-white">
+              <h4>E-mail</h4>
+              <p>webertfernandes16@gmail.com</p>
+            </div>
+          </div>
         </div>
-        <div class="bg-gradient-to-tr opacity-25 from-[#570cac] to-primary blur-2xl h-20 w-80 z-0 absolute -top-1/2 -left-4 transform -translate-x-2/3 
-        -translate-1/2
-        "></div>
+        <!-- Formulário -->
+        <div style="background: #111a3e; border-radius: 20px;">
+          <form class="flex flex-col p-2" id="contactForm">
+            <!-- Campo E-mail -->
+            <div class="mb-6">
+              <label for="email" class="text-white block mb-2">Seu e-mail</label>
+              <input type="email" id="email" class="bg-[#111827] text-gray-100 rounded-lg block w-full p-2.5" placeholder="email@gmail.com" />
+            </div>
+            <!-- Campo Assunto -->
+            <div class="mb-6">
+              <label for="subject" class="text-white block mb-2">Assunto</label>
+              <input type="text" id="subject" class="bg-[#111827] text-gray-100 rounded-lg block w-full p-2.5" placeholder="Assunto" />
+            </div>
+            <!-- Campo Mensagem -->
+            <div class="mb-6">
+              <label for="message" class="text-white block mb-2">Mensagem</label>
+              <textarea id="message" class="bg-[#111827] text-gray-100 rounded-lg block w-full p-2.5" placeholder="Digite sua mensagem aqui"></textarea>
+            </div>
+            <!-- Botão Enviar -->
+            <button type="submit" class="w-full px-6 py-3 rounded-lg bg-primary text-white">Enviar</button>
+          </form>
         </div>
+      </div>
     </section>
-</template>
-<script>
-
-</script>
+  </template>
+  
+  <script>
+  export default {
+    mounted() {
+      const form = document.getElementById("contactForm");
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+  
+        // Captura os valores dos campos
+        const email = document.getElementById("email").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+  
+        // Validação básica
+        if (!email || !subject || !message) {
+          alert("Por favor, preencha todos os campos!");
+          return;
+        }
+  
+        try {
+          // Envio ao backend
+          const response = await fetch("http://localhost:3000/enviar-formulario", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email, subject, message }),
+          });
+  
+          if (!response.ok) {
+            throw new Error("Erro ao enviar mensagem!");
+          }
+  
+          const result = await response.text();
+          alert(result);
+        } catch (error) {
+          console.error("Erro:", error);
+          alert("Erro ao enviar mensagem. Tente novamente.");
+        }
+      });
+    },
+  };
+  </script>
+  
