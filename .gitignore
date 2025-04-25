@@ -7,12 +7,20 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Diretórios de dependências
 node_modules
+
+# Diretórios de saída de build
 dist
 dist-ssr
-*.local
+build
 
-# Editor directories and files
+# Arquivos de configuração de ambiente
+.env
+.env.local
+.env.*.local
+
+# Configurações específicas de editores
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -22,3 +30,30 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*.bak
+
+# Arquivos temporários do sistema operacional
+Thumbs.db
+desktop.ini
+
+# Ignorar lockfiles opcionais
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Diretórios usados para caching e build interno
+.cache/
+.terraform/
+.husky/
+output/
+.vite/
+
+# Ignorar arquivos de testes e relatórios de testes
+coverage/
+*.lcov
+.nyc_output
+
+# Logs de debug ou perfil de performance
+*.tgz
+*.zip
+*.tmp

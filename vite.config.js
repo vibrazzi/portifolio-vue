@@ -1,14 +1,13 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import tailwindcss from 'tailwindcss'; // Ajuste aqui para o Tailwind correto
+import tailwindcss from 'tailwindcss'; 
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()], // Aqui vai apenas o Vue
+  plugins: [vue()],
   css: {
     postcss: {
-      plugins: [tailwindcss()], // Plugin do Tailwind CSS adicionado de forma explícita
+      plugins: [tailwindcss()],
     },
   },
   resolve: {
