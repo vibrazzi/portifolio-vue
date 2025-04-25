@@ -1,5 +1,5 @@
 <template>
-  <section class="text-white mt-20" id="contact">
+   <section class="text-white mt-20" id="contact">
       <h2 class="text-4xl font-bold text-white text-left mb-4 px-4 xl:pl-16">Contato</h2>
       <div class="grid md:grid-cols-2 gap-8 px-4 xl:px-16 mt-8" data-aos="zoom-in-up">
           <!-- Informações de Contato -->
@@ -52,7 +52,7 @@
                       </div>
                       <div class="ml-5">
                           <h4 class="text-lg font-semibold">GitHub</h4>
-                          <a href="https://github.com/webertfernandes" target="_blank" class="group flex items-center space-x-2" style="color: #f97316; transition: color 0.3s;" onmouseover="this.style.color='#3498db'" onmouseout="this.style.color='#f97316'">
+                          <a href="https://github.com/vibrazzi" target="_blank" class="group flex items-center space-x-2" style="color: #f97316; transition: color 0.3s;" onmouseover="this.style.color='#3498db'" onmouseout="this.style.color='#f97316'">
                               <img src="https://img.icons8.com/material-outlined/24/orange/arrow.png" alt="arrow" class="w-4" style="transition: transform 0.3s;" onmouseover="this.style.color='#3498db'" onmouseout="this.style.color='#f97316'">
                               <span>Visitar repositório</span>
                           </a>
@@ -64,7 +64,7 @@
           <div class="bg-[#1a233a] p-8 rounded-lg shadow-md">
               <form class="space-y-6">
                   <div>
-                      <label for="email" class="block text-sm font-medium text-gray-300">E-mail</label>
+                      <label for="email" class="block text-sm font-medium text-gray-300">Seu e-mail</label>
                       <input type="email" id="email" name="email" class="block w-full mt-2 p-3" style="background-color: #111827; color: #ffffff; border-radius: 8px;" placeholder="email@gmail.com">
                   </div>
                   <div>
@@ -82,4 +82,49 @@
           </div>
       </div>
   </section>
-</template>
+  </template>
+  
+  <script>
+  export default {
+    data() {
+      return {
+        email: "",
+        subject: "",
+        message: "",
+      };
+    },
+    methods: {
+      async enviarMensagem() {
+        const payload = {
+          email: this.email,
+          subject: this.subject,
+          message: this.message,
+        };
+  
+        try {
+          const response = await fetch("http://localhost:3000/enviar-formulario", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+          });
+  
+          if (response.ok) {
+            alert("Recebi sua mensagem, obrigado!");
+            this.email = "";
+            this.subject = "";
+            this.message = "";
+          } else {
+            const errorData = await response.json();
+            alert(`Erro: ${errorData.error}`);
+          }
+        } catch (error) {
+          alert("Erro de conexão. Tente novamente mais tarde.");
+          console.error(error);
+        }
+      },
+    },
+  };
+  </script>
+  

@@ -1,0 +1,80 @@
+console.log("Iniciando o servidor...");
+
+const express = require('express');
+const nodemailer = require('nodemailer');
+const cors = require('cors');
+const mysql = require('mysql');
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Configuração da conexão com o banco de dados MySQL
+const db = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'Stopcrazy1', // Substitua pela senha do seu MySQL
+    database: 'mensagens',
+});
+
+db.connect((err) => {
+    if (err) {
+        console.error('Erro ao conectar ao banco de dados:', err);
+        process.exit(1); // Encerra se não conectar ao banco
+    }
+    console.log('Conectado ao banco de dados!');
+});
+
+// Rota para salvar mensagens e enviar e-mail
+app.post('/enviar-formulario', async (req, res) => {
+    const { email, subject, message } = req.body;
+
+    // Validação dos campos obrigatórios
+    if (!email || !subject || !message) {
+        console.warn('Campos obrigatórios ausentes!');
+        return res.status(400).json({ error: 'Preencha todos os campos obrigatórios.' });
+    }
+
+    // Query para salvar a mensagem no banco de dados
+    const query = 'INSERT INTO mensagens (email, subject, message) VALUES (?, ?, ?)';
+    const values = [email, subject, message];
+
+    db.query(query, values, async (err) => {
+        if (err) {
+            console.error('Erro ao salvar no banco de dados:', err);
+            return res.status(500).json({ error: 'Erro ao salvar mensagem no banco.' });
+        }
+
+        console.log('Mensagem salva no banco de dados.');
+
+        // Configuração do serviço de envio de e-mail (Nodemailer)
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'webertfernandes16@gmail.com', // Seu e-mail
+                pass: 'lttpstecuhbjaryr', // Substitua pela senha de aplicativo gerada no Gmail
+            },
+        });
+
+        const mailOptions = {
+            from: `Contato do Formulário <${email}>`,
+            to: 'webertfernandes16@gmail.com', // Seu e-mail que receberá a mensagem
+            subject: subject,
+            text: `Você recebeu uma nova mensagem de contato:\n\nDe: ${email}\nAssunto: ${subject}\n\nMensagem:\n${message}`,
+        };
+
+        try {
+            // Envia o e-mail
+            await transporter.sendMail(mailOptions);
+            console.log('E-mail enviado com sucesso!');
+            return res.status(200).json({ success: 'Mensagem salva e enviada com sucesso!' });
+        } catch (error) {
+            console.error('Erro ao enviar e-mail:', error);
+            return res.status(500).json({ error: 'Mensagem salva, mas houve um erro ao enviar o e-mail.' });
+        }
+    });
+});
+
+// Inicializa o servidor na porta 3000
+const PORT = 3000;
+app.listen(PORT, () => console.log(`Servidor rodando em http://localhost:${PORT}`));
