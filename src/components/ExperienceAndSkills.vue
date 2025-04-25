@@ -9,7 +9,7 @@
         </div>
         <div class="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 xl:px-16">
             <div class="mt-4 md:mt-0 text-left flex flex-col z-10 h-full w-[80%]">
-                <h2 class="text-4xl font-bold text-white text-left mb-4">Habilidades
+                <h2 class="text-4xl font-bold text-white text-left">Habilidades
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Técnicas</span>
                 </h2>
                 <div class="mt-8" v-for="skill in Skills" :key="skill.id">
