@@ -4,17 +4,21 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const mysql = require('mysql');
+require('dotenv').config(); // Importa variáveis de ambiente do .env
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: ['http://localhost:5173', 'https://portifolio-vue-delta.vercel.app'], // Permite acesso do local e do deploy
+    methods: ['GET', 'POST'],
+}));
 app.use(express.json());
 
 // Configuração da conexão com o banco de dados MySQL
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'Stopcrazy1', // Substitua pela senha do seu MySQL
-    database: 'mensagens',
+    host: process.env.DB_HOST || 'localhost',
+    user: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD || 'Stopcrazy1',
+    database: process.env.DB_NAME || 'mensagens',
 });
 
 db.connect((err) => {
@@ -51,14 +55,14 @@ app.post('/enviar-formulario', async (req, res) => {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'webertfernandes16@gmail.com', // Seu e-mail
-                pass: 'lttpstecuhbjaryr', // Substitua pela senha de aplicativo gerada no Gmail
+                user: process.env.EMAIL_USER, // Definido no arquivo .env
+                pass: process.env.EMAIL_PASS, // Definido no arquivo .env
             },
         });
 
         const mailOptions = {
             from: `Contato do Formulário <${email}>`,
-            to: 'webertfernandes16@gmail.com', // Seu e-mail que receberá a mensagem
+            to: process.env.EMAIL_USER, // Seu e-mail que receberá as mensagens
             subject: subject,
             text: `Você recebeu uma nova mensagem de contato:\n\nDe: ${email}\nAssunto: ${subject}\n\nMensagem:\n${message}`,
         };
@@ -75,6 +79,6 @@ app.post('/enviar-formulario', async (req, res) => {
     });
 });
 
-// Inicializa o servidor na porta 3000
-const PORT = 3000;
+// Inicializa o servidor na porta configurada
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Servidor rodando em http://localhost:${PORT}`));
