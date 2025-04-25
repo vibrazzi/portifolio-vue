@@ -4,7 +4,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const mysql = require('mysql');
-require('dotenv').config(); // Carregar variáveis de ambiente do arquivo .env
+require('dotenv').config(); // Carrega variáveis de ambiente
 
 const app = express();
 
@@ -30,7 +30,7 @@ const db = mysql.createConnection({
 db.connect((err) => {
     if (err) {
         console.error('Erro ao conectar ao banco de dados:', err);
-        process.exit(1); // Encerra o servidor em caso de erro
+        process.exit(1);
     }
     console.log('Conectado ao banco de dados!');
 });
@@ -39,13 +39,11 @@ db.connect((err) => {
 app.post('/enviar-formulario', async (req, res) => {
     const { email, subject, message } = req.body;
 
-    // Validação dos campos obrigatórios
     if (!email || !subject || !message) {
         console.warn('Campos obrigatórios ausentes!');
         return res.status(400).json({ error: 'Preencha todos os campos obrigatórios.' });
     }
 
-    // Query para salvar a mensagem no banco de dados
     const query = 'INSERT INTO mensagens (email, subject, message) VALUES (?, ?, ?)';
     const values = [email, subject, message];
 
@@ -57,7 +55,6 @@ app.post('/enviar-formulario', async (req, res) => {
 
         console.log('Mensagem salva no banco de dados.');
 
-        // Configuração do serviço de envio de e-mail (Nodemailer)
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -68,13 +65,12 @@ app.post('/enviar-formulario', async (req, res) => {
 
         const mailOptions = {
             from: `Contato do Formulário <${email}>`,
-            to: process.env.EMAIL_USER, // E-mail que receberá as mensagens
+            to: process.env.EMAIL_USER,
             subject: subject,
             text: `Você recebeu uma nova mensagem de contato:\n\nDe: ${email}\nAssunto: ${subject}\n\nMensagem:\n${message}`,
         };
 
         try {
-            // Envio do e-mail
             await transporter.sendMail(mailOptions);
             console.log('E-mail enviado com sucesso!');
             return res.status(200).json({ success: 'Mensagem salva e enviada com sucesso!' });
@@ -85,6 +81,5 @@ app.post('/enviar-formulario', async (req, res) => {
     });
 });
 
-// Inicializa o servidor na porta configurada
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Servidor rodando em http://localhost:${PORT}`));

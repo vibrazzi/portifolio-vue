@@ -62,8 +62,7 @@ export default {
       };
 
       try {
-        // URL dinâmica do backend usando variável de ambiente para produção e local
-        const backendURL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
+        const backendURL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000"; // URL dinâmica
         
         const response = await fetch(`${backendURL}/enviar-formulario`, {
           method: "POST",
