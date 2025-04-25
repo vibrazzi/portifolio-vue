@@ -1,76 +1,85 @@
 <template>
   <section class="text-white mt-20" id="contact">
       <h2 class="text-4xl font-bold text-white text-left mb-4 px-4 xl:pl-16">Contato</h2>
-      <div class="grid md:grid-cols-2 gap-4 relative px-4 xl:px-16 mt-8" data-aos="zoom-in-up">
+      <div class="grid md:grid-cols-2 gap-8 px-4 xl:px-16 mt-8" data-aos="zoom-in-up">
+          <!-- Informações de Contato -->
           <div>
               <p class="text-[#adb7be]"></p>
-              <div class="col-lg-4 col-md-4 mb-lg-0 mt-5">
-                  <div class="flex mb-10 items-center">
-                      <div class="p-2"
-                          style="background: #111a3e; width: 50px;height: 46px; display: flex;justify-content: center; border-radius: 50%;
-                      overflow: hidden;border: 1px solid#111a3e;backdrop-filter: blur(9px);-webkit-backdrop-filter: blur(9px);">
-                          <img src="https://img.icons8.com/metro/50/ffffff/new-post.png" alt="new-post" class="w-6">
+              <div class="space-y-8">
+                  <!-- E-mail -->
+                  <div class="flex items-center">
+                      <div class="p-3" style="background-color: #1a233a; border-radius: 50%;">
+                          <img src="https://img.icons8.com/metro/50/ffffff/new-post.png" alt="email" class="w-7">
                       </div>
-                      <div class="ml-5 text-white">
-                          <h4>E-mail</h4>
-                          <p>webertfernandes16@gmail.com</p>
-                      </div>
-                  </div>
-                  <div class="flex mb-10 items-center">
-                      <div class="p-2"
-                          style="background: #111a3e; width: 50px;height: 46px; display: flex;justify-content: center; border-radius: 50%;
-                      overflow: hidden;border: 1px solid#111a3e;backdrop-filter: blur(9px);-webkit-backdrop-filter: blur(9px);">
-                          <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="phone" class="w-6">
-                      </div>
-                      <div class="ml-5 text-white">
-                          <h4>WhatsApp</h4>
-                          <p>(34)99792-6005</p>
+                      <div class="ml-5">
+                          <h4 class="text-lg font-semibold">E-mail</h4>
+                          <a href="mailto:webertfernandes16@gmail.com" class="group flex items-center space-x-2" style="color: #f97316; transition: color 0.3s;" onmouseover="this.style.color='#3498db'" onmouseout="this.style.color='#f97316'">
+                              <img src="https://img.icons8.com/material-outlined/24/orange/arrow.png" alt="arrow" class="w-4" style="transition: transform 0.3s;" onmouseover="this.style.color='#3498db'" onmouseout="this.style.color='#f97316'">
+                              <span>webertfernandes16@gmail.com</span>
+                          </a>
                       </div>
                   </div>
-                  <div class="flex mb-10 items-center">
-                      <div class="p-2"
-                          style="background: #111a3e; width: 50px;height: 46px; display: flex;justify-content: center; border-radius: 50%;
-                      overflow: hidden;border: 1px solid#111a3e;backdrop-filter: blur(9px);-webkit-backdrop-filter: blur(9px);">
-                          <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="linkedin"
-                              class="w-6">
+                  <!-- WhatsApp -->
+                  <div class="flex items-center">
+                      <div class="p-3" style="background-color: #1a233a; border-radius: 50%;">
+                          <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="phone" class="w-7">
                       </div>
-                      <div class="ml-5 text-white">
-                          <h4>LinkedIn</h4>
-                          <p>https://www.linkedin.com/in/webert-fernandes-2b6463253/</p>
+                      <div class="ml-5">
+                          <h4 class="text-lg font-semibold">WhatsApp</h4>
+                          <a href="https://wa.me/5534997926005" target="_blank" class="group flex items-center space-x-2" style="color: #f97316; transition: color 0.3s;" onmouseover="this.style.color='#3498db'" onmouseout="this.style.color='#f97316'">
+                              <img src="https://img.icons8.com/material-outlined/24/orange/arrow.png" alt="arrow" class="w-4" style="transition: transform 0.3s;" onmouseover="this.style.color='#3498db'" onmouseout="this.style.color='#f97316'">
+                              <span>(34)99792-6005</span>
+                          </a>
+                      </div>
+                  </div>
+                  <!-- LinkedIn -->
+                  <div class="flex items-center">
+                      <div class="p-3" style="background-color: #1a233a; border-radius: 50%;">
+                          <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="linkedin" class="w-7">
+                      </div>
+                      <div class="ml-5">
+                          <h4 class="text-lg font-semibold">LinkedIn</h4>
+                          <a href="https://www.linkedin.com/in/webert-fernandes-2b6463253/" target="_blank" class="group flex items-center space-x-2" style="color: #f97316; transition: color 0.3s;" onmouseover="this.style.color='#3498db'" onmouseout="this.style.color='#f97316'">
+                              <img src="https://img.icons8.com/material-outlined/24/orange/arrow.png" alt="arrow" class="w-4" style="transition: transform 0.3s;" onmouseover="this.style.color='#3498db'" onmouseout="this.style.color='#f97316'">
+                              <span>Visitar perfil</span>
+                          </a>
+                      </div>
+                  </div>
+                  <!-- GitHub -->
+                  <div class="flex items-center">
+                      <div class="p-3" style="background-color: #1a233a; border-radius: 50%;">
+                          <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="github" class="w-7">
+                      </div>
+                      <div class="ml-5">
+                          <h4 class="text-lg font-semibold">GitHub</h4>
+                          <a href="https://github.com/webertfernandes" target="_blank" class="group flex items-center space-x-2" style="color: #f97316; transition: color 0.3s;" onmouseover="this.style.color='#3498db'" onmouseout="this.style.color='#f97316'">
+                              <img src="https://img.icons8.com/material-outlined/24/orange/arrow.png" alt="arrow" class="w-4" style="transition: transform 0.3s;" onmouseover="this.style.color='#3498db'" onmouseout="this.style.color='#f97316'">
+                              <span>Visitar repositório</span>
+                          </a>
                       </div>
                   </div>
               </div>
           </div>
-          <div
-          style="background: #111a3e; width: 100%;height: 100%; border-radius: 20px;
-          overflow: hidden;border: 1px solid #111a3e;backdrop-filter: blur(9px);-webkit-backdrop-filter: blur(9px);">
-          <form class="flex flex-col p-2" data-aos="zoom-in-up" >
-              <div class="mb-6">
-                  <label for="email" class="text-white block mb-2 text-sm font-medium">E-mail</label>
-                  <input type="email" id="email" class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                  placeholder="email@gmail.com" name="email">
-              </div>
-              <div class="mb-6">
-                  <label for="subject" class="text-white block mb-2 text-sm font-medium">Assunto</label>
-                  <input type="subject" id="subject" class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                  placeholder="Assunto" name="subject">
-              </div>
-              <div class="mb-6">
-                  <label for="message" class="text-white block mb-2 text-sm font-medium">Mensagem</label>
-                  <textarea id="Message" class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                  placeholder="Vamos falar sobre..." name="Message"></textarea>
-              </div>
-              <button class="z-1 w-[100%!important] px-6 md:px-7 py-3 rounded-full sm:w-max flex justify-center text-white bg-primary border-2 border-transparent">
-                  Enviar 
-              </button>
-          </form>
-      </div>
-      <div class="bg-gradient-to-tr opacity-25 from-[#570cac] to-primary blur-2xl h-20 w-80 z-0 absolute -top-1/2 -left-4 transform -translate-x-2/3 
-      -translate-1/2
-      "></div>
+          <!-- Formulário de Contato -->
+          <div class="bg-[#1a233a] p-8 rounded-lg shadow-md">
+              <form class="space-y-6">
+                  <div>
+                      <label for="email" class="block text-sm font-medium text-gray-300">E-mail</label>
+                      <input type="email" id="email" name="email" class="block w-full mt-2 p-3" style="background-color: #111827; color: #ffffff; border-radius: 8px;" placeholder="email@gmail.com">
+                  </div>
+                  <div>
+                      <label for="subject" class="block text-sm font-medium text-gray-300">Assunto</label>
+                      <input type="text" id="subject" name="subject" class="block w-full mt-2 p-3" style="background-color: #111827; color: #ffffff; border-radius: 8px;" placeholder="Digite o assunto">
+                  </div>
+                  <div>
+                      <label for="message" class="block text-sm font-medium text-gray-300">Mensagem</label>
+                      <textarea id="message" name="message" class="block w-full mt-2 p-3" style="background-color: #111827; color: #ffffff; border-radius: 8px;" placeholder="Sua mensagem"></textarea>
+                  </div>
+                  <button type="submit" class="w-full py-3" style="background-color: #f97316; color: white; border-radius: 8px; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#3498db'" onmouseout="this.style.backgroundColor='#f97316'">
+                      Enviar
+                  </button>
+              </form>
+          </div>
       </div>
   </section>
 </template>
-<script>
-
-</script>
