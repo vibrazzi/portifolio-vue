@@ -34,7 +34,10 @@
           placeholder="Sua mensagem"
         ></textarea>
       </div>
-      <button type="submit" class="w-full py-3 bg-[#f97316] text-white rounded-lg hover:bg-[#3498db] transition">
+      <button 
+        type="submit" 
+        class="w-full py-3 bg-[#f97316] text-white rounded-lg hover:bg-[#3498db] transition"
+      >
         Enviar
       </button>
     </form>
@@ -59,7 +62,9 @@ export default {
       };
 
       try {
-        const backendURL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000"; // Variável de ambiente para o backend
+        // URL dinâmica do backend usando variável de ambiente para produção e local
+        const backendURL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
+        
         const response = await fetch(`${backendURL}/enviar-formulario`, {
           method: "POST",
           headers: {

@@ -4,16 +4,22 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const mysql = require('mysql');
-require('dotenv').config(); // Importa variáveis de ambiente do .env
+require('dotenv').config(); // Carregar variáveis de ambiente do arquivo .env
 
 const app = express();
+
+// Configuração de CORS com suporte para dispositivos móveis e produção
 app.use(cors({
-    origin: ['http://localhost:5173', 'https://portifolio-vue-delta.vercel.app'], // Permite acesso do local e do deploy
+    origin: [
+        'http://localhost:5173', // Ambiente local
+        'https://portifolio-vue-delta.vercel.app' // URL do frontend no deploy
+    ],
     methods: ['GET', 'POST'],
+    credentials: true,
 }));
 app.use(express.json());
 
-// Configuração da conexão com o banco de dados MySQL
+// Configuração da conexão com o banco de dados MySQL usando variáveis de ambiente
 const db = mysql.createConnection({
     host: process.env.DB_HOST || 'localhost',
     user: process.env.DB_USER || 'root',
@@ -24,7 +30,7 @@ const db = mysql.createConnection({
 db.connect((err) => {
     if (err) {
         console.error('Erro ao conectar ao banco de dados:', err);
-        process.exit(1); // Encerra se não conectar ao banco
+        process.exit(1); // Encerra o servidor em caso de erro
     }
     console.log('Conectado ao banco de dados!');
 });
@@ -55,20 +61,20 @@ app.post('/enviar-formulario', async (req, res) => {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: process.env.EMAIL_USER, // Definido no arquivo .env
-                pass: process.env.EMAIL_PASS, // Definido no arquivo .env
+                user: process.env.EMAIL_USER, // Carregado da variável de ambiente
+                pass: process.env.EMAIL_PASS, // Carregado da variável de ambiente
             },
         });
 
         const mailOptions = {
             from: `Contato do Formulário <${email}>`,
-            to: process.env.EMAIL_USER, // Seu e-mail que receberá as mensagens
+            to: process.env.EMAIL_USER, // E-mail que receberá as mensagens
             subject: subject,
             text: `Você recebeu uma nova mensagem de contato:\n\nDe: ${email}\nAssunto: ${subject}\n\nMensagem:\n${message}`,
         };
 
         try {
-            // Envia o e-mail
+            // Envio do e-mail
             await transporter.sendMail(mailOptions);
             console.log('E-mail enviado com sucesso!');
             return res.status(200).json({ success: 'Mensagem salva e enviada com sucesso!' });
