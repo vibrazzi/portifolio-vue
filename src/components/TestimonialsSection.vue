@@ -51,7 +51,7 @@
           </div>
           <div class="ml-5">
             <h4 class="text-lg font-semibold">GitHub</h4>
-            <a href="https://github.com/webertfernandes" target="_blank" class="group flex items-center space-x-2 text-[#f97316] hover:text-[#3498db] transition">
+            <a href="https://github.com/vibrazzi" target="_blank" class="group flex items-center space-x-2 text-[#f97316] hover:text-[#3498db] transition">
               <img src="https://img.icons8.com/material-outlined/24/orange/arrow.png" alt="arrow" class="w-4" />
               <span>Visitar repositório</span>
             </a>

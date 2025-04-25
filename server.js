@@ -4,7 +4,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const mysql = require('mysql');
-require('dotenv').config(); // Carrega variáveis de ambiente
+require('dotenv').config(); // Carrega variáveis de ambiente do arquivo .env
 
 const app = express();
 
@@ -39,11 +39,13 @@ db.connect((err) => {
 app.post('/enviar-formulario', async (req, res) => {
     const { email, subject, message } = req.body;
 
+    // Validação dos campos obrigatórios
     if (!email || !subject || !message) {
         console.warn('Campos obrigatórios ausentes!');
         return res.status(400).json({ error: 'Preencha todos os campos obrigatórios.' });
     }
 
+    // Query para salvar a mensagem no banco de dados
     const query = 'INSERT INTO mensagens (email, subject, message) VALUES (?, ?, ?)';
     const values = [email, subject, message];
 
@@ -55,6 +57,7 @@ app.post('/enviar-formulario', async (req, res) => {
 
         console.log('Mensagem salva no banco de dados.');
 
+        // Configuração do serviço de envio de e-mail (Nodemailer)
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -71,6 +74,7 @@ app.post('/enviar-formulario', async (req, res) => {
         };
 
         try {
+            // Envia o e-mail
             await transporter.sendMail(mailOptions);
             console.log('E-mail enviado com sucesso!');
             return res.status(200).json({ success: 'Mensagem salva e enviada com sucesso!' });
@@ -81,5 +85,6 @@ app.post('/enviar-formulario', async (req, res) => {
     });
 });
 
+// Inicializa o servidor na porta configurada
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Servidor rodando em http://localhost:${PORT}`));

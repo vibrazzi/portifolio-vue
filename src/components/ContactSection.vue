@@ -4,38 +4,38 @@
     <form @submit.prevent="enviarMensagem" class="space-y-6 bg-[#1a233a] p-8 rounded-lg">
       <div>
         <label for="email" class="block text-sm font-medium">Seu e-mail</label>
-        <input 
-          v-model="email" 
-          type="email" 
-          id="email" 
-          required 
-          class="w-full mt-2 p-3 bg-[#111827] text-gray-100 rounded-lg" 
-          placeholder="email@gmail.com" 
+        <input
+          v-model="email"
+          type="email"
+          id="email"
+          required
+          class="w-full mt-2 p-3 bg-[#111827] text-gray-100 rounded-lg"
+          placeholder="email@gmail.com"
         />
       </div>
       <div>
         <label for="subject" class="block text-sm font-medium">Assunto</label>
-        <input 
-          v-model="subject" 
-          type="text" 
-          id="subject" 
-          required 
-          class="w-full mt-2 p-3 bg-[#111827] text-gray-100 rounded-lg" 
-          placeholder="Digite o assunto" 
+        <input
+          v-model="subject"
+          type="text"
+          id="subject"
+          required
+          class="w-full mt-2 p-3 bg-[#111827] text-gray-100 rounded-lg"
+          placeholder="Digite o assunto"
         />
       </div>
       <div>
         <label for="message" class="block text-sm font-medium">Mensagem</label>
-        <textarea 
-          v-model="message" 
-          id="message" 
-          required 
-          class="w-full mt-2 p-3 bg-[#111827] text-gray-100 rounded-lg" 
+        <textarea
+          v-model="message"
+          id="message"
+          required
+          class="w-full mt-2 p-3 bg-[#111827] text-gray-100 rounded-lg"
           placeholder="Sua mensagem"
         ></textarea>
       </div>
-      <button 
-        type="submit" 
+      <button
+        type="submit"
         class="w-full py-3 bg-[#f97316] text-white rounded-lg hover:bg-[#3498db] transition"
       >
         Enviar
@@ -62,8 +62,10 @@ export default {
       };
 
       try {
-        const backendURL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000"; // URL dinâmica
-        
+        // Configura a URL do backend de forma dinâmica, local ou produção
+        const backendURL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
+
+        // Faz a requisição POST ao backend
         const response = await fetch(`${backendURL}/enviar-formulario`, {
           method: "POST",
           headers: {
@@ -83,7 +85,7 @@ export default {
         }
       } catch (error) {
         alert("Erro de conexão. Tente novamente mais tarde.");
-        console.error(error);
+        console.error("Erro ao enviar a mensagem:", error);
       }
     },
   },
