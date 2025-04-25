@@ -1,14 +1,14 @@
 
 <template>
-    <section class="text-white mt-18" id="skills">
+    <section class="text-white" id="skills">
         <div class="absolute right-0 top-[110rem] h-full w-full justify-end">
             <span class="flex opacity-20">
                 <span class="w-16 h-32 rounded-l-full flex bg-primary blur-2xl"></span>
-                <span class="w-16 h-32 rounded-r-full flex bg-[#f88fc2] blur-2xl mt-14"></span>
+                <span class="w-16 h-32 rounded-r-full flex bg-[#f88fc2] blur-2xl"></span>
             </span>
         </div>
         <div class="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 xl:px-16">
-            <div class="mt-4 md:mt-0 text-left flex flex-col z-10 h-full w-[80%]">
+            <div class="mt-4 md:mt-0 text-left flex flex-col z-10 h-full w-[90%]">
                 <h2 class="text-4xl font-bold text-white text-left">Habilidades
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Técnicas</span>
                 </h2>

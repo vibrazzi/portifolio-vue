@@ -1,5 +1,5 @@
 <template>
-    <section class="text-white mt-20" id="projects">
+    <section class="text-white mt-10" id="projects">
         <div class="px-4 xl:pl-16">
             <div class="md:flex md:justify-between xl:pr-16">
                 <h2 class="text-4xl font-bold text-white">Meus ultimos projetos</h2>
