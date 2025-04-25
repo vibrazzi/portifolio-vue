@@ -1,67 +1,63 @@
 <template>
-    <section id="contact" class="text-white mt-20">
-      <h2 class="text-4xl font-bold text-left mb-6 px-4 xl:pl-16">Entre em contato</h2>
-      <form @submit.prevent="enviarMensagem" class="space-y-6 bg-[#1a233a] p-8 rounded-lg">
-        <div>
-          <label for="email" class="block text-sm font-medium">Seu e-mail</label>
-          <input v-model="email" type="email" id="email" required class="w-full mt-2 p-3 bg-[#111827] text-gray-100 rounded-lg" placeholder="email@gmail.com" />
+  <section id="contact" class="text-white mt-10">
+    <!-- Título com maior margem inferior -->
+    <h2 class="text-4xl font-bold text-left mb-6 px-4 xl:pl-16">Contato</h2> 
+    <!-- Informações de Contato -->
+    <div>
+      <div class="space-y-8">
+        <!-- E-mail -->
+        <div class="flex items-center">
+          <div class="p-3 bg-[#1a233a] rounded-full">
+            <img src="https://img.icons8.com/metro/50/ffffff/new-post.png" alt="email" class="w-7" />
+          </div>
+          <div class="ml-5">
+            <h4 class="text-lg font-semibold">E-mail</h4>
+            <a href="mailto:webertfernandes16@gmail.com" class="group flex items-center space-x-2 text-[#f97316] hover:text-[#3498db] transition">
+              <img src="https://img.icons8.com/material-outlined/24/orange/arrow.png" alt="arrow" class="w-4" />
+              <span>webertfernandes16@gmail.com</span>
+            </a>
+          </div>
         </div>
-        <div>
-          <label for="subject" class="block text-sm font-medium">Assunto</label>
-          <input v-model="subject" type="text" id="subject" required class="w-full mt-2 p-3 bg-[#111827] text-gray-100 rounded-lg" placeholder="Digite o assunto" />
+        <!-- WhatsApp -->
+        <div class="flex items-center">
+          <div class="p-3 bg-[#1a233a] rounded-full">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="phone" class="w-7" />
+          </div>
+          <div class="ml-5">
+            <h4 class="text-lg font-semibold">WhatsApp</h4>
+            <a href="https://wa.me/5534997926005" target="_blank" class="group flex items-center space-x-2 text-[#f97316] hover:text-[#3498db] transition">
+              <img src="https://img.icons8.com/material-outlined/24/orange/arrow.png" alt="arrow" class="w-4" />
+              <span>(34) 99792-6005</span>
+            </a>
+          </div>
         </div>
-        <div>
-          <label for="message" class="block text-sm font-medium">Mensagem</label>
-          <textarea v-model="message" id="message" required class="w-full mt-2 p-3 bg-[#111827] text-gray-100 rounded-lg" placeholder="Sua mensagem"></textarea>
+        <!-- LinkedIn -->
+        <div class="flex items-center">
+          <div class="p-3 bg-[#1a233a] rounded-full">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="linkedin" class="w-7" />
+          </div>
+          <div class="ml-5">
+            <h4 class="text-lg font-semibold">LinkedIn</h4>
+            <a href="https://www.linkedin.com/in/webert-fernandes-2b6463253/" target="_blank" class="group flex items-center space-x-2 text-[#f97316] hover:text-[#3498db] transition">
+              <img src="https://img.icons8.com/material-outlined/24/orange/arrow.png" alt="arrow" class="w-4" />
+              <span>Visitar perfil</span>
+            </a>
+          </div>
         </div>
-        <button type="submit" class="w-full py-3 bg-[#f97316] text-white rounded-lg hover:bg-[#3498db] transition">
-          Enviar
-        </button>
-      </form>
-    </section>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        email: "",
-        subject: "",
-        message: "",
-      };
-    },
-    methods: {
-      async enviarMensagem() {
-        const payload = {
-          email: this.email,
-          subject: this.subject,
-          message: this.message,
-        };
-  
-        try {
-          const response = await fetch("http://localhost:3000/enviar-formulario", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(payload),
-          });
-  
-          if (response.ok) {
-            alert("Recebi sua mensagem! Logo retornarei, obrigado!");
-            this.email = "";
-            this.subject = "";
-            this.message = "";
-          } else {
-            const errorData = await response.json();
-            alert(`Erro: ${errorData.error}`);
-          }
-        } catch (error) {
-          alert("Erro de conexão. Tente novamente mais tarde.");
-          console.error(error);
-        }
-      },
-    },
-  };
-  </script>
-  
+        <!-- GitHub -->
+        <div class="flex items-center">
+          <div class="p-3 bg-[#1a233a] rounded-full">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="github" class="w-7" />
+          </div>
+          <div class="ml-5">
+            <h4 class="text-lg font-semibold">GitHub</h4>
+            <a href="https://github.com/webertfernandes" target="_blank" class="group flex items-center space-x-2 text-[#f97316] hover:text-[#3498db] transition">
+              <img src="https://img.icons8.com/material-outlined/24/orange/arrow.png" alt="arrow" class="w-4" />
+              <span>Visitar repositório</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
