@@ -57,7 +57,7 @@ const Projects = ref([
     {
         id: 1,
         category: 'web development',
-        image: 'tela.png',
+        image: 'React.png',
         title: 'Projeto: Tela Login React',
         description: 'A Tela de login oferece uma interface intuitiva de para efetuar o login',
         technologies: ['React', 'Vite', 'JavaScript'],
@@ -67,8 +67,8 @@ const Projects = ref([
     {
         id: 2,
         category: 'Mobile App',
-        image: 'loginpage.png',
-        title: 'Projeto: Login Page',
+        image: 'Angular.png',
+        title: 'Projeto: Login Page Angular',
         description: 'A pagina de login oferece uma interface fácil de usar para logar',
         technologies: ['Angular', 'SASS', 'TypeScript', 'Figma'],
         gitURL: 'https://github.com/vibrazzi/LoginPage',
@@ -77,8 +77,8 @@ const Projects = ref([
     {
         id: 3,
         category: 'web development',
-        image: 'portifolio.png',
-        title: 'Projeto: Portifólio',
+        image: 'portifólio.png',
+        title: 'Projeto: Portifólio Vue',
         description: 'Essa é uma aplicação frontend desenvolvida com Vue.js para exibir um portfólio interativo e moderno',
         technologies: ['vue.js 3', 'vuex', 'Express'],
         gitURL: 'https://github.com/vibrazzi/portifolio-vue',
