@@ -41,7 +41,17 @@
     {
       id: 1,
       category: 'web development',
-      image: 'telaloginproj.png',
+      image: 'SiteVinhos.png',
+      title: 'Projeto: Vitrine de Vinhos',
+      description: 'Essa é um site desenvolvido com Vue.js para exibir uma Vitrine de Vinhos que servem na empresa W Lounge Premium',
+      technologies: ['vue.js 3', 'vuex', 'Express', 'JavaScript'],
+      gitURL: 'https://github.com/vibrazzi/vitrine-vinhos',
+      webURL: 'https://vitrine-vinhos.vercel.app/'
+    },
+    {
+      id: 2,
+      category: 'web development',
+      image: 'TELALOGIN.png',
       title: 'Projeto: Tela Login React',
       description: 'A Tela de login oferece uma interface intuitiva de para efetuar o login',
       technologies: ['React', 'Vite', 'JavaScript'],
@@ -49,24 +59,14 @@
       webURL: 'https://tela-react-login.vercel.app/'
     },
     {
-      id: 2,
+      id: 3,
       category: 'Mobile App',
-      image: 'loginpageproj.png',
+      image: 'LOGINPAGE.png',
       title: 'Projeto: Login Page Angular',
       description: 'A pagina de login oferece uma interface fácil de usar para logar',
       technologies: ['Angular', 'SASS', 'TypeScript', 'Figma'],
       gitURL: 'https://github.com/vibrazzi/LoginPage',
       webURL: 'https://login-page-six-livid.vercel.app/login'
-    },
-    {
-      id: 3,
-      category: 'web development',
-      image: 'portifólioproj.png',
-      title: 'Projeto: Portifólio Vue',
-      description: 'Essa é uma aplicação frontend desenvolvida com Vue.js para exibir um portfólio interativo e moderno',
-      technologies: ['vue.js 3', 'vuex', 'Express'],
-      gitURL: 'https://github.com/vibrazzi/portifolio-vue',
-      webURL: 'https://portifolio-vue-delta.vercel.app/'
     }
   ]);
   
@@ -86,7 +86,7 @@
   .link-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #6a2700;
+    background-color: #af704c;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -95,7 +95,7 @@
   }
   
   .link-button:hover {
-    background-color: #6a2700;
+    background-color: #af704c7c;
     transform: scale(1.05);
   }
   </style>
