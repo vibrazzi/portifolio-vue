@@ -1,13 +1,14 @@
 {
   "name": "my-vue-portfolio",
   "private": true,
-  "version": "0.0.0",
-  "type": "commonjs",
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "node server.js"
+    "start": "node server.js",
+    "start:dev": "nodemon server.js"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -24,21 +25,29 @@
     "vue3-carousel": "^0.3.4"
   },
   "devDependencies": {
+    "@types/node": "^22.15.3",
     "@vitejs/plugin-vue": "^5.1.2",
     "autoprefixer": "^10.4.21",
     "nodemon": "^3.1.10",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3",
     "vite": "^6.3.4"
   },
-  "description": "Bem-vindo ao repositório do **Portfólio Vue.js**! Este projeto é uma aplicação frontend desenvolvida com Vue.js para exibir um portfólio interativo e moderno.",
+  "description": "Bem-vindo ao repositório do Portfólio Vue.js! Este projeto é uma aplicação frontend desenvolvida com Vue.js para exibir um portfólio interativo e moderno.",
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vibrazzi/portifolio-vue.git"
+    "url": "https://github.com/vibrazzi/portifolio-vue.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "vue",
+    "portfolio",
+    "frontend",
+    "tailwindcss",
+    "vite"
+  ],
+  "author": "Webert Fernandes",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/vibrazzi/portifolio-vue/issues"

@@ -69,17 +69,17 @@ export default {
       this.isLoading = true; // Inicia o estado de carregamento
 
       try {
-        const backendURL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
-
-        const response = await fetch(`${backendURL}/enviar-formulario`, {
-          method: "POST",
+        const response = await fetch('/api/enviar-formulario', {
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify(payload),
         });
 
         if (response.ok) {
+          const data = await response.json();
+          console.log(data);
           alert("Recebi sua mensagem! Logo retornarei, obrigado!");
           this.email = "";
           this.subject = "";

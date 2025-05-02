@@ -29,7 +29,7 @@ const db = mysql.createConnection({
 
 db.connect((err) => {
   if (err) {
-    console.error('Erro ao conectar ao banco de dados:', err);
+    console.error('Erro ao conectar ao banco de dados:', err.message);
     process.exit(1); // Finaliza o processo em caso de erro
   }
   console.log(`Conectado ao banco de dados! Host: ${process.env.DB_HOST}`);
@@ -45,12 +45,18 @@ app.post('/enviar-formulario', async (req, res) => {
     return res.status(400).json({ error: 'Preencha todos os campos obrigatórios.' });
   }
 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    console.warn('E-mail inválido!');
+    return res.status(400).json({ error: 'E-mail inválido.' });
+  }
+
   const query = 'INSERT INTO mensagens (email, subject, message) VALUES (?, ?, ?)';
   const values = [email, subject, message];
 
   db.query(query, values, async (err) => {
     if (err) {
-      console.error('Erro ao salvar no banco de dados:', err);
+      console.error('Erro ao salvar no banco de dados:', err.message);
       return res.status(500).json({ error: 'Erro ao salvar mensagem no banco.' });
     }
 
@@ -77,7 +83,7 @@ app.post('/enviar-formulario', async (req, res) => {
       console.log('E-mail enviado com sucesso!');
       return res.status(200).json({ success: 'Mensagem salva e enviada com sucesso!' });
     } catch (error) {
-      console.error('Erro ao enviar e-mail:', error);
+      console.error('Erro ao enviar e-mail:', error.message);
       return res.status(500).json({ error: 'Mensagem salva, mas houve um erro ao enviar o e-mail.' });
     }
   });
