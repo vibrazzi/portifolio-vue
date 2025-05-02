@@ -4,10 +4,11 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const mysql = require('mysql');
-require('dotenv').config(); 
+require('dotenv').config();
 
 const app = express();
 
+// Configuração do CORS
 app.use(cors({
   origin: [
     'http://localhost:5173',
@@ -18,24 +19,27 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// Configuração do banco de dados
 const db = mysql.createConnection({
   host: process.env.DB_HOST || 'localhost',
   user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || 'Stopcrazy1',
+  password: process.env.DB_PASSWORD || '',
   database: process.env.DB_NAME || 'mensagens',
 });
 
 db.connect((err) => {
   if (err) {
     console.error('Erro ao conectar ao banco de dados:', err);
-    process.exit(1); 
+    process.exit(1); // Finaliza o processo em caso de erro
   }
   console.log(`Conectado ao banco de dados! Host: ${process.env.DB_HOST}`);
 });
 
+// Rota para envio de formulário
 app.post('/enviar-formulario', async (req, res) => {
   const { email, subject, message } = req.body;
 
+  // Validação dos campos obrigatórios
   if (!email || !subject || !message) {
     console.warn('Campos obrigatórios ausentes!');
     return res.status(400).json({ error: 'Preencha todos os campos obrigatórios.' });
@@ -52,6 +56,7 @@ app.post('/enviar-formulario', async (req, res) => {
 
     console.log('Mensagem salva no banco de dados.');
 
+    // Configuração do Nodemailer
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -61,7 +66,7 @@ app.post('/enviar-formulario', async (req, res) => {
     });
 
     const mailOptions = {
-      from: `Contato do Formulário <${email}>`,
+      from: `Contato do Formulário <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
       subject,
       text: `Você recebeu uma nova mensagem de contato:\n\nDe: ${email}\nAssunto: ${subject}\n\nMensagem:\n${message}`,
@@ -78,6 +83,7 @@ app.post('/enviar-formulario', async (req, res) => {
   });
 });
 
+// Inicialização do servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);

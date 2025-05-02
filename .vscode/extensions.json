@@ -1,3 +1,9 @@
 {
-  "recommendations": ["Vue.volar"]
+  "recommendations": [
+    "Vue.volar", // Extensão para suporte ao Vue 3
+    "esbenp.prettier-vscode", // Extensão para formatação de código com Prettier
+    "dbaeumer.vscode-eslint", // Extensão para linting com ESLint
+    "formulahendry.auto-rename-tag", // Extensão para renomear automaticamente tags HTML
+    "formulahendry.auto-close-tag" // Extensão para fechar automaticamente tags HTML
+  ]
 }

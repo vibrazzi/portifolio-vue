@@ -1,29 +1,36 @@
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
 # Diretórios de dependências
-node_modules
+node_modules/
 
 # Diretórios de saída de build
-dist
-dist-ssr
-build
+dist/
+dist-ssr/
+build/
+.cache/
+output/
 
 # Arquivos de configuração de ambiente
 .env
 .env.local
 .env.*.local
 
+# Arquivos sensíveis
+*.pem
+*.key
+*.crt
+*.pfx
+
 # Configurações específicas de editores
-.vscode/*
+.vscode/
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
@@ -42,16 +49,13 @@ yarn.lock
 pnpm-lock.yaml
 
 # Diretórios usados para caching e build interno
-.cache/
-.terraform/
 .husky/
-output/
-.vite/
+.terraform/
 
 # Ignorar arquivos de testes e relatórios de testes
 coverage/
 *.lcov
-.nyc_output
+.nyc_output/
 
 # Logs de debug ou perfil de performance
 *.tgz
