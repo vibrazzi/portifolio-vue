@@ -1,9 +1,9 @@
 [build]
-  command = "vite build"
-  functions = "netlify/functions"
-  publish = "dist"
+  command = "vite build" # Comando para construir o projeto
+  functions = "netlify/functions" # Diretório para funções serverless
+  publish = "dist" # Diretório onde os arquivos estáticos serão publicados
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/*" # Redireciona todas as rotas
+  to = "/index.html" # Garante que o SPA funcione corretamente
   status = 200
