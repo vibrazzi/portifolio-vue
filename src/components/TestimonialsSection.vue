@@ -1,5 +1,9 @@
 <template>
-  <section id="contact" class="text-white mt-20 px-4 xl:px-16">
+  <section
+    id="contact"
+    class="text-white mt-20 px-4 xl:px-16 opacity-0 transform translate-y-10 transition-all duration-700"
+    ref="contactSection"
+  >
     <h2 class="text-4xl font-bold text-left mb-6">Entre em contato</h2>
     <form @submit.prevent="enviarMensagem" class="space-y-6 bg-[#1a233a] p-8 rounded-lg shadow-lg">
       <div>
@@ -95,6 +99,23 @@ export default {
         this.isLoading = false; // Finaliza o estado de carregamento
       }
     },
+    handleScroll() {
+      const section = this.$refs.contactSection;
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        section.classList.add("opacity-100", "translate-y-0");
+      }
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
   },
 };
 </script>
+
+<style>
+/* Adicione estilos personalizados aqui, se necessário */
+</style>

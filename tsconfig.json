@@ -1,11 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "types": ["node"]
-  }
+    "target": "ESNext", // Define o alvo de compilação como ESNext
+    "module": "ESNext", // Usa o sistema de módulos ESNext
+    "moduleResolution": "Node", // Resolve módulos no estilo Node.js
+    "strict": true, // Ativa todas as verificações estritas do TypeScript
+    "esModuleInterop": true, // Permite interoperabilidade com módulos CommonJS
+    "skipLibCheck": true, // Ignora a verificação de tipos em arquivos de declaração
+    "types": ["node", "vite/client"], // Inclui tipos do Node.js e do Vite
+    "baseUrl": ".", // Define o diretório base para resolução de caminhos
+    "paths": {
+      "@/*": ["src/*"] // Configura alias para facilitar importações
+    }
+  },
+  "include": ["src"], // Inclui o diretório "src" para compilação
+  "exclude": ["node_modules", "dist"] // Exclui "node_modules" e "dist" da compilação
 }

@@ -13,7 +13,12 @@
           </div>
           <div class="ml-5 flex items-center">
             <h4 class="text-lg font-semibold mr-3">LinkedIn:</h4>
-            <a href="https://www.linkedin.com/in/webert-fernandes-2b6463253/" target="_blank" class="group flex items-center space-x-2 text-[#f97316] hover:text-[#3498db] transition">
+            <a
+              href="https://www.linkedin.com/in/webert-fernandes-2b6463253/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex items-center space-x-2 text-[#f97316] hover:text-[#3498db] transition"
+            >
               <img src="https://img.icons8.com/material-outlined/24/orange/arrow.png" alt="arrow" class="w-4" />
               <span>Visitar perfil</span>
             </a>
@@ -26,7 +31,12 @@
           </div>
           <div class="ml-5 flex items-center">
             <h4 class="text-lg font-semibold mr-3">GitHub:</h4>
-            <a href="https://github.com/vibrazzi" target="_blank" class="group flex items-center space-x-2 text-[#f97316] hover:text-[#3498db] transition">
+            <a
+              href="https://github.com/vibrazzi"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex items-center space-x-2 text-[#f97316] hover:text-[#3498db] transition"
+            >
               <img src="https://img.icons8.com/material-outlined/24/orange/arrow.png" alt="arrow" class="w-4" />
               <span>Visitar repositório</span>
             </a>
@@ -42,7 +52,10 @@
           </div>
           <div class="ml-5 flex items-center">
             <h4 class="text-lg font-semibold mr-3">Email:</h4>
-            <a href="mailto:webertfernandes16@gmail.com" class="group flex items-center space-x-2 text-[#f97316] hover:text-[#3498db] transition">
+            <a
+              href="mailto:webertfernandes16@gmail.com"
+              class="group flex items-center space-x-2 text-[#f97316] hover:text-[#3498db] transition"
+            >
               <img src="https://img.icons8.com/material-outlined/24/orange/arrow.png" alt="arrow" class="w-4" />
               <span>webertfernandes16@gmail.com</span>
             </a>
@@ -55,7 +68,12 @@
           </div>
           <div class="ml-5 flex items-center">
             <h4 class="text-lg font-semibold mr-3">WhatsApp:</h4>
-            <a href="https://wa.me/5534997926005" target="_blank" class="group flex items-center space-x-2 text-[#f97316] hover:text-[#3498db] transition">
+            <a
+              href="https://wa.me/5534997926005"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex items-center space-x-2 text-[#f97316] hover:text-[#3498db] transition"
+            >
               <img src="https://img.icons8.com/material-outlined/24/orange/arrow.png" alt="arrow" class="w-4" />
               <span>(34) 99792-6005</span>
             </a>
@@ -65,3 +83,11 @@
     </div>
   </section>
 </template>
+
+<script setup>
+// Este componente é puramente visual e não requer lógica adicional.
+</script>
+
+<style scoped>
+/* Adicione estilos personalizados aqui, se necessário */
+</style>

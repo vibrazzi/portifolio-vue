@@ -11,8 +11,8 @@ const app = express();
 // Configuração do CORS
 app.use(cors({
   origin: [
-    'http://localhost:5173',
-    'https://portifolio-vue-delta.vercel.app',
+    'http://localhost:5173', // Ambiente de desenvolvimento
+    'https://portifolio-vue-delta.vercel.app', // Ambiente de produção
   ],
   methods: ['GET', 'POST'],
   credentials: true,
