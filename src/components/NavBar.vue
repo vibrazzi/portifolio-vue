@@ -1,6 +1,6 @@
 <template>
   <header class="flex justify-between items-center p-6 bg-opacity-50 relative z-20 bg-[#111827]">
-    <div class="text-white text-3xl font-bold">Meu Portfólio</div>
+    <div class="text-white text-3xl font-bold">Portfólio</div>
     <!-- Mobile Toggle Button -->
     <div class="md:hidden z-30">
       <button

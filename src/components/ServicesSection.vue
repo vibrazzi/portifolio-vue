@@ -48,9 +48,9 @@ const services = ref([
   },
   {
     id: 3,
-    icon: 'https://img.icons8.com/ios-filled/100/ffffff/cloud.png',
-    name: 'Desenvolvimento em Nuvem',
-    description: 'Soluções escaláveis e seguras na nuvem.',
+    icon: 'https://img.icons8.com/ios-filled/100/ffffff/api.png', // Novo ícone
+    name: 'Integração de APIs',
+    description: 'Desenvolvimento e integração de APIs RESTful para comunicação eficiente entre sistemas.',
   },
 ]);
 </script>

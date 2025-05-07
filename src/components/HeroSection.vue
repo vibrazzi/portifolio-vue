@@ -32,7 +32,12 @@
             </h1>
           </div>
           <p class="text-gray-300 pt-8 text-center lg:text-left mx-auto max-w-xl">
-           Eu sempre fui apaixonado por música, foi algo que dediquei minha vida inteira, com todo o amor. Tenho até duas músicas no Spotify, algo de que me orgulho muito. No meio dessa jornada, tive a ideia de criar um site para divulgar minhas músicas, e foi assim que tive meu primeiro contato com o desenvolvimento. Foi uma experiência tão incrível! Quanto mais eu aprendia, mais eu me encantava. Isso me motivou a mergulhar de cabeça nesse mundo. Acabei colocando minhas produções musicais de lado para focar nos estudos e entrei no curso de Análise e Desenvolvimento de Sistemas. No curso, explorei várias áreas e aprendi de tudo um pouco. Mas o que realmente conquistou meu coração foi o desenvolvimento Front-End, embora também tenha tido contato com o Back-End. Além disso, eu me considero uma pessoa muito empática, uma habilidade que desenvolvi ao trabalhar por muitos anos com atendimento ao cliente. Agora, estou em busca de uma oportunidade para crescer como profissional e colocar em prática tudo o que aprendi.
+            Sou um profissional apaixonado pelo design, tecnologia e pela arte de
+            estilizar ambientes e experiências. Minha jornada inclui a criação da vitrine
+            de vinhos para a W Premium Lounge, onde combinei estética e
+            funcionalidade para proporcionar uma experiência sofisticada e envolvente
+            aos clientes.Minhas especialidades incluem React, Vue, HTML, CSS, Sass,
+            JavaScript (ES6), TypeScript, Bootstrap, Tailwind.
           </p>
           <div class="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0">
             <button class="px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center bg-primary text-white hover:bg-pink-500 transition-all">
@@ -66,7 +71,7 @@
                   </svg>
                   <div class="download-loader text-white hidden"></div>
                 </div>
-                <a href="curriculo.pdf" download="Profile Webert F Souza" class="pl-2 text-primary">
+                <a href="Profile Webert Souza.pdf" download="Profile Webert F Souza" class="pl-2 text-primary">
                   Download Currículo
                 </a>
               </div>

@@ -41,18 +41,7 @@
           mim
         </h2>
         <p class="text-base lg:text-lg mt-0 py-8 text-left">
-          Desde cedo, sempre fui apaixonado por desafios que envolvem criatividade e inovação, algo que marcou minha
-          trajetória desde quando me dedicava completamente à música. Ao longo dessa jornada, aprendi a importância de
-          criar algo único, tanto que cheguei a lançar duas músicas no Spotify. Foi nesse caminho que descobri minha
-          segunda paixão, o desenvolvimento, ao criar um site para divulgar meu trabalho musical. Hoje, apesar de ter
-          explorado várias áreas da tecnologia, escolhi seguir como Desenvolvedor Front-End, pois me encanta a ideia de
-          criar interfaces que conectam pessoas e entregam experiências incríveis. Além disso, minha experiência de
-          anos na área de atendimento ao cliente me ajudou a desenvolver empatia e uma visão centrada no usuário,
-          competências que acredito serem essenciais para criar produtos que realmente façam a diferença. Estou à
-          procura de uma oportunidade que me permita crescer como profissional e contribuir com minha paixão por
-          tecnologia, enquanto ajudo a transformar a vida das pessoas (e dos animais de estimação) com soluções
-          inovadoras. Sei que tenho muito a agregar, seja trabalhando em equipe, escrevendo códigos limpos ou
-          contribuindo com ideias criativas.
+          Eu sempre fui apaixonado por música, foi algo que dediquei minha vida inteira, com todo o amor. Tenho até duas músicas no Spotify, algo de que me orgulho muito. No meio dessa jornada, tive a ideia de criar um site para divulgar minhas músicas, e foi assim que tive meu primeiro contato com o desenvolvimento. Foi uma experiência tão incrível! Quanto mais eu aprendia, mais eu me encantava. Isso me motivou a mergulhar de cabeça nesse mundo. Acabei colocando minhas produções musicais de lado para focar nos estudos e entrei no curso de Análise e Desenvolvimento de Sistemas. No curso, explorei várias áreas e aprendi de tudo um pouco. Mas o que realmente conquistou meu coração foi o desenvolvimento Front-End, embora também tenha tido contato com o Back-End. Além disso, eu me considero uma pessoa muito empática, uma habilidade que desenvolvi ao trabalhar por muitos anos com atendimento ao cliente. Agora, estou em busca de uma oportunidade para crescer como profissional e colocar em prática tudo o que aprendi.
         </p>
         <div class="grid grid-cols-3 gap-4 max-w-lg pt-8">
           <!-- Espaço para adicionar ícones ou informações adicionais -->

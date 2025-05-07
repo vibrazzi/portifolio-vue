@@ -78,8 +78,8 @@ const Experiences = ref([
   {
     id: 1,
     role: 'Desenvolvedor Front-End',
-    company: 'Freelancer /W Premium',
-    date: 'Jan 2025 - Presente',
+    company: 'W Premium Lounge',
+    date: 'Jan 2024 - Presente',
     icon: 'https://img.icons8.com/ios-filled/100/ffffff/code.png',
   },
   {
