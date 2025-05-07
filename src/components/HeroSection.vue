@@ -36,7 +36,7 @@
             estilizar ambientes e experiências. Minha jornada inclui a criação da vitrine
             de vinhos para a W Premium Lounge, onde combinei estética e
             funcionalidade para proporcionar uma experiência sofisticada e envolvente
-            aos clientes.Minhas especialidades incluem React, Vue, HTML, CSS, Sass,
+            aos clientes. Minhas especialidades incluem React, Vue, HTML, CSS, Sass,
             JavaScript (ES6), TypeScript, Bootstrap, Tailwind.
           </p>
           <div class="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0">
