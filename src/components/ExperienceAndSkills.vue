@@ -77,23 +77,23 @@ const Skills = ref([
 const Experiences = ref([
   {
     id: 1,
-    role: 'Desenvolvedor Front-End',
-    company: 'W Premium Lounge',
-    date: 'Jan 2024 - Presente',
+    role: 'Desenvolvedor Frontend',
+    company: '87 Labs',
+    date: 'Jul - Presente',
     icon: 'https://img.icons8.com/ios-filled/100/ffffff/code.png',
   },
   {
     id: 2,
-    role: 'Estagiário de TI',
-    company: 'Descomplica',
-    date: 'Ago 2024 - Jan 2025',
+    role: 'Freelancer',
+    company: 'W Premium Lounge',
+    date: 'Jan 2024 - Jun 2025',
     icon: 'https://img.icons8.com/ios-filled/100/ffffff/learning.png',
   },
   {
     id: 3,
     role: 'Suporte Técnico',
     company: 'Netflix',
-    date: 'Jan 2020 - Jul 2024',
+    date: 'Jan 2020 - Dez 2023',
     icon: 'https://img.icons8.com/ios-filled/100/ffffff/customer-support.png',
   },
 ]);
