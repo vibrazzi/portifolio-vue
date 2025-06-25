@@ -77,15 +77,15 @@ const Skills = ref([
 const Experiences = ref([
   {
     id: 1,
-    role: 'Desenvolvedor Frontend',
+    role: 'Desenvolvedor Front-End',
     company: '87 Labs',
-    date: 'Jul - Presente',
+    date: 'Jul 2025 - Presente',
     icon: 'https://img.icons8.com/ios-filled/100/ffffff/code.png',
   },
   {
     id: 2,
-    role: 'Freelancer',
-    company: 'W Premium Lounge',
+    role: 'Desenvolvedor Front-End',
+    company: 'W Premium Lounge (Freelancer)',
     date: 'Jan 2024 - Jun 2025',
     icon: 'https://img.icons8.com/ios-filled/100/ffffff/learning.png',
   },
