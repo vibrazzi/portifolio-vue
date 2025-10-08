@@ -1,21 +1,23 @@
 <template>
-  <div class="bg-[#111827] min-h-screen">
+  <div class="bg-gray-900 dark:bg-gray-950 min-h-screen transition-colors duration-300">
     <Suspense>
       <template #default>
         <div>
           <NavBar />
-          <HeroSection />
-          <ServicesSection />
-          <AboutSection />
-          <ExperienceAndSkills />
-          <LatestProjSection />
-          <ContactSection />
+          <main class="pt-20">
+            <HeroSection />
+            <ServicesSection />
+            <AboutSection />
+            <ExperienceAndSkills />
+            <LatestProjSection />
+            <ContactSection />
+          </main>
           <Footer />
           <BackToTop />
         </div>
       </template>
       <template #fallback>
-        <div class="flex justify-center items-center min-h-screen">
+        <div class="flex justify-center items-center min-h-screen bg-gray-900 dark:bg-gray-950">
           <loadingSpinner />
         </div>
       </template>
@@ -24,29 +26,80 @@
 </template>
 
 <script setup>
-import { defineAsyncComponent } from 'vue';
+import { defineAsyncComponent, onMounted } from 'vue'
+import { useTheme } from './composables/useTheme'
 
-// Importação assíncrona dos componentes para melhorar o desempenho
-const NavBar = defineAsyncComponent(() => import('@/components/NavBar.vue'));
-const HeroSection = defineAsyncComponent(() => import('@/components/HeroSection.vue'));
-const ServicesSection = defineAsyncComponent(() => import('@/components/ServicesSection.vue'));
-const AboutSection = defineAsyncComponent(() => import('@/components/AboutSection.vue'));
-const LatestProjSection = defineAsyncComponent(() => import('@/components/LatestProjSection.vue'));
-const ExperienceAndSkills = defineAsyncComponent(() => import('@/components/ExperienceAndSkills.vue'));
-const ContactSection = defineAsyncComponent(() => import('@/components/ContactSection.vue'));
-const Footer = defineAsyncComponent(() => import('@/components/Footer.vue'));
-const BackToTop = defineAsyncComponent(() => import('@/components/BackToTop.vue'));
+const { isDark } = useTheme()
 
-// Importação do componente de carregamento
-import loadingSpinner from './components/loadingSpinner.vue';
+const NavBar = defineAsyncComponent(() => import('@/components/NavBar.vue'))
+const HeroSection = defineAsyncComponent(() => import('@/components/HeroSection.vue'))
+const ServicesSection = defineAsyncComponent(() => import('@/components/ServicesSection.vue'))
+const AboutSection = defineAsyncComponent(() => import('@/components/AboutSection.vue'))
+const LatestProjSection = defineAsyncComponent(() => import('@/components/LatestProjSection.vue'))
+const ExperienceAndSkills = defineAsyncComponent(() => import('@/components/ExperienceAndSkills.vue'))
+const ContactSection = defineAsyncComponent(() => import('@/components/ContactSection.vue'))
+const Footer = defineAsyncComponent(() => import('@/components/Footer.vue'))
+const BackToTop = defineAsyncComponent(() => import('@/components/BackToTop.vue'))
+
+import loadingSpinner from './components/loadingSpinner.vue'
+
+onMounted(() => {
+  document.documentElement.style.scrollBehavior = 'smooth'
+})
 </script>
 
 <style>
-/* Estilização global para personalizar a barra de rolagem */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #111827 #f1f1f1;
+:root {
+  --scrollbar-width: 8px;
+  --scrollbar-track: #1f2937;
+  --scrollbar-thumb: #374151;
+  --scrollbar-thumb-hover: #4b5563;
 }
 
-/* Adicione estilos personalizados aqui, se necessário */
+.dark {
+  --scrollbar-track: #0f1419;
+  --scrollbar-thumb: #2d3748;
+  --scrollbar-thumb-hover: #4a5568;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: rgba(245, 158, 11, 0.3);
+  color: #ffffff;
+}
+
+.dark ::selection {
+  background: rgba(245, 158, 11, 0.4);
+  color: #ffffff;
+}
 </style>

@@ -1,10 +1,6 @@
-/* Importa os estilos base do Tailwind CSS */
 @tailwind base;
 
-/* Importa os componentes do Tailwind CSS */
 @tailwind components;
 
-/* Importa as utilidades do Tailwind CSS */
 @tailwind utilities;
 
-/* Adicione aqui seus estilos personalizados, se necessário */

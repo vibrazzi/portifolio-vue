@@ -1,90 +1,247 @@
 <template>
-  <section class="relative w-full" data-aos="zoom-in-up">
-    <div class="absolute top-0 inset-x-0 h-64 flex items-start">
-      <div class="h-24 w-2/3 bg-gradient-to-br from-[#570cac] blur-2xl invisible opacity-40"></div>
-      <div class="h-20 w-3/5 bg-gradient-to-r from-[#670ccf] opacity-40 blur-2xl"></div>
+  <section class="relative w-full min-h-screen flex items-center overflow-hidden bg-gray-900 dark:bg-gray-950 transition-colors duration-300"
+           data-aos="fade-up" data-aos-duration="1000">
+    <div class="absolute inset-0">
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-primary/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-bl from-blue-500/15 to-purple-500/15 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+
+      <div class="absolute inset-0 overflow-hidden">
+        <div v-for="i in 6" :key="i"
+             class="absolute w-2 h-2 bg-primary/30 rounded-full animate-float"
+             :style="{
+               left: Math.random() * 100 + '%',
+               top: Math.random() * 100 + '%',
+               animationDelay: Math.random() * 5 + 's',
+               animationDuration: (Math.random() * 3 + 3) + 's'
+             }">
+        </div>
+      </div>
     </div>
-    <div class="w-full px-5 sm:px-8 md:px-12 lg:px-8 max-w-screen-lg lg:max-w-screen-xl mx-auto relative">
-      <div class="grid lg:grid-cols-2 gap-10 xl:gap-14 relative pt-24 lg:max-w-none max-w-2xl md:max-w-3xl mx-auto">
-        <div class="lg:h-full md:flex">
-          <div class="flex w-full h-96 min-h-[24rem] lg:min-h-[none] lg:w-full lg:h-full items-center relative">
-            <div class="absolute z-0 top-1/2 -translate-y-1/2 w-5/6 right-0 h-[calc(80%+20px)] bg-gradient-to-tr opacity-25 from-[#570cac] to-primary blur-2xl"></div>
-            <div class="absolute h-full z-10 p-2 -translate-y-1/2 top-1/2 lg:right-3 md:right-40 sm:right-16 rounded-full shadow-lg border border-primary">
+
+    <div class="w-full px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl mx-auto relative z-10">
+      <div class="grid lg:grid-cols-2 gap-8 xl:gap-16 items-center">
+
+        <div class="order-1 lg:order-2 flex justify-center lg:justify-end"
+             data-aos="fade-left" data-aos-delay="300">
+          <div class="relative group">
+            <div class="absolute -inset-4 bg-gradient-to-r from-primary to-pink-500 rounded-full opacity-20 blur-xl group-hover:opacity-30 transition-all duration-500"></div>
+
+            <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-primary/25">
               <img
                 src="@/assets/fotoo.jpg"
-                alt="Hero pic"
-                width="auto"
-                height="auto"
+                alt="Webert Fernandes - Desenvolvedor"
+                class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
-                class="w-full h-full rounded-full object-cover"
               />
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+
+            <div class="absolute -top-4 -right-4 w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce">
+              React
+            </div>
+            <div class="absolute -bottom-4 -left-4 w-14 h-14 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce" style="animation-delay: 1s;">
+              JS
+            </div>
+            <div class="absolute -top-4 -left-10 w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce" style="animation-delay: 1s;">
+              Vue
             </div>
           </div>
         </div>
-        <div class="lg:py-6">
-          <div class="text-center lg:text-left">
-            <h1 class="pt-4 text-white font-bold text-4xl md:text-5xl lg:text-6xl">
-              Oi, sou
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-500">
-                Webert
+
+        <div class="order-2 lg:order-1 text-center lg:text-left space-y-6">
+          <div data-aos="fade-right" data-aos-delay="200">
+            <p class="text-primary font-medium text-lg mb-2 tracking-wide">Olá, eu sou</p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
+              <span class="block">Webert</span>
+              <span class="block bg-gradient-to-r from-primary via-pink-500 to-purple-500 bg-clip-text text-transparent animate-gradient-x">
+                Fernandes
               </span>
-              😁
             </h1>
           </div>
-          <p class="text-gray-300 pt-8 text-center lg:text-left mx-auto max-w-xl">
-            Sou um profissional apaixonado pelo design, tecnologia e pela arte de
-            estilizar ambientes e experiências. Minha jornada inclui a criação da vitrine
-            de vinhos para a W Premium Lounge, onde combinei estética e
-            funcionalidade para proporcionar uma experiência sofisticada e envolvente
-            aos clientes. Minhas especialidades incluem React, Vue, HTML, CSS, Sass,
-            JavaScript (ES6), TypeScript, Bootstrap, Tailwind.
-          </p>
-          <div class="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0">
-            <button class="px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center bg-primary text-white hover:bg-pink-500 transition-all">
-              <a href="#contact" class="text-white">Entre em Contato</a>
-            </button>
-            <button class="border border-primary px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center">
-              <div class="hover:scale-105 transition-all ease-in-out flex justify-center items-center relative">
-                <div class="svg-container">
-                  <svg
-                    class="download-icon"
-                    width="18"
-                    height="22"
-                    viewBox="0 0 18 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      class="download-arrow"
-                      d="M13 9L9 13M9 13L5 9M9 13V1"
-                      stroke="#f59e0b"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M1 17V18C1 18.7956 1.31607 19.5587 1.87868 20.1213C2.44129 20.6839 3.20435 21 4 21H14C14.7956 21 15.5587 20.6839 16.1213 20.1213C16.6839 19.5587 17 18.7956 17 18V17"
-                      stroke="#f59e0b"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
+
+          <div data-aos="fade-right" data-aos-delay="400">
+            <h2 class="text-xl sm:text-2xl lg:text-3xl text-gray-300 dark:text-gray-400 font-light mb-4">
+              Desenvolvedor Web
+            </h2>
+            <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-6">
+              <span v-for="tech in ['React', 'Vue.js', 'TypeScript', 'Node.js']" :key="tech"
+                    class="px-3 py-1 bg-gray-800 dark:bg-gray-700 text-gray-300 rounded-full text-sm border border-gray-700 hover:border-primary transition-colors duration-300">
+                {{ tech }}
+              </span>
+            </div>
+          </div>
+
+          <div data-aos="fade-right" data-aos-delay="600">
+            <p class="text-gray-400 dark:text-gray-500 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Apaixonado por criar experiências digitais incríveis. Especializado em desenvolvimento
+              frontend, combinando design moderno com código limpo e eficiente.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4"
+               data-aos="fade-up" data-aos-delay="800">
+            <button class="group relative px-8 py-4 bg-gradient-to-r from-primary to-pink-500 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/25 hover:scale-105 transform">
+              <span class="relative z-10">
+                <a href="#contact" class="flex items-center justify-center space-x-2">
+                  <span>Entre em Contato</span>
+                  <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                   </svg>
-                  <div class="download-loader text-white hidden"></div>
-                </div>
-                <a href="Profile Webert Souza.pdf" download="Profile Webert F Souza" class="pl-2 text-primary">
-                  Download Currículo
                 </a>
-              </div>
+              </span>
+              <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </button>
+
+            <button class="group relative px-8 py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 transform">
+              <a href="/Profile Webert Souza.pdf" download="Profile_Webert_Fernandes" class="flex items-center justify-center space-x-2">
+                <svg class="w-5 h-5 transform group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                <span>Download CV</span>
+              </a>
             </button>
           </div>
+
+          <div class="flex justify-center lg:justify-start space-x-6 pt-6"
+               data-aos="fade-up" data-aos-delay="1000">
+            <a v-for="social in socialLinks" :key="social.name"
+               :href="social.url"
+               :aria-label="social.name"
+               class="w-12 h-12 bg-gray-800 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary transition-all duration-300 hover:scale-110 transform hover:shadow-lg">
+              <i :class="social.icon" class="text-xl"></i>
+            </a>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div class="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center">
+        <div class="w-1 h-3 bg-primary rounded-full mt-2 animate-scroll"></div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-AOS.init();
+import { ref } from 'vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+AOS.init({
+  duration: 800,
+  once: true,
+  offset: 100
+})
+
+const socialLinks = ref([
+  {
+    name: 'GitHub',
+    url: 'https://github.com/vibrazzi',
+    icon: 'fab fa-github'
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/webert-fernandes-2b6463253/',
+    icon: 'fab fa-linkedin'
+  },
+  {
+    name: 'Email',
+    url: 'mailto:webertfernandes16@gmail.com',
+    icon: 'fas fa-envelope'
+  }
+])
 </script>
+
+<style scoped>
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+}
+
+.animate-float {
+  animation: float infinite ease-in-out;
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+  background-size: 200% 200%;
+}
+
+.animate-scroll {
+  animation: scroll 2s infinite;
+}
+
+.group:hover .group-hover\:scale-110 {
+  transform: scale(1.1);
+}
+
+.group:hover .group-hover\:translate-x-1 {
+  transform: translateX(0.25rem);
+}
+
+@media (max-width: 640px) {
+  .text-4xl {
+    font-size: 2.5rem;
+  }
+
+  .w-72 {
+    width: 16rem;
+  }
+
+  .h-72 {
+    height: 16rem;
+  }
+}
+
+.dark .bg-gray-800 {
+  background-color: #1f2937;
+}
+
+.dark .border-gray-700 {
+  border-color: #374151;
+}
+
+.dark .text-gray-300 {
+  color: #d1d5db;
+}
+
+.dark .text-gray-400 {
+  color: #9ca3af;
+}
+
+.dark .text-gray-500 {
+  color: #6b7280;
+}
+</style>

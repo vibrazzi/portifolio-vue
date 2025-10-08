@@ -1,32 +1,33 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'], // Define os arquivos onde o Tailwind será aplicado
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        primary: '#f59e0b', // Cor primária personalizada
-        secondary: '#ec4899', // Cor secundária personalizada
-        dark: '#1a233a', // Cor adicional para temas escuros
-        light: '#f3f4f6', // Cor adicional para temas claros
+        primary: '#f59e0b',
+        secondary: '#ec4899',
+        dark: '#1a233a',
+        light: '#f3f4f6',
       },
       spacing: {
-        '128': '32rem', // Exemplo de espaçamento personalizado
+        '128': '32rem',
         '144': '36rem',
-        '160': '40rem', // Novo espaçamento adicionado
+        '160': '40rem',
       },
       borderRadius: {
-        '4xl': '2rem', // Exemplo de borda arredondada personalizada
-        '5xl': '2.5rem', // Novo valor de borda arredondada
+        '4xl': '2rem',
+        '5xl': '2.5rem',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'], // Fonte padrão personalizada
-        serif: ['Merriweather', 'serif'], // Fonte adicional
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
       },
     },
   },
   plugins: [
-    require('@tailwindcss/forms'), // Plugin para estilizar formulários
-    require('@tailwindcss/typography'), // Plugin para tipografia
-    require('@tailwindcss/aspect-ratio'), // Plugin para proporções de aspecto
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
   ],
 };
