@@ -213,7 +213,7 @@ const Experiences = ref([
 ])
 
 const additionalTechs = ref([
-  'Node.js', 'Express', 'MySQL', 'Git', 'Figma', 'Sass', 'Bootstrap', 'Webpack', 'Vite', 'Jest', 'Cypress'
+  'Node.js', 'Git', 'Figma', 'Sass', 'Vite', 'Playwright', 'Storybook',
 ])
 
 onMounted(() => {
