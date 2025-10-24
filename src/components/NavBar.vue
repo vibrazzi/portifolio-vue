@@ -1,5 +1,5 @@
 <template>
-  <header class="top-0 bottom-20px left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-xl border-b border-gray-200/20 dark:border-white/10 transition-all duration-500 ease-in-out">
+  <header class="top-0 bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-xl border-b border-gray-200/20 dark:border-white/10 transition-all duration-500 ease-in-out">
     <div class="flex justify-between items-center px-4 sm:px-6 lg:px-8 py-4 max-w-7xl mx-auto">
       <div class="group cursor-pointer" @click="scrollToTop">
         <div class="relative">
