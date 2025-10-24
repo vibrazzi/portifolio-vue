@@ -1,6 +1,5 @@
 <template>
-  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out"
-          :class="scrolled ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-xl border-b border-gray-200/20 dark:border-white/10' : 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md'">
+  <header class="top-0 bottom-20px left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-xl border-b border-gray-200/20 dark:border-white/10 transition-all duration-500 ease-in-out">
     <div class="flex justify-between items-center px-4 sm:px-6 lg:px-8 py-4 max-w-7xl mx-auto">
       <div class="group cursor-pointer" @click="scrollToTop">
         <div class="relative">
@@ -95,7 +94,6 @@ const Menu = ref([
 ])
 
 const isMenuOpen = ref(false)
-const scrolled = ref(false)
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
@@ -119,18 +117,6 @@ const scrollToTop = () => {
     behavior: 'smooth'
   })
 }
-
-const handleScroll = () => {
-  scrolled.value = window.scrollY > 50
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
 </script>
 
 <style scoped>
