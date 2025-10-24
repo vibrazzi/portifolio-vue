@@ -6,6 +6,7 @@
           <NavBar />
           <main class="pt-20">
             <HeroSection />
+            <CodeMentorSection />
             <ServicesSection />
             <AboutSection />
             <ExperienceAndSkills />
@@ -33,6 +34,7 @@ const { isDark } = useTheme()
 
 const NavBar = defineAsyncComponent(() => import('@/components/NavBar.vue'))
 const HeroSection = defineAsyncComponent(() => import('@/components/HeroSection.vue'))
+const CodeMentorSection = defineAsyncComponent(() => import('@/components/CodeMentorSection.vue'))
 const ServicesSection = defineAsyncComponent(() => import('@/components/ServicesSection.vue'))
 const AboutSection = defineAsyncComponent(() => import('@/components/AboutSection.vue'))
 const LatestProjSection = defineAsyncComponent(() => import('@/components/LatestProjSection.vue'))
