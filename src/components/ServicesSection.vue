@@ -15,7 +15,7 @@
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16" data-aos="fade-up">
         <h2
-          class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
+          class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6"
         >
           Meus
           <span
@@ -32,7 +32,7 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
         <div
           v-for="(service, index) in services"
           :key="service.id"
@@ -48,7 +48,7 @@
             class="absolute inset-0 bg-gradient-to-br from-primary/20 to-pink-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"
           ></div>
 
-          <div class="relative p-8 lg:p-10 h-full flex flex-col">
+          <div class="relative p-6 sm:p-8 lg:p-10 h-full flex flex-col">
             <div class="relative mb-8">
               <div
                 class="w-20 h-20 mx-auto bg-gradient-to-br from-primary to-pink-500 rounded-2xl flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500"

@@ -26,7 +26,7 @@
           <div class="relative group">
             <div class="absolute -inset-4 bg-gradient-to-r from-primary to-pink-500 rounded-full opacity-20 blur-xl group-hover:opacity-30 transition-all duration-500"></div>
 
-            <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-primary/25">
+            <div class="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-primary/25">
               <img
                 src="@/assets/fotoo.jpg"
                 alt="Webert Fernandes - Desenvolvedor"
@@ -36,13 +36,13 @@
               <div class="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
 
-            <div class="absolute -top-4 -right-4 w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce">
+            <div class="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-12 h-12 sm:w-14 sm:h-14 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce">
               React
             </div>
-            <div class="absolute -bottom-4 -left-4 w-14 h-14 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce" style="animation-delay: 1s;">
+            <div class="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-12 h-12 sm:w-14 sm:h-14 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce" style="animation-delay: 1s;">
               JS
             </div>
-            <div class="absolute -top-4 -left-10 w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce" style="animation-delay: 1s;">
+            <div class="absolute -top-2 -left-6 sm:-top-4 sm:-left-10 w-12 h-12 sm:w-14 sm:h-14 bg-primary rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce" style="animation-delay: 1s;">
               Vue
             </div>
           </div>
@@ -51,7 +51,7 @@
         <div class="order-2 lg:order-1 text-center lg:text-left space-y-6">
           <div data-aos="fade-right" data-aos-delay="200">
             <p class="text-primary font-medium text-lg mb-2 tracking-wide">Olá, eu sou</p>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
               <span class="block">Webert</span>
               <span class="block bg-gradient-to-r from-primary via-pink-500 to-purple-500 bg-clip-text text-transparent animate-gradient-x">
                 Fernandes
@@ -60,7 +60,7 @@
           </div>
 
           <div data-aos="fade-right" data-aos-delay="400">
-            <h2 class="text-xl sm:text-2xl lg:text-3xl text-gray-300 dark:text-gray-400 font-light mb-4">
+            <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 dark:text-gray-400 font-light mb-4">
               Desenvolvedor Web
             </h2>
             <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-6">
@@ -80,7 +80,7 @@
 
           <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4"
                data-aos="fade-up" data-aos-delay="800">
-            <button class="group relative px-8 py-4 bg-gradient-to-r from-primary to-pink-500 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/25 hover:scale-105 transform">
+            <button class="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary to-pink-500 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/25 hover:scale-105 transform text-sm sm:text-base">
               <span class="relative z-10">
                 <a href="#contact" class="flex items-center justify-center space-x-2">
                   <span>Entre em Contato</span>
@@ -92,7 +92,7 @@
               <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
 
-            <button class="group relative px-8 py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 transform">
+            <button class="group relative px-6 sm:px-8 py-3 sm:py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 transform text-sm sm:text-base">
               <a href="/Profile Webert Souza.pdf" download="Profile_Webert_Fernandes" class="flex items-center justify-center space-x-2">
                 <svg class="w-5 h-5 transform group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>

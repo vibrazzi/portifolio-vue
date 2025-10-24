@@ -6,8 +6,8 @@
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+      <div class="text-center mb-12 sm:mb-16" data-aos="fade-up">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
           Meus
           <span class="bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
             Projetos
@@ -15,7 +15,7 @@
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
         <div
           v-for="(project, index) in Projects"
           :key="project.id"
@@ -58,7 +58,7 @@
           </div>
 
           <div class="space-y-4">
-            <h3 class="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors duration-300">
+            <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors duration-300">
               {{ project.title }}
             </h3>
 
@@ -81,7 +81,7 @@
                 :href="project.webURL"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="flex-1 inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-primary to-pink-500 text-white font-medium rounded-xl hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105"
+                class="flex-1 inline-flex items-center justify-center px-4 sm:px-6 py-3 bg-gradient-to-r from-primary to-pink-500 text-white font-medium rounded-xl hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
               >
                 <i class="fas fa-external-link-alt mr-2"></i>
                 Ver Projeto
@@ -90,7 +90,7 @@
                 :href="project.gitURL"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="flex-1 inline-flex items-center justify-center px-6 py-3 bg-gray-900 dark:bg-gray-700 text-white font-medium rounded-xl hover:bg-gray-800 dark:hover:bg-gray-600 transition-all duration-300 transform hover:scale-105"
+                class="flex-1 inline-flex items-center justify-center px-4 sm:px-6 py-3 bg-gray-900 dark:bg-gray-700 text-white font-medium rounded-xl hover:bg-gray-800 dark:hover:bg-gray-600 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
               >
                 <i class="fab fa-github mr-2"></i>
                 Ver Código

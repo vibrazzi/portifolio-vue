@@ -7,7 +7,7 @@
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
           Vamos
           <span class="bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
             Conversar
@@ -18,7 +18,7 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
         <a
           href="https://www.linkedin.com/in/webert-fernandes-2b6463253/"
           target="_blank"
@@ -27,12 +27,12 @@
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-              <i class="fab fa-linkedin text-white text-2xl"></i>
+          <div class="flex items-start space-x-3 sm:space-x-4">
+            <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <i class="fab fa-linkedin text-white text-xl sm:text-2xl"></i>
             </div>
             <div class="flex-1 min-w-0">
-              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors duration-300">
+              <h3 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors duration-300">
                 LinkedIn
               </h3>
               <p class="text-gray-600 dark:text-gray-400 mb-3">

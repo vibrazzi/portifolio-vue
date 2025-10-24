@@ -1,9 +1,9 @@
 <template>
-  <header class="top-0 bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-xl border-b border-gray-200/20 dark:border-white/10 transition-all duration-500 ease-in-out">
-    <div class="flex justify-between items-center px-4 sm:px-6 lg:px-8 py-4 max-w-7xl mx-auto">
+  <header class="top-0 bottom-20px left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-xl border-b border-gray-200/20 dark:border-white/10 transition-all duration-500 ease-in-out">
+    <div class="flex justify-between items-center px-4 sm:px-6 lg:px-8 py-3 sm:py-4 max-w-7xl mx-auto">
       <div class="group cursor-pointer" @click="scrollToTop">
         <div class="relative">
-          <h1 class="text-2xl sm:text-3xl font-bold transition-all duration-300 group-hover:scale-105">
+          <h1 class="text-xl sm:text-2xl lg:text-3xl font-bold transition-all duration-300 group-hover:scale-105">
             <span class="bg-gradient-to-r m-0 from-primary via-pink-500 to-purple-600 bg-clip-text text-transparent">
               Portifólio
             </span>
@@ -103,7 +103,7 @@ const scrollToSection = (href) => {
   isMenuOpen.value = false
   const section = document.querySelector(href)
   if (section) {
-    const offsetTop = section.offsetTop - 80 // Ajuste para navbar fixa
+    const offsetTop = section.offsetTop - 100
     window.scrollTo({
       top: offsetTop,
       behavior: 'smooth'

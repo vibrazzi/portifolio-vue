@@ -6,39 +6,38 @@
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+            <div class="text-center mb-8 sm:mb-16" data-aos="fade-up">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
+          CodeMentor
           <span class="bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
             IA para Lógica de Programação
           </span>
         </h2>
-        <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-          Um projeto que eu desenvolvi para ajudar estudantes e entusiastas da programação a aprimorarem suas habilidades em lógica de programação através de uma IA especializada.
+        <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4">
+          Um projeto desenvolvido para ajudar estudantes e entusiastas da programação a aprimorarem suas habilidades em lógica de programação através de uma IA especializada.
         </p>
       </div>
 
-      <div class="relative overflow-hidden rounded-2xl h-[2001px] bg-gray-200 dark:bg-gray-800 mx-auto max-w-8xl" data-aos="fade-up">
-        <iframe
-          src="https://code-mentor-production-4d2f.up.railway.app/"
-          width="100%"
-          height="100%"
-          style="border: none; border-radius: 12px;"
-          title="CodeMentor Chat"
-          allow="clipboard-write"
-          loading="lazy"
-        ></iframe>
-      </div>
+        <div class="relative overflow-hidden rounded-2xl min-h-[2000px] bg-gray-200 dark:bg-gray-800 mx-auto w-full max-w-6xl px-4" data-aos="fade-up">
+          <iframe
+            src="https://code-mentor-production-4d2f.up.railway.app/"
+            style="width: 100%; height: 2000px; border: none; border-radius: 12px; display: block;"
+            title="CodeMentor Chat"
+            allow="clipboard-write"
+            loading="lazy"
+          ></iframe>
+        </div>
 
-      <div class="text-center mt-8" data-aos="fade-up" data-aos-delay="200">
-        <p class="text-gray-600 dark:text-gray-400 mb-6">
+      <div class="text-center mt-6 sm:mt-8 px-4" data-aos="fade-up" data-aos-delay="200">
+        <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 sm:mb-6">
           Construído com FastAPI, alimentado por modelos Ollama, e hospedado no Railway. Experimente gratuitamente e veja como a IA pode acelerar seu aprendizado!
         </p>
         <div class="flex flex-wrap justify-center gap-2">
-          <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-lg">FastAPI</span>
-          <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-lg">Python</span>
-          <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-lg">Ollama</span>
-          <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-lg">Docker</span>
-          <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-lg">Railway</span>
+          <span class="px-2 sm:px-3 py-1 bg-primary/10 text-primary text-xs sm:text-sm rounded-lg">FastAPI</span>
+          <span class="px-2 sm:px-3 py-1 bg-primary/10 text-primary text-xs sm:text-sm rounded-lg">Python</span>
+          <span class="px-2 sm:px-3 py-1 bg-primary/10 text-primary text-xs sm:text-sm rounded-lg">Ollama</span>
+          <span class="px-2 sm:px-3 py-1 bg-primary/10 text-primary text-xs sm:text-sm rounded-lg">Docker</span>
+          <span class="px-2 sm:px-3 py-1 bg-primary/10 text-primary text-xs sm:text-sm rounded-lg">Railway</span>
         </div>
       </div>
     </div>
