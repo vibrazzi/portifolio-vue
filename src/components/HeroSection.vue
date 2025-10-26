@@ -40,7 +40,7 @@
               React
             </div>
             <div class="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-12 h-12 sm:w-14 sm:h-14 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce" style="animation-delay: 1s;">
-              JS
+              Python
             </div>
             <div class="absolute -top-2 -left-6 sm:-top-4 sm:-left-10 w-12 h-12 sm:w-14 sm:h-14 bg-primary rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce" style="animation-delay: 1s;">
               Vue
@@ -61,10 +61,10 @@
 
           <div data-aos="fade-right" data-aos-delay="400">
             <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 dark:text-gray-400 font-light mb-4">
-              Desenvolvedor Web
+              Desenvolvedor Full Stack & IA
             </h2>
             <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-6">
-              <span v-for="tech in ['React', 'Vue.js', 'TypeScript', 'Node.js']" :key="tech"
+              <span v-for="tech in ['React', 'Vue.js', 'TypeScript', 'Node.js', 'Python', 'FastAPI', 'AI']" :key="tech"
                     class="px-3 py-1 bg-gray-800 dark:bg-gray-700 text-gray-300 rounded-full text-sm border border-gray-700 hover:border-primary transition-colors duration-300">
                 {{ tech }}
               </span>
@@ -73,8 +73,8 @@
 
           <div data-aos="fade-right" data-aos-delay="600">
             <p class="text-gray-400 dark:text-gray-500 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Apaixonado por criar experiências digitais incríveis. Especializado em desenvolvimento
-              frontend, combinando design moderno com código limpo e eficiente.
+              Apaixonado por criar experiências digitais incríveis e ferramentas de IA para programação.
+              Especializado em desenvolvimento full stack, combinando design moderno, código limpo e inteligência artificial.
             </p>
           </div>
 

@@ -15,7 +15,7 @@
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-6 sm:gap-8 justify-center">
         <div
           v-for="(project, index) in Projects"
           :key="project.id"
@@ -119,36 +119,25 @@ AOS.init({
 const Projects = ref([
   {
     id: 1,
+    category: 'ai & web development',
+    image: '/image copy 3.png',
+    title: 'CodeMentor - IA para Programação',
+    description:
+      'Assistente especializado em lógica de programação construído com FastAPI e Groq API. Com respostas em português, interface responsiva e deploy no Railway.',
+    technologies: ['Python', 'FastAPI', 'Groq API', 'Railway', 'Docker'],
+    gitURL: 'https://github.com/vibrazzi/code-mentor',
+    webURL: 'https://code-mentor.up.railway.app/', // TODO: Update with actual URL
+  },
+  {
+    id: 2,
     category: 'web development',
-    image: '/SiteVinhos.png',
+    image: '/image copy 2.png',
     title: 'Vitrine de Vinhos Premium',
     description:
       'Site desenvolvido com para exibir uma vitrine de vinhos da W Lounge Premium, combinando estética sofisticada com funcionalidade intuitiva.',
     technologies: ['Vue.js 3', 'Vuex', 'JavaScript', 'CSS3'],
     gitURL: 'https://github.com/vibrazzi/vitrine-vinhos',
     webURL: 'https://vitrine-vinhos.vercel.app/',
-  },
-  {
-    id: 2,
-    category: 'web development',
-    image: '/TELALOGIN.png',
-    title: 'Tela de Login React',
-    description:
-      'Interface moderna de autenticação desenvolvida com React, focando em experiência do usuário e design responsivo.',
-    technologies: ['React', 'Vite', 'JavaScript', 'CSS3'],
-    gitURL: 'https://github.com/vibrazzi/tela-React-Login',
-    webURL: 'https://tela-react-login.vercel.app/',
-  },
-  {
-    id: 3,
-    category: 'web development',
-    image: '/LOGINPAGE.png',
-    title: 'Login Page Angular',
-    description:
-      'Página de login elegante e funcional desenvolvida com Angular, implementando boas práticas de TypeScript e design moderno.',
-    technologies: ['Angular', 'SASS', 'TypeScript', 'Figma'],
-    gitURL: 'https://github.com/vibrazzi/LoginPage',
-    webURL: 'https://login-page-six-livid.vercel.app/login',
   },
 ])
 </script>

@@ -20,7 +20,7 @@
                 <div class="h-0.5 w-0 bg-gradient-to-r from-primary to-pink-500 transition-all duration-500 group-hover:w-full"></div>
               </div>
               <p class="text-gray-400 text-sm leading-relaxed">
-                Desenvolvedor Front-End apaixonado por criar experiências digitais incríveis e interfaces que encantam.
+                Desenvolvedor Full Stack apaixonado por criar experiências digitais incríveis, interfaces que encantam e ferramentas de IA para programação.
               </p>
               <div class="flex items-center space-x-2 pt-2">
                 <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
