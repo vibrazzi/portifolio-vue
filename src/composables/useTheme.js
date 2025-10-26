@@ -30,7 +30,7 @@ export function useTheme() {
     if (savedTheme) {
       isDark.value = savedTheme === 'dark'
     } else {
-      isDark.value = window.matchMedia('(prefers-color-scheme: dark)').matches
+      isDark.value = globalThis.matchMedia('(prefers-color-scheme: dark)').matches
     }
   }
 

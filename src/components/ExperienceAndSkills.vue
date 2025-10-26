@@ -295,10 +295,10 @@ const additionalTechs = ref([
 onMounted(() => {
   setTimeout(() => {
     const progressBars = document.querySelectorAll(".skill-progress");
-    progressBars.forEach((bar) => {
-      const width = bar.getAttribute("data-width");
+    for (const bar of progressBars) {
+      const width = bar.dataset.width;
       bar.style.width = width;
-    });
+    }
   }, 500);
 });
 </script>
@@ -544,8 +544,6 @@ onMounted(() => {
 .skill-progress {
   box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
 }
-
-/* Responsive adjustments */
 @media (max-width: 1024px) {
   .experience-card .ml-16 {
     margin-left: 0;

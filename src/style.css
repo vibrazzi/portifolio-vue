@@ -80,11 +80,6 @@ html, body {
   }
 }
 
-* {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
 img, iframe, video, embed, object {
   max-width: 100%;
   height: auto;

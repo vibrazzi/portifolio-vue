@@ -120,10 +120,10 @@
                   src="https://open.spotify.com/embed/track/7HdL53DrtK9p1zqc6JZ3XY?utm_source=generator"
                   width="100%"
                   height="352"
-                  frameBorder="0"
                   allowfullscreen=""
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"
+                  title="Spotify Track: Música 1"
                   class="w-full rounded-xl shadow-2xl transition-transform duration-300 group-hover:scale-[1.02]">
                 </iframe>
               </div>
@@ -138,10 +138,10 @@
                   src="https://open.spotify.com/embed/track/3C4AUuNwYPjGQgyE7YhnGq?utm_source=generator"
                   width="100%"
                   height="352"
-                  frameBorder="0"
                   allowfullscreen=""
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"
+                  title="Spotify Track: Música 2"
                   class="w-full rounded-xl shadow-2xl transition-transform duration-300 group-hover:scale-[1.02]">
                 </iframe>
               </div>

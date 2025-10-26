@@ -170,20 +170,4 @@ AOS.init({
 .contact-card {
   will-change: transform;
 }
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.dark .contact-card:hover {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
-              0 0 20px rgba(245, 158, 11, 0.1);
-}
 </style>

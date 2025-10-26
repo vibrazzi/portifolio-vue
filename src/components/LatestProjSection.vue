@@ -126,7 +126,7 @@ const Projects = ref([
       'Assistente especializado em lógica de programação construído com FastAPI e Groq API. Com respostas em português, interface responsiva e deploy no Railway.',
     technologies: ['Python', 'FastAPI', 'Groq API', 'Railway', 'Docker'],
     gitURL: 'https://github.com/vibrazzi/code-mentor',
-    webURL: 'https://code-mentor.up.railway.app/', // TODO: Update with actual URL
+    webURL: 'https://code-mentor.up.railway.app/',
   },
   {
     id: 2,
