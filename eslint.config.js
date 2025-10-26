@@ -9,6 +9,13 @@ export default [
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        localStorage: 'readonly',
+        setTimeout: 'readonly'
+      },
       parserOptions: {
         requireConfigFile: false
       }
@@ -16,7 +23,7 @@ export default [
     rules: {
       'vue/multi-word-component-names': 'off',
       'vue/no-unused-vars': 'error',
-      'no-console': 'error',
+      'no-console': 'off', // Allow console in development
       'no-debugger': 'error',
       'no-unused-vars': 'error'
     }

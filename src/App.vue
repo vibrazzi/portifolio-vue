@@ -28,9 +28,6 @@
 
 <script setup>
 import { defineAsyncComponent, onMounted } from 'vue'
-import { useTheme } from './composables/useTheme'
-
-const { isDark } = useTheme()
 
 const NavBar = defineAsyncComponent(() => import('@/components/NavBar.vue'))
 const HeroSection = defineAsyncComponent(() => import('@/components/HeroSection.vue'))

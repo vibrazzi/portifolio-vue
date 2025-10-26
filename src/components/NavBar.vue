@@ -82,7 +82,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref } from 'vue'
 import ThemeToggle from './ThemeToggle.vue'
 
 const Menu = ref([
