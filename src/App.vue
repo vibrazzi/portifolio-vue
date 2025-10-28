@@ -4,7 +4,7 @@
       <template #default>
         <div>
           <NavBar />
-            <main class="lg:pt-32">
+          <main>
             <HeroSection />
             <CodeMentorSection />
             <ServicesSection />

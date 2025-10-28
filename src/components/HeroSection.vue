@@ -1,5 +1,5 @@
 <template>
-  <section class="relative w-full min-h-screen flex items-center overflow-hidden bg-gray-900 dark:bg-gray-950 transition-colors duration-300"
+  <section class="relative w-full min-h-screen flex items-start lg:items-center overflow-hidden bg-gray-900 dark:bg-gray-950 transition-colors duration-300 pt-24 lg:pt-32 pb-16"
            data-aos="fade-up" data-aos-duration="1000">
     <div class="absolute inset-0">
       <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-primary/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -39,11 +39,11 @@
             <div class="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-12 h-12 sm:w-14 sm:h-14 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce">
               React
             </div>
-            <div class="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-12 h-12 sm:w-14 sm:h-14 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce" style="animation-delay: 1s;">
+            <div class="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 w-16 h-16 sm:w-20 sm:h-20 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce" style="animation-delay: 1s;">
               Python
             </div>
             <div class="absolute -top-2 -left-6 sm:-top-4 sm:-left-10 w-12 h-12 sm:w-14 sm:h-14 bg-primary rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce" style="animation-delay: 1s;">
-              Vue
+              IA
             </div>
           </div>
         </div>
@@ -61,10 +61,12 @@
 
           <div data-aos="fade-right" data-aos-delay="400">
             <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 dark:text-gray-400 font-light mb-4">
-              Desenvolvedor Full Stack & IA
+              Desenvolvedor Full Stack | Especializando em IA Generativa
             </h2>
             <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-6">
-              <span v-for="tech in ['React', 'Vue.js', 'TypeScript', 'Node.js', 'Python', 'FastAPI', 'AI']" :key="tech"
+              <span
+                v-for="tech in ['GenAIOps', 'LLMs', 'Python', 'FastAPI', 'Vue.js', 'React', 'CI/CD', 'Arquitetura Multiagente']"
+                :key="tech"
                     class="px-3 py-1 bg-gray-800 dark:bg-gray-700 text-gray-300 rounded-full text-sm border border-gray-700 hover:border-primary transition-colors duration-300">
                 {{ tech }}
               </span>
@@ -72,28 +74,30 @@
           </div>
 
           <div data-aos="fade-right" data-aos-delay="600">
-            <p class="text-gray-400 dark:text-gray-500 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Apaixonado por criar experiências digitais incríveis e ferramentas de IA para programação.
-              Especializado em desenvolvimento full stack, combinando design moderno, código limpo e inteligência artificial.
-            </p>
+            <div class="space-y-4 text-gray-400 dark:text-gray-500 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              <p>
+                Especializando-se com GenAIOps e IA Generativa, aplicando experiência em desenvolvimento full stack, arquiteturas
+multiagente e práticas de CI/CD para implementar soluções robustas baseadas em LLMs e infraestrutura cloud.
+              </p>
+            </div>
           </div>
 
           <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4"
                data-aos="fade-up" data-aos-delay="800">
             <button class="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary to-pink-500 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/25 hover:scale-105 transform text-sm sm:text-base">
-              <span class="relative z-10">
-                <a href="#contact" class="flex items-center justify-center space-x-2">
-                  <span>Entre em Contato</span>
-                  <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </a>
-              </span>
+            <span class="relative z-10">
+              <a href="#contact" class="flex items-center justify-center space-x-2">
+                <span>Entre em Contato</span>
+                <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+            </span>
               <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
 
             <button class="group relative px-6 sm:px-8 py-3 sm:py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 transform text-sm sm:text-base">
-              <a href="/Profile Webert Souza.pdf" download="Profile_Webert_Fernandes" class="flex items-center justify-center space-x-2">
+              <a href="/Curriculo-Webert-Fernandes.pdf" download="Curriculo_Webert_Fernandes" class="flex items-center justify-center space-x-2">
                 <svg class="w-5 h-5 transform group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                 </svg>
@@ -142,7 +146,7 @@ const socialLinks = ref([
   },
   {
     name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/webert-fernandes-2b6463253/',
+    url: 'https://linkedin.com/in/webertfernandes',
     icon: 'fab fa-linkedin'
   },
   {
