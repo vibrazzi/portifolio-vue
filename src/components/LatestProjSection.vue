@@ -123,10 +123,10 @@ const Projects = ref([
     image: '/image copy 3.png',
     title: 'CodeMentor - IA para Programação',
     description:
-      'Assistente especializado em lógica de programação construído com FastAPI e Groq API. Com respostas em português, interface responsiva e deploy no Railway.',
-    technologies: ['Python', 'FastAPI', 'Groq API', 'Railway', 'Docker'],
+      'Assistente de lógica, SSE em tempo real e rastreabilidade completa do aprendizado. Deploy automatizado via CI/CD no Railway com validações Pydantic.',
+    technologies: ['Python 3.12', 'FastAPI', 'Groq API', 'Docker', 'Railway', 'Vanilla JS'],
     gitURL: 'https://github.com/vibrazzi/code-mentor',
-    webURL: 'https://code-mentor.up.railway.app/',
+    webURL: 'https://code-mentor-production-4d2f.up.railway.app',
   },
   {
     id: 2,
@@ -134,8 +134,8 @@ const Projects = ref([
     image: '/image copy 2.png',
     title: 'Vitrine de Vinhos Premium',
     description:
-      'Site desenvolvido com para exibir uma vitrine de vinhos da W Lounge Premium, combinando estética sofisticada com funcionalidade intuitiva.',
-    technologies: ['Vue.js 3', 'Vuex', 'JavaScript', 'CSS3'],
+      'Experiência headless para W Premium Lounge com Vue 3, Vuex e integrações Express/FastAPI entregando curadoria dinâmica e indicadores de performance.',
+    technologies: ['Vue 3', 'Vuex', 'Express', 'FastAPI', 'Tailwind CSS'],
     gitURL: 'https://github.com/vibrazzi/vitrine-vinhos',
     webURL: 'https://vitrine-vinhos.vercel.app/',
   },

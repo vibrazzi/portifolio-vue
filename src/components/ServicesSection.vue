@@ -27,8 +27,8 @@
         <p
           class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
         >
-          Ofereço soluções completas para transformar suas ideias em
-          experiências digitais extraordinárias
+          Projetos end-to-end com IA generativa, engenharia full stack e práticas de DevOps que sustentam escala,
+          observabilidade e resultado de negócio.
         </p>
       </div>
 
@@ -98,27 +98,6 @@
               </ul>
             </div>
 
-            <div class="mt-auto">
-              <button
-                class="w-full px-6 py-3 bg-transparent border-2 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-xl font-medium hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300 group-hover:border-primary group-hover:text-primary"
-              >
-                Saiba Mais
-                <svg
-                  class="w-4 h-4 inline-block ml-2 transform group-hover:translate-x-1 transition-transform duration-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-
             <div
               class="absolute inset-0 bg-gradient-to-br from-primary/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
             ></div>
@@ -143,36 +122,41 @@ AOS.init({
 const services = ref([
   {
     id: 1,
-    icon: "fas fa-code",
-    name: "Desenvolvimento Frontend",
+    icon: "fas fa-brain",
+    name: "GenAIOps & Arquitetura LLM",
     description:
-      "Criação de interfaces modernas, responsivas e interativas utilizando as mais recentes tecnologias web.",
+      "Estruturo produtos baseados em IA generativa com pipelines auditáveis, segurança e governança de modelos.",
     features: [
-      "React & Vue.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Animações Avançadas",
+      "Arquiteturas multiagente",
+      "Avaliação e guardrails de LLMs",
+      "Ingestão e vetorização de dados",
+      "Deploy resiliente com observabilidade",
     ],
   },
   {
     id: 2,
-    icon: "fas fa-plug",
-    name: "Integração de APIs",
+    icon: "fas fa-layer-group",
+    name: "Plataformas Full Stack",
     description:
-      "Integração eficiente com APIs externas e desenvolvimento de soluções de comunicação entre sistemas.",
-    features: ["APIs REST", "GraphQL", "Webhooks", "Microserviços"],
+      "Construo experiências completas, da storefront às integrações backend, alinhadas a performance e SEO.",
+    features: [
+      "Apps Shopify e headless commerce",
+      "React, Vue 3 e componentes web",
+      "Integrações REST/GraphQL",
+      "UX responsiva orientada a métricas",
+    ],
   },
   {
     id: 3,
-    icon: "fas fa-rocket",
-    name: "Otimização & Performance",
+    icon: "fas fa-cloud",
+    name: "Cloud & DevOps",
     description:
-      "Otimização de aplicações para máxima performance e melhores práticas de SEO.",
+      "Automação de infraestrutura, monitoramento contínuo e fluxos CI/CD que aceleram releases confiáveis.",
     features: [
-      "Core Web Vitals",
-      "SEO",
-      "Bundle Optimization",
-      "Lighthouse Score",
+      "Pipelines CI/CD GitHub Actions",
+      "Containers Docker e runtime serverless",
+      "SRE: métricas, logs e alertas",
+      "Playbooks de incidentes 24/7",
     ],
   },
 ]);
@@ -202,16 +186,10 @@ const services = ref([
   background-size: 200% 200%;
 }
 
-.service-card:hover .fa-code {
+.service-card:hover .fa-brain,
+.service-card:hover .fa-layer-group,
+.service-card:hover .fa-cloud {
   animation: code-bounce 1s ease-in-out infinite alternate;
-}
-
-.service-card:hover .fa-server {
-  animation: server-pulse 2s ease-in-out infinite;
-}
-
-.service-card:hover .fa-mobile-alt {
-  animation: mobile-shake 0.5s ease-in-out infinite;
 }
 
 .service-card:hover .fa-paint-brush {

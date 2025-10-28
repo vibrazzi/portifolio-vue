@@ -14,7 +14,7 @@
           </span>
         </h2>
         <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-          Estou sempre aberto a novas oportunidades e colaborações. Entre em contato!
+          Vamos conversar sobre GenAIOps, produtos full stack e como a IA generativa pode gerar impacto real no seu negócio.
         </p>
       </div>
 

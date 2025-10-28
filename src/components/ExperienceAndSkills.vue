@@ -145,14 +145,24 @@
                         {{ experience.date }}
                       </div>
 
-                      <p class="text-gray-400 text-sm leading-relaxed">
-                        {{ experience.description }}
-                      </p>
+              <p v-if="experience.description" class="text-gray-400 text-sm leading-relaxed">
+                {{ experience.description }}
+              </p>
 
-                      <div class="mt-3 flex flex-wrap gap-2">
-                        <span
-                          v-for="skill in experience.skills"
-                          :key="skill"
+              <ul
+                v-if="experience.highlights && experience.highlights.length"
+                class="mt-3 space-y-2 text-gray-400 text-sm leading-relaxed"
+              >
+                <li v-for="item in experience.highlights" :key="item" class="flex items-start">
+                  <i class="fas fa-circle text-primary text-[0.45rem] mr-2 mt-1.5"></i>
+                  <span>{{ item }}</span>
+                </li>
+              </ul>
+
+              <div class="mt-3 flex flex-wrap gap-2">
+                <span
+                  v-for="skill in experience.skills"
+                  :key="skill"
                           class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
                         >
                           {{ skill }}
@@ -188,108 +198,84 @@ AOS.init({
 const Skills = ref([
   {
     id: 1,
-    name: "HTML & CSS",
-    width: "100%",
-    icon: "fab fa-html5",
-    description: "Semântica moderna, CSS Grid, Flexbox, animações",
+    name: "IA Generativa & MLOps",
+    width: "95%",
+    icon: "fas fa-brain",
+    description: "Pipelines GenAIOps, guardrails, monitoramento e avaliação contínua.",
   },
   {
     id: 2,
-    name: "React",
-    width: "90%",
-    icon: "fab fa-react",
-    description: "Hooks, Context API, Redux, Next.js",
+    name: "Desenvolvimento Full Stack",
+    width: "92%",
+    icon: "fas fa-layer-group",
+    description: "Shopify apps, React, Vue 3, Node/FastAPI e integrações de parceiros.",
   },
   {
     id: 3,
-    name: "JavaScript",
-    width: "98%",
-    icon: "fab fa-js-square",
-    description: "ES6+, Async/Await, APIs, DOM manipulation",
+    name: "Cloud & DevOps",
+    width: "88%",
+    icon: "fas fa-cloud",
+    description: "CI/CD GitHub Actions, Docker, SRE, métricas e observabilidade end-to-end.",
   },
   {
     id: 4,
-    name: "TypeScript",
-    width: "95%",
-    icon: "fas fa-code",
-    description: "Tipagem estática, interfaces, generics",
+    name: "Python & FastAPI",
+    width: "90%",
+    icon: "fab fa-python",
+    description: "APIs performáticas, validações Pydantic, streaming SSE e automação.",
   },
   {
     id: 5,
-    name: "Vue.js",
-    width: "70%",
-    icon: "fab fa-vuejs",
-    description: "Composition API, Pinia, Vue Router",
-  },
-  {
-    id: 6,
-    name: "Python",
+    name: "React & Vue.js",
     width: "85%",
-    icon: "fab fa-python",
-    description: "FastAPI, Flask, automação, scripts",
-  },
-  {
-    id: 7,
-    name: "Inteligência Artificial",
-    width: "75%",
-    icon: "fas fa-robot",
-    description: "Groq API, integração LLM, chatbots",
+    icon: "fab fa-vuejs",
+    description: "Componentização, SSR, design systems e UX responsiva orientada a dados.",
   },
 ]);
 
 const Experiences = ref([
   {
     id: 1,
-    role: "Desenvolvedor Front-End",
+    role: "Desenvolvedor Full Stack",
     company: "87 Labs",
     date: "Jul 2025 - Presente",
     iconClass: "fas fa-laptop-code",
-    description:
-      "Desenvolvimento de aplicações web modernas utilizando React e TypeScript, focando em performance e experiência do usuário.",
-    skills: ["React", "TypeScript", "Tailwind CSS", "Next.js"],
+    highlights: [
+      "Construção end-to-end de apps Shopify cobrindo storefront, backend Node/Go e integrações com parceiros.",
+      "Componentes com LIT, React, Liquid e JavaScript conectados a APIs REST/GraphQL e automações serverless.",
+      "Arquitetura full stack observável com métricas, logs e automações de alerta em tempo real.",
+      "Otimização contínua de performance e UX responsiva alinhada a SEO e objetivos comerciais.",
+    ],
+    skills: ["React", "LIT", "Node.js", "Go", "Shopify", "CI/CD"],
   },
   {
     id: 2,
-    role: "Desenvolvedor Full Stack & IA",
-    company: "CodeMentor (Projeto Pessoal)",
-    date: "2025 - Presente",
-    iconClass: "fas fa-robot",
-    description:
-      "Desenvolvimento de assistente de lógica de programação com FastAPI e Groq API, oferecendo mentoria ultra-rápida (~300ms) e interface responsiva.",
-    skills: ["Python", "FastAPI", "Groq API", "Railway", "Docker"],
-  },
-  {
-    id: 3,
-    role: "Desenvolvedor Front-End",
-    company: "W Premium Lounge (Freelancer)",
-    date: "Jan 2024 - Jun 2025",
+    role: "Desenvolvedor Full Stack",
+    company: "W Premium Lounge",
+    date: "Jan 2024 - Mai 2025",
     iconClass: "fas fa-code",
-    skills: ["Vue.js", "CSS", "JavaScript", "UI/UX"],
-  },
-  {
-    id: 4,
-    role: "Suporte Técnico",
-    company: "Netflix",
-    date: "Jan 2020 - Dez 2023",
-    iconClass: "fas fa-headset",
-    description:
-      "Atendimento ao cliente e resolução de problemas técnicos, desenvolvendo habilidades de comunicação e empatia.",
-    skills: ["Atendimento", "Resolução de Problemas", "Comunicação"],
+    highlights: [
+      "Delivery de UI com Vue 3, Vuex e componentes reutilizáveis integrados a APIs Express/Node e FastAPI.",
+      "Criação de vitrine de vinhos com UX interativa e recomendações personalizadas a partir de dados de clientes.",
+      "Pipelines full stack monitorando usabilidade, performance e acessibilidade com inspeções recorrentes.",
+      "Manutenção de infraestrutura Docker/CI e gestão de ambientes com banco de dados gerenciado.",
+    ],
+    skills: ["Vue 3", "Vuex", "FastAPI", "Express", "Docker", "UX"],
   },
 ]);
 
 const additionalTechs = ref([
-  "Node.js",
-  "Git",
-  "Figma",
-  "Sass",
-  "Vite",
-  "Playwright",
-  "Storybook",
-  "FastAPI",
-  "Groq API",
-  "Railway",
+  "LLMs",
+  "Arquitetura Multiagente",
+  "TypeScript",
+  "JavaScript",
   "Docker",
+  "Railway",
+  "Groq API",
+  "Ollama",
+  "CI/CD",
+  "REST APIs",
+  "Git",
 ]);
 
 onMounted(() => {
@@ -390,19 +376,19 @@ onMounted(() => {
 }
 
 /* Icon hover animations */
-.skill-item:hover .fa-html5 {
+.skill-item:hover .fa-brain {
   animation: htmlBounce 0.6s ease-in-out;
 }
 
-.skill-item:hover .fa-react {
+.skill-item:hover .fa-layer-group {
   animation: reactSpin 1s ease-in-out;
 }
 
-.skill-item:hover .fa-js-square {
+.skill-item:hover .fa-cloud {
   animation: jsPulse 0.8s ease-in-out;
 }
 
-.skill-item:hover .fa-code {
+.skill-item:hover .fa-python {
   animation: codeBlink 1s ease-in-out;
 }
 
