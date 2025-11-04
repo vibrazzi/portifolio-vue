@@ -146,7 +146,7 @@ const socialLinks = ref([
   },
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com/in/webertfernandes',
+    url: 'https://www.linkedin.com/in/webert-fernandes-2b6463253/',
     icon: 'fab fa-linkedin'
   },
   {
