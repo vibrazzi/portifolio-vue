@@ -14,8 +14,8 @@
           </span>
         </h2>
         <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4">
-          Plataforma de mentoria inteligente que combina FastAPI, Groq API e fluxos multiagente para entregar respostas em tempo real,
-          validações contextuais e jornadas de ensino personalizadas.
+          Projeto de mentoria inteligente que eu criei combinando FastAPI, Groq API e fluxos multiagente para entregar respostas em tempo real,
+          validações contextuais e jornadas de ensino personalizadas em Logica de Programação.
         </p>
       </div>
 
