@@ -65,7 +65,7 @@
             </h2>
             <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-6">
               <span
-                v-for="tech in ['GenAIOps', 'LLMs', 'Python', 'FastAPI', 'React', 'Vue.js', 'Shopify', 'CI/CD', 'Arquitetura Multiagente']"
+                v-for="tech in ['GenAIOps', 'LLMs', 'Python', 'FastAPI', 'React', 'Shopify', 'CI/CD', 'Arquitetura Multiagente']"
                 :key="tech"
                     class="px-3 py-1 bg-gray-800 dark:bg-gray-700 text-gray-300 rounded-full text-sm border border-gray-700 hover:border-primary transition-colors duration-300">
                 {{ tech }}
