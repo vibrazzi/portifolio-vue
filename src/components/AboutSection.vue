@@ -88,12 +88,12 @@
           <div class="relative bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
             <div class="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
-                Sou movido por entregar produtos inteligentes que combinam IA generativa, engenharia full stack e rigor operacional.
-                Atuo desde o discovery até a sustentação, orquestrando times e tecnologias para acelerar ciclos de entrega com qualidade.
+                Sou movido por aprender e construir produtos que combinam IA generativa com desenvolvimento full stack.
+                Trabalho com tecnologias modernas aplicando práticas de CI/CD para entregar soluções de qualidade.
               </p>
               <p>
-                Minha jornada recente inclui construir apps Shopify na 87 Labs, evoluir o ecossistema digital da W Premium Lounge
-                e liderar o CodeMentor AI — plataforma de mentoria assistida por LLMs.
+                Atualmente desenvolvo soluções de IA na 87 Labs integrando LLMs e arquiteturas RAG com LangChain.
+                Também criei o CodeMentor AI — plataforma de mentoria assistida por LLMs com streaming SSE em tempo real.
               </p>
             </div>
             <ul class="mt-6 space-y-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -276,36 +276,36 @@ const education = ref([
 const coreTechs = ref([
   'Python',
   'FastAPI',
+  'LangChain',
   'React',
-  'Vue.js',
   'LLMs',
   'Docker',
   'Git',
-  'JavaScript',
   'TypeScript',
   'REST APIs',
   'CI/CD',
-])
+]);
 
 const aboutHighlights = ref([
-  'Experiência recente com apps Shopify utilizando React, LIT e integrações REST/GraphQL.',
-  'Especialização em Vue 3, Vuex e APIs Node/FastAPI para experiências personalizadas.',
-  'Foco em construir produtos observáveis com métricas, logs e automações CI/CD.',
-])
+  'Integração de LLMs com arquiteturas RAG usando LangChain para sistemas inteligentes.',
+  'Pipelines de dados para embeddings e orquestração de modelos em produção.',
+  'APIs seguras com FastAPI, observabilidade via Grafana e conformidade com LGPD.',
+]);
 
 const project = ref({
-  description: 'Sistema de mentoria inteligente que entrega avaliações de código, recomendações de estudo e feedback guiado para lógica de programação.',
+  description: 'Sistema de mentoria inteligente para ensino de lógica de programação com alta performance e UX otimizada.',
   highlights: [
-    'Streaming SSE em tempo real e agentes especializados por nível de dificuldade.',
-    'Pipelines CI/CD no Railway com validações Pydantic e cobertura Pytest.',
-    'Containerização Docker e provisionamento automatizado para escalar sob demanda.',
+    'SSE em tempo real',
+    'CI/CD no Railway',
+    'Validação Pydantic',
+    'Containerização Docker',
   ],
-  stack: ['Python 3.12', 'FastAPI', 'Groq API', 'Ollama', 'Docker', 'Railway', 'Vanilla JS'],
+  stack: ['Python 3.12', 'SSE', 'FastAPI', 'Groq API', 'Ollama', 'Docker', 'Vanilla JS', 'Railway', 'CI/CD'],
   links: {
     github: 'https://github.com/vibrazzi/code-mentor',
     demo: 'https://code-mentor-production-4d2f.up.railway.app',
   },
-})
+});
 </script>
 
 <style scoped>
