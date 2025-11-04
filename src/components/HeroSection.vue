@@ -65,7 +65,7 @@
             </h2>
             <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-6">
               <span
-                v-for="tech in ['GenAIOps', 'LLMs', 'Python', 'FastAPI', 'Vue.js', 'React', 'CI/CD', 'Arquitetura Multiagente']"
+                v-for="tech in ['GenAIOps', 'LLMs', 'Python', 'FastAPI', 'React', 'Vue.js', 'Shopify', 'CI/CD', 'Arquitetura Multiagente']"
                 :key="tech"
                     class="px-3 py-1 bg-gray-800 dark:bg-gray-700 text-gray-300 rounded-full text-sm border border-gray-700 hover:border-primary transition-colors duration-300">
                 {{ tech }}
@@ -76,8 +76,8 @@
           <div data-aos="fade-right" data-aos-delay="600">
             <div class="space-y-4 text-gray-400 dark:text-gray-500 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
               <p>
-                Especializando-se com GenAIOps e IA Generativa, aplicando experiência em desenvolvimento full stack, arquiteturas
-multiagente e práticas de CI/CD para implementar soluções robustas baseadas em LLMs e infraestrutura cloud.
+                Trabalhando com GenAIOps e IA Generativa, aplicando conhecimentos em desenvolvimento full stack, arquiteturas
+multiagente e práticas de CI/CD para implementar soluções baseadas em LLMs.
               </p>
             </div>
           </div>
@@ -97,7 +97,7 @@ multiagente e práticas de CI/CD para implementar soluções robustas baseadas e
             </button>
 
             <button class="group relative px-6 sm:px-8 py-3 sm:py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 transform text-sm sm:text-base">
-              <a href="/Curriculo-Webert-Fernandes.pdf" download="Curriculo_Webert_Fernandes" class="flex items-center justify-center space-x-2">
+              <a href="/curriculo_Webert_Dev.pdf" download="Curriculo_Webert_Fernandes" class="flex items-center justify-center space-x-2">
                 <svg class="w-5 h-5 transform group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                 </svg>
