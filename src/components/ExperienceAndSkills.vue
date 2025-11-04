@@ -212,24 +212,17 @@ const Skills = ref([
   },
   {
     id: 3,
-    name: "Cloud & DevOps",
-    width: "88%",
-    icon: "fas fa-cloud",
-    description: "CI/CD GitHub Actions, Docker, SRE, métricas e observabilidade end-to-end.",
-  },
-  {
-    id: 4,
     name: "Python & FastAPI",
     width: "90%",
     icon: "fab fa-python",
     description: "APIs performáticas, validações Pydantic, streaming SSE e automação.",
   },
   {
-    id: 5,
+    id: 4,
     name: "React & Vue.js",
-    width: "85%",
+    width: "65%",
     icon: "fab fa-vuejs",
-    description: "Componentização, SSR, design systems e UX responsiva orientada a dados.",
+    description: "Componentização, design systems e UX responsiva orientada a dados.",
   },
 ]);
 
@@ -237,35 +230,36 @@ const Experiences = ref([
   {
     id: 1,
     role: "Desenvolvedor Full Stack",
-    company: "87 Labs",
+    company: "87 Labs - Remoto",
     date: "Jul 2025 - Presente",
     iconClass: "fas fa-laptop-code",
     highlights: [
-      "Construção end-to-end de apps Shopify cobrindo storefront, backend Node/Go e integrações com parceiros.",
-      "Componentes com LIT, React, Liquid e JavaScript conectados a APIs REST/GraphQL e automações serverless.",
-      "Arquitetura full stack observável com métricas, logs e automações de alerta em tempo real.",
-      "Otimização contínua de performance e UX responsiva alinhada a SEO e objetivos comerciais.",
+      "Desenvolvimento de soluções de IA, integrando LLMs para otimizar a experiência do cliente em plataformas de e-commerce.",
+      "Implementação de arquiteturas RAG com LangChain para potencializar sistemas de busca e chatbots inteligentes.",
+      "Criação e manutenção de pipelines de dados para processamento de embeddings e orquestração de modelos.",
+      "Desenvolvimento de APIs seguras com Python/FastAPI, garantindo observabilidade com Grafana e conformidade com a LGPD.",
     ],
-    skills: ["React", "LIT", "Node.js", "Go", "Shopify", "CI/CD"],
+    skills: ["Python", "FastAPI", "LangChain", "LLMs", "RAG", "Docker", "Grafana", "CI/CD"],
   },
   {
     id: 2,
     role: "Desenvolvedor Full Stack",
-    company: "W Premium Lounge",
-    date: "Jan 2024 - Mai 2025",
+    company: "W Premium Lounge - Remoto",
+    date: "Jan 2024 - Jun 2025",
     iconClass: "fas fa-code",
     highlights: [
-      "Delivery de UI com Vue 3, Vuex e componentes reutilizáveis integrados a APIs Express/Node e FastAPI.",
-      "Criação de vitrine de vinhos com UX interativa e recomendações personalizadas a partir de dados de clientes.",
-      "Pipelines full stack monitorando usabilidade, performance e acessibilidade com inspeções recorrentes.",
-      "Manutenção de infraestrutura Docker/CI e gestão de ambientes com banco de dados gerenciado.",
+      "UI com Vue 3, Vuex e componentes reutilizáveis integrados a APIs Express/Node e FastAPI.",
+      "Vitrine de vinhos com UX interativa e recomendações personalizadas.",
+      "Pipelines full stack monitorando usabilidade, performance e acessibilidade.",
+      "Manutenção de infraestrutura Docker/CI e gestão de banco de dados managed.",
     ],
-    skills: ["Vue 3", "Vuex", "FastAPI", "Express", "Docker", "UX"],
+    skills: ["Vue 3", "Vuex", "FastAPI", "Express", "Docker", "Node.js"],
   },
 ]);
 
 const additionalTechs = ref([
   "LLMs",
+  "LangChain",
   "Arquitetura Multiagente",
   "TypeScript",
   "JavaScript",
@@ -276,6 +270,7 @@ const additionalTechs = ref([
   "CI/CD",
   "REST APIs",
   "Git",
+  "Grafana",
 ]);
 
 onMounted(() => {
