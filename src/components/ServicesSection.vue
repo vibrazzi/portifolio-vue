@@ -27,12 +27,15 @@
         <p
           class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
         >
-          Projetos end-to-end com IA generativa, engenharia full stack e práticas de DevOps que sustentam escala,
-          observabilidade e resultado de negócio.
+          Desenvolvimento de aplicações web modernas utilizando JavaScript,
+          TypeScript, React e Vue.js, com foco em usabilidade, performance e
+          integração com plataformas como Shopify.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8"
+      >
         <div
           v-for="(service, index) in services"
           :key="service.id"
@@ -80,7 +83,7 @@
                 <li
                   v-for="feature in service.features"
                   :key="feature"
-                  class="flex items-center justify-center text-sm text-gray-500 dark:text-gray-400"
+                  class="flex items-center justify-start text-sm text-gray-500 dark:text-gray-400"
                 >
                   <svg
                     class="w-4 h-4 text-primary mr-2 flex-shrink-0"
@@ -122,41 +125,41 @@ AOS.init({
 const services = ref([
   {
     id: 1,
-    icon: "fas fa-brain",
-    name: "GenAIOps & Arquitetura LLM",
+    icon: "fas fa-shopping-cart",
+    name: "Desenvolvimento Front-End para E-commerce",
     description:
-      "Estruturo produtos baseados em IA generativa com pipelines auditáveis, segurança e governança de modelos.",
+      "Desenvolvimento de aplicativos e sites para usuários Shopify utilizando LIT, StoryBook, React, Liquid, JavaScript e TypeScript.",
     features: [
-      "Arquiteturas multiagente",
-      "Avaliação e guardrails de LLMs",
-      "Ingestão e vetorização de dados",
-      "Deploy resiliente com observabilidade",
+      "Criação de web components",
+      "Integração com APIs",
+      "Otimização de performance e usabilidade",
+      "Interfaces responsivas",
     ],
   },
   {
     id: 2,
-    icon: "fas fa-layer-group",
-    name: "Plataformas Full Stack",
+    icon: "fas fa-brain",
+    name: "Desenvolvimento de Assistentes de IA",
     description:
-      "Construo experiências completas, da storefront às integrações backend, alinhadas a performance e SEO.",
+      "Criação de assistentes inteligentes, utilizando FastAPI, Groq API e interfaces modernas para experiências interativas.",
     features: [
-      "Apps Shopify e headless commerce",
-      "React, Vue 3 e componentes web",
-      "Integrações REST/GraphQL",
-      "UX responsiva orientada a métricas",
+      "Integração com APIs de IA (Groq, Ollama)",
+      "Respostas rápidas e estruturadas",
+      "Interfaces de chat responsivas",
+      "Deploy e otimização para produção",
     ],
   },
   {
     id: 3,
-    icon: "fas fa-cloud",
-    name: "Cloud & DevOps",
+    icon: "fas fa-plug",
+    name: "Integração e Consumo de APIs",
     description:
-      "Automação de infraestrutura, monitoramento contínuo e fluxos CI/CD que aceleram releases confiáveis.",
+      "Integração de APIs REST, consumo de dados, autenticação e manipulação de estados com JavaScript, TypeScript, React e Vue.js.",
     features: [
-      "Pipelines CI/CD GitHub Actions",
-      "Containers Docker e runtime serverless",
-      "SRE: métricas, logs e alertas",
-      "Playbooks de incidentes 24/7",
+      "Consumo de APIs REST e GraphQL",
+      "Gerenciamento de autenticação e tokens",
+      "Manipulação de estados e dados",
+      "Otimização de requisições e performance",
     ],
   },
 ]);

@@ -145,24 +145,35 @@
                         {{ experience.date }}
                       </div>
 
-              <p v-if="experience.description" class="text-gray-400 text-sm leading-relaxed">
-                {{ experience.description }}
-              </p>
+                      <p
+                        v-if="experience.description"
+                        class="text-gray-400 text-sm leading-relaxed"
+                      >
+                        {{ experience.description }}
+                      </p>
 
-              <ul
-                v-if="experience.highlights && experience.highlights.length"
-                class="mt-3 space-y-2 text-gray-400 text-sm leading-relaxed"
-              >
-                <li v-for="item in experience.highlights" :key="item" class="flex items-start">
-                  <i class="fas fa-circle text-primary text-[0.45rem] mr-2 mt-1.5"></i>
-                  <span>{{ item }}</span>
-                </li>
-              </ul>
+                      <ul
+                        v-if="
+                          experience.highlights && experience.highlights.length
+                        "
+                        class="mt-3 space-y-2 text-gray-400 text-sm leading-relaxed"
+                      >
+                        <li
+                          v-for="item in experience.highlights"
+                          :key="item"
+                          class="flex items-start"
+                        >
+                          <i
+                            class="fas fa-circle text-primary text-[0.45rem] mr-2 mt-1.5"
+                          ></i>
+                          <span>{{ item }}</span>
+                        </li>
+                      </ul>
 
-              <div class="mt-3 flex flex-wrap gap-2">
-                <span
-                  v-for="skill in experience.skills"
-                  :key="skill"
+                      <div class="mt-3 flex flex-wrap gap-2">
+                        <span
+                          v-for="skill in experience.skills"
+                          :key="skill"
                           class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
                         >
                           {{ skill }}
@@ -198,79 +209,101 @@ AOS.init({
 const Skills = ref([
   {
     id: 1,
-    name: "IA Generativa & MLOps",
+    name: "JavaScript & TypeScript",
     width: "95%",
-    icon: "fas fa-brain",
-    description: "Pipelines GenAIOps, guardrails, monitoramento e avaliação contínua.",
+    icon: "fab fa-js-square",
+    description:
+      "Desenvolvimento de aplicações web dinâmicas e tipadas com foco em performance e manutenibilidade.",
   },
   {
     id: 2,
-    name: "Desenvolvimento Full Stack",
-    width: "92%",
-    icon: "fas fa-layer-group",
-    description: "Shopify apps, React, Vue 3, Node/FastAPI e integrações de parceiros.",
+    name: "React & Vue.js",
+    width: "90%",
+    icon: "fab fa-vuejs",
+    description:
+      "Criação de interfaces responsivas e componentes reutilizáveis para experiências de usuário excepcionais.",
   },
   {
     id: 3,
-    name: "Python & FastAPI",
-    width: "90%",
-    icon: "fab fa-python",
-    description: "APIs performáticas, validações Pydantic, streaming SSE e automação.",
+    name: "Integração de APIs",
+    width: "85%",
+    icon: "fas fa-plug",
+    description:
+      "Conexão eficiente de sistemas backend e frontend, garantindo segurança e otimização de dados.",
   },
   {
     id: 4,
-    name: "React & Vue.js",
-    width: "65%",
-    icon: "fab fa-vuejs",
-    description: "Componentização, design systems e UX responsiva orientada a dados.",
+    name: "Desenvolvimento Web",
+    width: "93%",
+    icon: "fas fa-layer-group",
+    description:
+      "Análise de requisitos, arquitetura de sistemas e otimização de performance em projetos completos.",
+  },
+  {
+    id: 5,
+    name: "Desenvolvimento de Plataformas de IA",
+    width: "50%",
+    icon: "fas fa-brain",
+    description:
+      "Criação de sistemas de mentoria assistida por LLMs, como o CodeMentor AI, com streaming em tempo real.",
   },
 ]);
 
 const Experiences = ref([
   {
     id: 1,
-    role: "Desenvolvedor Full Stack",
+    role: "Analista de Sistemas",
     company: "87 Labs - Remoto",
-    date: "Jul 2025 - Presente",
+    date: "Jul 2024 - Presente",
     iconClass: "fas fa-laptop-code",
     highlights: [
-      "Desenvolvimento de soluções de IA, integrando LLMs para otimizar a experiência do cliente em plataformas de e-commerce.",
-      "Implementação de arquiteturas RAG com LangChain para potencializar sistemas de busca e chatbots inteligentes.",
-      "Criação e manutenção de pipelines de dados para processamento de embeddings e orquestração de modelos.",
-      "Desenvolvimento de APIs seguras com Python/FastAPI, garantindo observabilidade com Grafana e conformidade com a LGPD.",
+      "Desenvolvimento de aplicações web responsivas utilizando JavaScript, TypeScript, React e Vue.js.",
+      "Criação de web components reutilizáveis com LIT para interfaces modulares e performáticas.",
+      "Integração de soluções com a plataforma Shopify, criando apps e funcionalidades personalizadas.",
+      "Análise de requisitos e definição de arquiteturas robustas para otimização de performance e usabilidade.",
+      "Colaboração em projetos que envolvem APIs, bancos de dados e interfaces de usuário interativas.",
     ],
-    skills: ["Python", "FastAPI", "LangChain", "LLMs", "RAG", "Docker", "Grafana", "CI/CD"],
+    skills: [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Vue.js",
+      "LIT",
+      "Shopify",
+      "APIs",
+      "HTML",
+      "CSS",
+    ],
   },
   {
     id: 2,
-    role: "Desenvolvedor Full Stack",
+    role: "Desenvolvedor Web",
     company: "W Premium Lounge - Remoto",
-    date: "Jan 2024 - Jun 2025",
+    date: "Jan 2024 - Jun 2024",
     iconClass: "fas fa-code",
     highlights: [
-      "UI com Vue 3, Vuex e componentes reutilizáveis integrados a APIs Express/Node e FastAPI.",
-      "Vitrine de vinhos com UX interativa e recomendações personalizadas.",
-      "Pipelines full stack monitorando usabilidade, performance e acessibilidade.",
-      "Manutenção de infraestrutura Docker/CI e gestão de banco de dados managed.",
+      "Desenvolvimento de sistema de cardápio digital interativo com Vue.js e integração de APIs.",
+      "Criação de interfaces responsivas e otimizadas para dispositivos móveis e desktop.",
+      "Implementação de funcionalidades que melhoram a experiência do usuário em ambientes premium.",
+      "Trabalho com tecnologias modernas para garantir performance e acessibilidade.",
     ],
-    skills: ["Vue 3", "Vuex", "FastAPI", "Express", "Docker", "Node.js"],
+    skills: ["Vue.js", "JavaScript", "APIs", "HTML", "CSS", "Responsividade"],
   },
 ]);
 
 const additionalTechs = ref([
-  "LLMs",
-  "LangChain",
-  "Arquitetura Multiagente",
-  "TypeScript",
-  "JavaScript",
-  "Docker",
-  "Railway",
-  "Groq API",
-  "Ollama",
-  "CI/CD",
-  "REST APIs",
-  "Git",
-  "Grafana",
+  "HTML5",
+  "CSS3",
+  "Sass",
+  "Tailwind CSS",
+  "Node.js",
+  "Express",
+  "GitHub",
+  "Figma",
+  "Adobe XD",
+  "Linux",
+  "Windows",
+  "Office",
 ]);
 
 onMounted(() => {
