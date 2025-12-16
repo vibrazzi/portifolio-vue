@@ -13,9 +13,6 @@
             Conversar
           </span>
         </h2>
-        <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-          Vamos conversar sobre GenAIOps, produtos full stack e como a IA generativa pode gerar impacto real no seu negócio.
-        </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">

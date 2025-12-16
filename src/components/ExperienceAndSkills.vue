@@ -279,7 +279,7 @@ const Experiences = ref([
     id: 2,
     role: "Desenvolvedor Web",
     company: "W Premium Lounge - Remoto",
-    date: "Jan 2024 - Jun 2024",
+    date: "Mar 2025 - Mai 2025",
     iconClass: "fas fa-code",
     highlights: [
       "Desenvolvimento de sistema de cardápio digital interativo com Vue.js e integração de APIs.",
@@ -318,7 +318,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* Skill progress animation */
 .skill-progress {
   position: relative;
   overflow: hidden;
@@ -349,7 +348,6 @@ onMounted(() => {
   }
 }
 
-/* Skill item animations */
 .skill-item {
   opacity: 0;
   transform: translateX(-30px);
@@ -379,7 +377,6 @@ onMounted(() => {
   }
 }
 
-/* Experience card animations */
 .experience-card {
   opacity: 0;
   transform: translateY(30px);
@@ -403,7 +400,6 @@ onMounted(() => {
   }
 }
 
-/* Icon hover animations */
 .skill-item:hover .fa-brain {
   animation: htmlBounce 0.6s ease-in-out;
 }
@@ -476,7 +472,6 @@ onMounted(() => {
   }
 }
 
-/* Experience icon animations */
 .experience-card:hover .fa-code {
   animation: codeFlow 1.5s ease-in-out infinite;
 }
@@ -521,7 +516,6 @@ onMounted(() => {
   }
 }
 
-/* Additional tech badges animation */
 .additional-techs span {
   opacity: 0;
   transform: translateY(20px);
@@ -554,7 +548,6 @@ onMounted(() => {
   }
 }
 
-/* Progress bar glow effect */
 .skill-progress {
   box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
 }
@@ -578,17 +571,14 @@ onMounted(() => {
   }
 }
 
-/* Dark mode specific enhancements */
 .dark .experience-card:hover {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(245, 158, 11, 0.1);
 }
 
-/* Timeline line glow */
 .absolute.w-0\.5 {
   box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
 }
 
-/* Loading states */
 .skill-item,
 .experience-card {
   will-change: transform, opacity;

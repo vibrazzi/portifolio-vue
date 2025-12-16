@@ -6,7 +6,6 @@
       class="fixed bottom-6 right-6 z-50 group bg-gradient-to-r from-primary to-pink-500 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 backdrop-blur-sm"
       aria-label="Voltar ao topo"
     >
-      <!-- Animated arrow icon -->
       <svg
         class="w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300"
         fill="none"
@@ -21,7 +20,6 @@
         />
       </svg>
 
-      <!-- Progress ring -->
       <svg class="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 36 36">
         <path
           class="text-white/20"
@@ -47,23 +45,18 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-// Estado para controlar a visibilidade do botão
 const isVisible = ref(false)
 const scrollProgress = ref(0)
 
-// Função para verificar a posição do scroll
 const handleScroll = () => {
   const scrollTop = window.scrollY
   const docHeight = document.documentElement.scrollHeight - window.innerHeight
 
-  // Mostrar botão após rolar 300px
   isVisible.value = scrollTop > 300
 
-  // Calcular progresso do scroll (0-100)
   scrollProgress.value = Math.min((scrollTop / docHeight) * 100, 100)
 }
 
-// Função para rolar suavemente até o topo
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
@@ -71,19 +64,16 @@ const scrollToTop = () => {
   })
 }
 
-// Adiciona o evento de scroll ao montar o componente
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
 })
 
-// Remove o evento de scroll ao desmontar o componente
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 </script>
 
 <style scoped>
-/* Transition animations */
 .back-to-top-enter-active,
 .back-to-top-leave-active {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -99,7 +89,6 @@ onUnmounted(() => {
   transform: translateY(20px) scale(0.8);
 }
 
-/* Mobile responsiveness */
 @media (max-width: 640px) {
   button {
     bottom: 1rem;
@@ -117,7 +106,6 @@ onUnmounted(() => {
   }
 }
 
-/* Dark mode adjustments */
 .dark button {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }

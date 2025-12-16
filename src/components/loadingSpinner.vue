@@ -1,7 +1,6 @@
 <template>
   <div class="loading-container">
     <div class="loading-content">
-      <!-- Main spinner -->
       <div class="relative">
         <div class="spinner-ring"></div>
         <div class="spinner-ring delay-1"></div>
