@@ -1,4 +1,4 @@
-import { describe, it, expect } from '@jest/globals'
+import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import NavBar from '@/components/NavBar.vue'
 
