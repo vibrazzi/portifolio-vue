@@ -198,6 +198,9 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import AOS from "aos";
+import { Skills as skillsData, additionalTechs as additionalTechsData } from '@/data/skills.js'
+import { Experiences as experiencesData } from '@/data/experiences.js'
+
 import "aos/dist/aos.css";
 
 AOS.init({
@@ -206,105 +209,9 @@ AOS.init({
   offset: 100,
 });
 
-const Skills = ref([
-  {
-    id: 1,
-    name: "JavaScript & TypeScript",
-    width: "95%",
-    icon: "fab fa-js-square",
-    description:
-      "Desenvolvimento de aplicações web dinâmicas e tipadas com foco em performance e manutenibilidade.",
-  },
-  {
-    id: 2,
-    name: "React & Vue.js",
-    width: "90%",
-    icon: "fab fa-vuejs",
-    description:
-      "Criação de interfaces responsivas e componentes reutilizáveis para experiências de usuário excepcionais.",
-  },
-  {
-    id: 3,
-    name: "Integração de APIs",
-    width: "85%",
-    icon: "fas fa-plug",
-    description:
-      "Conexão eficiente de sistemas backend e frontend, garantindo segurança e otimização de dados.",
-  },
-  {
-    id: 4,
-    name: "Desenvolvimento Web",
-    width: "93%",
-    icon: "fas fa-layer-group",
-    description:
-      "Análise de requisitos, arquitetura de sistemas e otimização de performance em projetos completos.",
-  },
-  {
-    id: 5,
-    name: "Desenvolvimento de Plataformas de IA",
-    width: "50%",
-    icon: "fas fa-brain",
-    description:
-      "Criação de sistemas de mentoria assistida por LLMs, como o CodeMentor AI, com streaming em tempo real.",
-  },
-]);
-
-const Experiences = ref([
-  {
-    id: 1,
-    role: "Analista de Sistemas",
-    company: "87 Labs - Remoto",
-    date: "Jul 2024 - Presente",
-    iconClass: "fas fa-laptop-code",
-    highlights: [
-      "Desenvolvimento de aplicações web responsivas utilizando JavaScript, TypeScript, React e Vue.js.",
-      "Criação de web components reutilizáveis com LIT para interfaces modulares e performáticas.",
-      "Integração de soluções com a plataforma Shopify, criando apps e funcionalidades personalizadas.",
-      "Análise de requisitos e definição de arquiteturas robustas para otimização de performance e usabilidade.",
-      "Colaboração em projetos que envolvem APIs, bancos de dados e interfaces de usuário interativas.",
-    ],
-    skills: [
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Vue.js",
-      "LIT",
-      "Shopify",
-      "APIs",
-      "HTML",
-      "CSS",
-    ],
-  },
-  {
-    id: 2,
-    role: "Desenvolvedor Web",
-    company: "W Premium Lounge - Remoto",
-    date: "Mar 2025 - Mai 2025",
-    iconClass: "fas fa-code",
-    highlights: [
-      "Desenvolvimento de sistema de cardápio digital interativo com Vue.js e integração de APIs.",
-      "Criação de interfaces responsivas e otimizadas para dispositivos móveis e desktop.",
-      "Implementação de funcionalidades que melhoram a experiência do usuário em ambientes premium.",
-      "Trabalho com tecnologias modernas para garantir performance e acessibilidade.",
-    ],
-    skills: ["Vue.js", "JavaScript", "APIs", "HTML", "CSS", "Responsividade"],
-  },
-]);
-
-const additionalTechs = ref([
-  "HTML5",
-  "CSS3",
-  "Sass",
-  "Tailwind CSS",
-  "Node.js",
-  "Express",
-  "GitHub",
-  "Figma",
-  "Adobe XD",
-  "Linux",
-  "Windows",
-  "Office",
-]);
+const Skills = ref(skillsData);
+const Experiences = ref(experiencesData);
+const additionalTechs = ref(additionalTechsData);
 
 onMounted(() => {
   setTimeout(() => {
