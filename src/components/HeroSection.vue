@@ -230,7 +230,7 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -241,7 +241,13 @@ AOS.init({
   offset: 100,
 });
 
-const socialLinks = ref([
+interface SocialLink {
+  name: string;
+  url: string;
+  icon: string;
+}
+
+const socialLinks = ref<SocialLink[]>([
   {
     name: "GitHub",
     url: "https://github.com/vibrazzi",

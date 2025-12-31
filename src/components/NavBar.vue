@@ -121,11 +121,16 @@
   </header>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import ThemeToggle from "./ThemeToggle.vue";
 
-const Menu = ref([
+interface MenuItem {
+  name: string;
+  href: string;
+}
+
+const Menu = ref<MenuItem[]>([
   { name: "Serviços", href: "#services" },
   { name: "Educação", href: "#about" },
   { name: "Habilidades", href: "#skills" },
@@ -133,7 +138,7 @@ const Menu = ref([
   { name: "Contato", href: "#contact" },
 ]);
 
-const isMenuOpen = ref(false);
+const isMenuOpen = ref<boolean>(false);
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;

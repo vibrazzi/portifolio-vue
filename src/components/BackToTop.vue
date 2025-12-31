@@ -42,13 +42,13 @@
   </Transition>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 
-const isVisible = ref(false)
-const scrollProgress = ref(0)
+const isVisible = ref<boolean>(false)
+const scrollProgress = ref<number>(0)
 
-const handleScroll = () => {
+const handleScroll = (): void => {
   const scrollTop = window.scrollY
   const docHeight = document.documentElement.scrollHeight - window.innerHeight
 
@@ -57,7 +57,7 @@ const handleScroll = () => {
   scrollProgress.value = Math.min((scrollTop / docHeight) * 100, 100)
 }
 
-const scrollToTop = () => {
+const scrollToTop = (): void => {
   window.scrollTo({
     top: 0,
     behavior: 'smooth'

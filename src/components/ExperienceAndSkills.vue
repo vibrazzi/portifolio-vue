@@ -195,11 +195,11 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from "vue";
 import AOS from "aos";
-import { Skills as skillsData, additionalTechs as additionalTechsData } from '@/data/skills.js'
-import { Experiences as experiencesData } from '@/data/experiences.js'
+import { Skills as skillsData, additionalTechs as additionalTechsData, type Skill } from '@/data/skills.ts'
+import { Experiences as experiencesData, type Experience } from '@/data/experiences.ts'
 
 import "aos/dist/aos.css";
 
@@ -209,9 +209,9 @@ AOS.init({
   offset: 100,
 });
 
-const Skills = ref(skillsData);
-const Experiences = ref(experiencesData);
-const additionalTechs = ref(additionalTechsData);
+const Skills = ref<Skill[]>(skillsData);
+const Experiences = ref<Experience[]>(experiencesData);
+const additionalTechs = ref<string[]>(additionalTechsData);
 
 onMounted(() => {
   setTimeout(() => {

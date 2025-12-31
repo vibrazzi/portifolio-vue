@@ -1,4 +1,12 @@
-export const Skills = [
+export interface Skill {
+  id: number;
+  name: string;
+  width: string;
+  icon: string;
+  description: string;
+}
+
+export const Skills: Skill[] = [
   {
     id: 1,
     name: "JavaScript & TypeScript",
@@ -41,7 +49,7 @@ export const Skills = [
   },
 ];
 
-export const additionalTechs = [
+export const additionalTechs: string[] = [
   "HTML5",
   "CSS3",
   "Sass",

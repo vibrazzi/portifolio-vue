@@ -389,7 +389,7 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -400,19 +400,26 @@ AOS.init({
   offset: 100,
 });
 
-const objectivePoints = ref([
+const objectivePoints = ref<string[]>([
   "Orquestrar pipelines GenAIOps com monitoramento de métricas e feedback contínuo.",
   "Desenhar arquiteturas multiagente que respeitam guardrails, privacy e compliance.",
   "Alavancar CI/CD para reduzir time-to-market mantendo qualidade e previsibilidade.",
 ]);
 
-const principles = ref([
+const principles = ref<string[]>([
   "Colocar confiabilidade, segurança e custo sob medição desde o discovery.",
   "Mapear fluxos ponta-a-ponta para criar telemetria acionável e alertas inteligentes.",
   "Adotar ciclos curtos com documentação viva, testes automatizados e revisão orientada a dados.",
 ]);
 
-const education = ref([
+interface Education {
+  id: number;
+  course: string;
+  school: string;
+  period: string;
+}
+
+const education = ref<Education[]>([
   {
     id: 1,
     course: "Análise e Desenvolvimento de Sistemas",
@@ -421,7 +428,7 @@ const education = ref([
   },
 ]);
 
-const coreTechs = ref([
+const coreTechs = ref<string[]>([
   "React",
   "Vue",
   "HTML",
@@ -434,13 +441,18 @@ const coreTechs = ref([
   "Office",
 ]);
 
-const aboutHighlights = ref([
+const aboutHighlights = ref<string[]>([
   "Integração de LLMs com arquiteturas RAG usando LangChain para sistemas inteligentes.",
   "Pipelines de dados para embeddings e orquestração de modelos em produção.",
   "APIs seguras com FastAPI, observabilidade via Grafana e conformidade com LGPD.",
 ]);
 
-const project = ref({
+interface Project {
+  description: string;
+  highlights: string[];
+}
+
+const project = ref<Project>({
   description:
     "Sistema de mentoria inteligente para ensino de lógica de programação com alta performance e UX otimizada.",
   highlights: [

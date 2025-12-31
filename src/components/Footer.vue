@@ -97,10 +97,15 @@
   </footer>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, computed } from 'vue'
 
-const navLinks = ref([
+interface NavLink {
+  name: string;
+  href: string;
+}
+
+const navLinks = ref<NavLink[]>([
   { name: 'Oferta', href: '#services' },
   { name: 'Posicionamento', href: '#about' },
   { name: 'Skills & Experiências', href: '#skills' },
@@ -108,7 +113,13 @@ const navLinks = ref([
   { name: 'Contato', href: '#contact' },
 ])
 
-const socialLinks = ref([
+interface SocialLink {
+  name: string;
+  url: string;
+  icon: string;
+}
+
+const socialLinks = ref<SocialLink[]>([
   {
     name: 'GitHub',
     url: 'https://github.com/vibrazzi',
@@ -126,7 +137,7 @@ const socialLinks = ref([
   },
 ])
 
-const currentYear = computed(() => new Date().getFullYear())
+const currentYear = computed<number>(() => new Date().getFullYear())
 
 const scrollToSection = (href) => {
   const section = document.querySelector(href)

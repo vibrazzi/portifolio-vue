@@ -1,17 +1,17 @@
 import { ref, watch, onMounted } from 'vue'
 
-const isDark = ref(false)
+const isDark = ref<boolean>(false)
 
 export function useTheme() {
-  const toggleTheme = () => {
+  const toggleTheme = (): void => {
     isDark.value = !isDark.value
   }
 
-  const setTheme = (dark) => {
+  const setTheme = (dark: boolean): void => {
     isDark.value = dark
   }
 
-  const applyTheme = () => {
+  const applyTheme = (): void => {
     if (isDark.value) {
       document.documentElement.classList.add('dark')
       document.documentElement.classList.remove('light')
@@ -21,11 +21,11 @@ export function useTheme() {
     }
   }
 
-  const saveTheme = () => {
+  const saveTheme = (): void => {
     localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
   }
 
-  const loadTheme = () => {
+  const loadTheme = (): void => {
     const savedTheme = localStorage.getItem('theme')
     if (savedTheme) {
       isDark.value = savedTheme === 'dark'

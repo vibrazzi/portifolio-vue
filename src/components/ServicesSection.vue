@@ -111,7 +111,7 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -122,7 +122,15 @@ AOS.init({
   offset: 100,
 });
 
-const services = ref([
+interface Service {
+  id: number;
+  icon: string;
+  name: string;
+  description: string;
+  features: string[];
+}
+
+const services = ref<Service[]>([
   {
     id: 1,
     icon: "fas fa-shopping-cart",

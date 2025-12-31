@@ -105,10 +105,10 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 import AOS from 'aos'
-import { Projects as projectsData } from '@/data/projects.js'
+import { Projects as projectsData, type Project } from '@/data/projects.ts'
 import 'aos/dist/aos.css'
 
 AOS.init({
@@ -117,7 +117,7 @@ AOS.init({
   offset: 100
 })
 
-const Projects = ref(projectsData)
+const Projects = ref<Project[]>(projectsData)
 </script>
 
 <style scoped>
