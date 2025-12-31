@@ -49,7 +49,8 @@
                 src="@/assets/fotoo.jpg"
                 alt="Webert Fernandes - Desenvolvedor"
                 class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-                loading="lazy"
+                loading="eager"
+                fetchpriority="high"
               />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
