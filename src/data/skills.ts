@@ -62,6 +62,7 @@ export const additionalTechs: string[] = [
   "Docker",
   "AWS",
   "Vercel",
+  "ServiceNow",
   "Figma",
   "Adobe XD",
 ];

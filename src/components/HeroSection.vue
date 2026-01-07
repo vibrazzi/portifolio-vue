@@ -98,7 +98,7 @@
             <h2
               class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 dark:text-gray-400 font-light mb-4"
             >
-              Desenvolvedor Web | Especializando em IA Generativa
+              Desenvolvedor Web
             </h2>
             <div
               class="flex flex-wrap justify-center lg:justify-start gap-2 mb-6"
@@ -111,6 +111,7 @@
                   'FastAPI',
                   'React',
                   'Shopify',
+                  'ServiceNow',
                   'Storybook',
                   'GitHub',
                 ]"
@@ -134,7 +135,8 @@
                 usabilidade. Possuo experiência em projetos reais, incluindo o
                 desenvolvimento de um sistema de cardápio digital para a W
                 Premium Lounge e, atualmente, atuo na 87 Labs no desenvolvimento
-                de soluções e aplicações integradas à plataforma Shopify, com
+                de soluções e aplicações integradas às plataformas Shopify e
+                ServiceNow, com
                 foco em qualidade técnica e entrega de valor ao negócio
               </p>
             </div>

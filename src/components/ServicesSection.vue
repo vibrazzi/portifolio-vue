@@ -29,7 +29,7 @@
         >
           Desenvolvimento de aplicações web modernas utilizando JavaScript,
           TypeScript, React e Vue.js, com foco em usabilidade, performance e
-          integração com plataformas como Shopify.
+          integração com plataformas como Shopify e ServiceNow.
         </p>
       </div>
 
@@ -136,10 +136,10 @@ const services = ref<Service[]>([
     icon: "fas fa-shopping-cart",
     name: "Desenvolvimento Front-End para E-commerce",
     description:
-      "Desenvolvimento de aplicativos e sites para usuários Shopify utilizando LIT, StoryBook, React, Liquid, JavaScript e TypeScript.",
+      "Desenvolvimento de aplicativos e sites para usuários Shopify e ServiceNow utilizando LIT, StoryBook, React, Liquid, JavaScript e TypeScript.",
     features: [
       "Criação de web components",
-      "Integração com APIs",
+      "Integração com APIs e fluxos Shopify/ServiceNow",
       "Otimização de performance e usabilidade",
       "Interfaces responsivas",
     ],

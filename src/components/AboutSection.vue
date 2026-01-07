@@ -436,6 +436,7 @@ const coreTechs = ref<string[]>([
   "Sass",
   "JavaScript",
   "TypeScript",
+  "ServiceNow",
   "Linux",
   "Windows",
   "Office",

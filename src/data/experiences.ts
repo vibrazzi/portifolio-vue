@@ -30,6 +30,7 @@ export const Experiences: Experience[] = [
       "Vue.js",
       "LIT",
       "Shopify",
+      "ServiceNow",
       "APIs",
       "HTML",
       "CSS",
