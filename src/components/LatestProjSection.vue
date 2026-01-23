@@ -1,6 +1,6 @@
 <template>
   <section class="relative py-20 lg:py-32 bg-gray-50 dark:bg-gray-900 transition-colors duration-300" id="projects">
-    <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute inset-0 overflow-auto">
       <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
       <div class="absolute bottom-1/4 left-1/4 w-80 h-80 bg-pink-500/5 rounded-full blur-3xl"></div>
     </div>
@@ -23,7 +23,7 @@
           :data-aos="'fade-up'"
           :data-aos-delay="index * 200"
         >
-          <div class="relative overflow-hidden rounded-2xl aspect-video mb-6 bg-gray-200 dark:bg-gray-800">
+          <div class="relative overflow-auto rounded-2xl aspect-video mb-6 bg-gray-200 dark:bg-gray-800">
             <img
               :src="project.image"
               :alt="project.title"
