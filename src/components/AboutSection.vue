@@ -298,19 +298,7 @@
             <div
               class="relative bg-black/10 dark:bg-black/20 rounded-2xl p-5 sm:p-6 backdrop-blur-sm border border-primary/25"
             >
-              <iframe
-                data-testid="embed-iframe"
-                style="border-radius: 12px"
-                src="https://open.spotify.com/embed/track/7HdL53DrtK9p1zqc6JZ3XY?utm_source=generator"
-                width="100%"
-                height="200"
-                allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                title="Spotify Track: Música 1"
-                class="w-full rounded-2xl shadow-2xl"
-              >
-              </iframe>
+              <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/4YMZ6YmkkgAVmz8mg9Vvev?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
           </div>
 
@@ -321,19 +309,7 @@
             <div
               class="relative bg-black/10 dark:bg-black/20 rounded-2xl p-5 sm:p-6 backdrop-blur-sm border border-pink-500/25"
             >
-              <iframe
-                data-testid="embed-iframe"
-                style="border-radius: 12px"
-                src="https://open.spotify.com/embed/track/3C4AUuNwYPjGQgyE7YhnGq?utm_source=generator"
-                width="100%"
-                height="480"
-                allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                title="Spotify Track: Música 2"
-                class="w-full rounded-2xl shadow-2xl"
-              >
-              </iframe>
+              <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/2yj9f2Yng0JlH82EuBwXgV?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
           </div>
         </div>
