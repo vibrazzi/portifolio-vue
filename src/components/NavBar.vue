@@ -32,7 +32,7 @@
             <a
               :href="item.href"
               class="relative px-4 py-2 rounded-xl text-gray-700 dark:text-gray-300 font-medium transition-all duration-300 hover:text-primary hover:bg-gray-100/50 dark:hover:bg-gray-800/50 group"
-              @click="scrollToSection(item.href)"
+              @click.prevent="scrollToSection(item.href.replace('#', ''))"
             >
               <span class="relative z-10">{{ item.name }}</span>
               <div
@@ -89,7 +89,7 @@
                 :href="item.href"
                 class="group flex items-center px-4 py-3 rounded-xl text-gray-700 dark:text-gray-300 font-medium transition-all duration-300 hover:text-primary hover:bg-gray-100/50 dark:hover:bg-gray-800/50 transform hover:translate-x-2"
                 :style="{ animationDelay: `${index * 0.1}s` }"
-                @click="scrollToSection(item.href)"
+                @click.prevent="scrollToSection(item.href.replace('#', ''))"
               >
                 <div
                   class="w-2 h-2 bg-gradient-to-r from-primary to-pink-500 rounded-full mr-3 scale-0 group-hover:scale-100 transition-transform duration-300"
@@ -144,16 +144,11 @@ const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
 
-const scrollToSection = (href) => {
+const emit = defineEmits(["scroll-to"]);
+
+const scrollToSection = (sectionName: string) => {
   isMenuOpen.value = false;
-  const section = document.querySelector(href);
-  if (section) {
-    const offsetTop = section.offsetTop - 100;
-    window.scrollTo({
-      top: offsetTop,
-      behavior: "smooth",
-    });
-  }
+  emit("scroll-to", sectionName);
 };
 
 const scrollToTop = () => {
