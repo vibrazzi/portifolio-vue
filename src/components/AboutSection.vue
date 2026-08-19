@@ -5,10 +5,10 @@
   >
     <div class="absolute inset-0 overflow-hidden">
       <div
-        class="absolute right-0 w-96 h-96 bg-gradient-to-bl from-primary/10 to-pink-500/10 rounded-full blur-3xl"
+        class="absolute right-0 w-96 h-96 bg-gradient-to-bl from-primary/10 to-secondary/10 rounded-full blur-3xl"
       ></div>
       <div
-        class="absolute bottom-1/4 left-0 w-80 h-80 bg-gradient-to-tr from-blue-500/5 to-purple-500/5 rounded-full blur-3xl"
+        class="absolute bottom-1/4 left-0 w-80 h-80 bg-gradient-to-tr from-secondary/5 to-secondary/5 rounded-full blur-3xl"
       ></div>
     </div>
 
@@ -20,7 +20,7 @@
               class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6"
             >
               <span
-                class="bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent"
+                class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
               >
                 Objetivo
               </span>
@@ -143,7 +143,7 @@
             >
               Sobre
               <span
-                class="bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent"
+                class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
               >
                 mim
               </span>
@@ -187,7 +187,7 @@
           </div>
 
           <div
-            class="relative bg-gradient-to-br from-primary/10 to-pink-500/10 rounded-2xl p-8 shadow-xl border border-primary/20"
+            class="relative bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 shadow-xl border border-primary/20"
           >
             <div class="flex items-start justify-between">
               <div>
@@ -271,12 +271,12 @@
           class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white"
         >
           <span
-            class="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent"
+            class="bg-gradient-to-r from-secondary to-secondary bg-clip-text text-transparent"
           >
             Também sou
           </span>
           <span
-            class="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent"
+            class="bg-gradient-to-r from-secondary to-secondary bg-clip-text text-transparent"
           >
             músico! 🎵
           </span>
@@ -288,12 +288,12 @@
       </div>
 
       <div
-        class="bg-gradient-to-r from-primary/10 to-pink-500/10 rounded-3xl border border-primary/20 px-6 sm:px-10 lg:px-16 py-12 sm:py-16 max-w-6xl mx-auto"
+        class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-3xl border border-primary/20 px-6 sm:px-10 lg:px-16 py-12 sm:py-16 max-w-6xl mx-auto"
       >
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-16">
           <div class="relative" data-aos="fade-up" data-aos-delay="250">
             <div
-              class="absolute -inset-3 bg-gradient-to-r from-primary to-pink-500 rounded-2xl opacity-25 blur-xl"
+              class="absolute -inset-3 bg-gradient-to-r from-primary to-secondary rounded-2xl opacity-25 blur-xl"
             ></div>
             <div
               class="relative bg-black/10 dark:bg-black/20 rounded-2xl p-5 sm:p-6 backdrop-blur-sm border border-primary/25"
@@ -304,10 +304,10 @@
 
           <div class="relative" data-aos="fade-up" data-aos-delay="350">
             <div
-              class="absolute -inset-3 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl opacity-25 blur-xl"
+              class="absolute -inset-3 bg-gradient-to-r from-secondary to-secondary rounded-2xl opacity-25 blur-xl"
             ></div>
             <div
-              class="relative bg-black/10 dark:bg-black/20 rounded-2xl p-5 sm:p-6 backdrop-blur-sm border border-pink-500/25"
+              class="relative bg-black/10 dark:bg-black/20 rounded-2xl p-5 sm:p-6 backdrop-blur-sm border border-secondary/25"
             >
               <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/2yj9f2Yng0JlH82EuBwXgV?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
@@ -322,7 +322,7 @@
               href="https://open.spotify.com/artist/0E7kdLTbivs01br4APOfRX?si=0x5VxA1BRW6UxG98zOUbUA"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center px-9 py-4 bg-green-500 text-white rounded-2xl hover:bg-green-600 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-green-500/25"
+              class="inline-flex items-center px-9 py-4 bg-secondary text-white rounded-2xl hover:bg-green-600 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-secondary/25"
             >
               <i class="fab fa-spotify mr-3 text-xl"></i>
               <span class="font-semibold text-lg">Ouça mais no Spotify</span>
@@ -330,18 +330,18 @@
 
             <div class="flex items-center space-x-5">
               <div
-                class="w-5 h-5 bg-green-500 rounded-full animate-pulse"
+                class="w-5 h-5 bg-secondary rounded-full animate-pulse"
               ></div>
               <div
                 class="w-5 h-5 bg-primary rounded-full animate-pulse"
                 style="animation-delay: 0.2s"
               ></div>
               <div
-                class="w-5 h-5 bg-pink-500 rounded-full animate-pulse"
+                class="w-5 h-5 bg-secondary rounded-full animate-pulse"
                 style="animation-delay: 0.4s"
               ></div>
               <div
-                class="w-5 h-5 bg-purple-500 rounded-full animate-pulse"
+                class="w-5 h-5 bg-secondary rounded-full animate-pulse"
                 style="animation-delay: 0.6s"
               ></div>
             </div>
@@ -354,7 +354,7 @@
               <p
                 class="text-sm text-gray-600 dark:text-gray-400 italic flex items-center"
               >
-                <i class="fas fa-headphones mr-2 text-green-500"></i>
+                <i class="fas fa-headphones mr-2 text-secondary"></i>
                 Ouça com fones para uma experiência completa.
               </p>
             </div>

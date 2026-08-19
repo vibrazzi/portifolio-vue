@@ -70,7 +70,7 @@
 }
 
 .progress-fill {
-  @apply h-full bg-gradient-to-r from-primary to-pink-500 rounded-full;
+  @apply h-full bg-gradient-to-r from-primary to-secondary rounded-full;
   animation: progress 2s ease-in-out infinite;
 }
 

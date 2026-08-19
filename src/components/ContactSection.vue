@@ -2,14 +2,14 @@
   <section id="contact" class="relative py-20 lg:py-32 bg-white dark:bg-gray-900 transition-colors duration-300">
     <div class="absolute inset-0 overflow-hidden">
       <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-pink-500/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-3xl"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16" data-aos="fade-up">
         <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
           Vamos
-          <span class="bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
+          <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Conversar
           </span>
         </h2>
@@ -25,7 +25,7 @@
           data-aos-delay="100"
         >
           <div class="flex items-start space-x-3 sm:space-x-4">
-            <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+            <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-secondary to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
               <i class="fab fa-linkedin text-white text-xl sm:text-2xl"></i>
             </div>
             <div class="flex-1 min-w-0">
@@ -77,7 +77,7 @@
           data-aos-delay="300"
         >
           <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+            <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-red-500 to-secondary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
               <i class="fas fa-envelope text-white text-2xl"></i>
             </div>
             <div class="flex-1 min-w-0">
@@ -104,7 +104,7 @@
           data-aos-delay="400"
         >
           <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+            <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-secondary to-green-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
               <i class="fab fa-whatsapp text-white text-2xl"></i>
             </div>
             <div class="flex-1 min-w-0">
@@ -126,7 +126,7 @@
       <div class="mt-16 text-center" data-aos="fade-up" data-aos-delay="500">
         <div class="inline-flex items-center space-x-6 px-8 py-4 bg-gray-50 dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700">
           <div class="flex items-center space-x-2">
-            <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+            <div class="w-3 h-3 bg-secondary rounded-full animate-pulse"></div>
           </div>
         </div>
       </div>

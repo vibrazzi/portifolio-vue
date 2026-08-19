@@ -3,7 +3,7 @@
     <button
       v-if="isVisible"
       @click="scrollToTop"
-      class="fixed bottom-6 right-6 z-50 group bg-gradient-to-r from-primary to-pink-500 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 backdrop-blur-sm"
+      class="fixed bottom-6 right-6 z-50 group bg-gradient-to-r from-primary to-secondary text-white rounded-full w-14 h-14 flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 backdrop-blur-sm"
       aria-label="Voltar ao topo"
     >
       <svg

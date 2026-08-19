@@ -8,7 +8,7 @@
         class="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
       ></div>
       <div
-        class="absolute bottom-0 right-1/4 w-80 h-80 bg-pink-500/5 rounded-full blur-3xl"
+        class="absolute bottom-0 right-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-3xl"
       ></div>
     </div>
 
@@ -19,7 +19,7 @@
         >
           Meus
           <span
-            class="bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent"
+            class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
           >
             Serviços
           </span>
@@ -48,13 +48,13 @@
           ></div>
 
           <div
-            class="absolute inset-0 bg-gradient-to-br from-primary/20 to-pink-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"
+            class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"
           ></div>
 
           <div class="relative p-6 sm:p-8 lg:p-10 h-full flex flex-col">
             <div class="relative mb-8">
               <div
-                class="w-20 h-20 mx-auto bg-gradient-to-br from-primary to-pink-500 rounded-2xl flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500"
+                class="w-20 h-20 mx-auto bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500"
               >
                 <i :class="service.icon" class="text-3xl text-white"></i>
               </div>
@@ -63,7 +63,7 @@
                 class="absolute -top-2 -right-2 w-4 h-4 bg-primary rounded-full opacity-60 group-hover:scale-150 transition-all duration-500"
               ></div>
               <div
-                class="absolute -bottom-2 -left-2 w-3 h-3 bg-pink-500 rounded-full opacity-40 group-hover:scale-150 transition-all duration-700"
+                class="absolute -bottom-2 -left-2 w-3 h-3 bg-secondary rounded-full opacity-40 group-hover:scale-150 transition-all duration-700"
               ></div>
             </div>
 
@@ -102,7 +102,7 @@
             </div>
 
             <div
-              class="absolute inset-0 bg-gradient-to-br from-primary/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              class="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
             ></div>
           </div>
         </div>

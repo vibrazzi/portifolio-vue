@@ -7,7 +7,7 @@
       : 'bg-gradient-to-br from-yellow-100 to-orange-100 hover:from-yellow-200 hover:to-orange-200'"
     aria-label="Alternar tema"
   >
-    <div class="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
+    <div class="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
 
     <Transition name="icon-fade" mode="out-in">
       <div v-if="!isDark" key="sun" class="relative z-10">

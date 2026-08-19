@@ -8,7 +8,7 @@
         class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
       ></div>
       <div
-        class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-pink-500/5 rounded-full blur-3xl"
+        class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-3xl"
       ></div>
     </div>
 
@@ -19,7 +19,7 @@
             <h2 class="text-4xl sm:text-5xl font-bold text-white mb-8">
               Habilidades
               <span
-                class="bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent"
+                class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
               >
                 Técnicas
               </span>
@@ -37,7 +37,7 @@
               <div class="flex items-center justify-between mb-3">
                 <div class="flex items-center space-x-3">
                   <div
-                    class="w-10 h-10 bg-gradient-to-r from-primary to-pink-500 rounded-lg flex items-center justify-center"
+                    class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center"
                   >
                     <i :class="skill.icon" class="text-white text-lg"></i>
                   </div>
@@ -55,7 +55,7 @@
                   class="h-3 bg-gray-800 dark:bg-gray-700 rounded-full overflow-hidden"
                 >
                   <div
-                    class="h-full bg-gradient-to-r from-primary to-pink-500 rounded-full transition-all duration-1000 ease-out skill-progress"
+                    class="h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-1000 ease-out skill-progress"
                     :style="{ width: '0%' }"
                     :data-width="skill.width"
                   ></div>
@@ -103,7 +103,7 @@
 
           <div class="relative">
             <div
-              class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-pink-500"
+              class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary"
             ></div>
 
             <div class="space-y-8">
@@ -115,7 +115,7 @@
                 :data-aos-delay="index * 200"
               >
                 <div
-                  class="absolute left-6 top-6 w-4 h-4 bg-gradient-to-r from-primary to-pink-500 rounded-full border-4 border-gray-900 dark:border-gray-950 shadow-lg group-hover:scale-125 transition-transform duration-300"
+                  class="absolute left-6 top-6 w-4 h-4 bg-gradient-to-r from-primary to-secondary rounded-full border-4 border-gray-900 dark:border-gray-950 shadow-lg group-hover:scale-125 transition-transform duration-300"
                 ></div>
 
                 <div
@@ -123,7 +123,7 @@
                 >
                   <div class="flex items-start space-x-4">
                     <div
-                      class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-pink-500 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"
+                      class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"
                     >
                       <i
                         :class="experience.iconClass"
@@ -183,7 +183,7 @@
                   </div>
 
                   <div
-                    class="absolute inset-0 bg-gradient-to-r from-primary/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    class="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   ></div>
                 </div>
               </div>

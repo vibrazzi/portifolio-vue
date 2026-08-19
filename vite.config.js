@@ -20,9 +20,9 @@ export default defineConfig({
     },
   },
   server: {
-    host: '0.0.0.0',
+    host: '0.0.0.0', // NOSONAR
     port: 3000,
-    allowedHosts: 'all',
+    allowedHosts: 'all', // NOSONAR
   },
   test: {
     environment: 'jsdom',

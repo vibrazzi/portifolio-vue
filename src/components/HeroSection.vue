@@ -6,10 +6,10 @@
   >
     <div class="absolute inset-0">
       <div
-        class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-primary/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"
+        class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-3xl animate-pulse"
       ></div>
       <div
-        class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-bl from-blue-500/15 to-purple-500/15 rounded-full blur-3xl animate-pulse"
+        class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-bl from-secondary/15 to-secondary/15 rounded-full blur-3xl animate-pulse"
         style="animation-delay: 2s"
       ></div>
 
@@ -39,7 +39,7 @@
         >
           <div class="relative group">
             <div
-              class="absolute -inset-4 bg-gradient-to-r from-primary to-pink-500 rounded-full opacity-20 blur-xl group-hover:opacity-30 transition-all duration-500"
+              class="absolute -inset-4 bg-gradient-to-r from-primary to-secondary rounded-full opacity-20 blur-xl group-hover:opacity-30 transition-all duration-500"
             ></div>
 
             <div
@@ -58,12 +58,12 @@
             </div>
 
             <div
-              class="absolute -top-2 -left-6 sm:-top-4 sm:-left-10 w-12 h-12 sm:w-20 sm:h-20 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce"
+              class="absolute -top-2 -left-6 sm:-top-4 sm:-left-10 w-12 h-12 sm:w-20 sm:h-20 bg-secondary rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce"
             >
               React
             </div>
             <div
-              class="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 w-16 h-16 sm:w-20 sm:h-20 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce"
+              class="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 w-16 h-16 sm:w-20 sm:h-20 bg-secondary rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce"
               style="animation-delay: 1s"
             >
               Python
@@ -87,7 +87,7 @@
             >
               <span class="block">Webert</span>
               <span
-                class="block bg-gradient-to-r from-primary via-pink-500 to-purple-500 bg-clip-text text-transparent animate-gradient-x"
+                class="block bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent animate-gradient-x"
               >
                 Fernandes
               </span>
@@ -148,7 +148,7 @@
             data-aos-delay="800"
           >
             <button
-              class="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary to-pink-500 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/25 hover:scale-105 transform text-sm sm:text-base"
+              class="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/25 hover:scale-105 transform text-sm sm:text-base"
             >
               <span class="relative z-10">
                 <a
@@ -172,7 +172,7 @@
                 </a>
               </span>
               <div
-                class="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                class="absolute inset-0 bg-gradient-to-r from-secondary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               ></div>
             </button>
 

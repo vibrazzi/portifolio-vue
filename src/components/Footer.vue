@@ -2,7 +2,7 @@
   <footer class="relative bg-gradient-to-b from-gray-900 to-gray-950 dark:from-gray-950 dark:to-black text-white overflow-hidden">
     <div class="absolute inset-0 overflow-hidden opacity-30">
       <div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-      <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,18 +12,18 @@
             <div class="space-y-4">
               <div class="group cursor-pointer inline-block" @click="scrollToTop">
                 <h3 class="text-2xl sm:text-3xl font-bold transition-all duration-300 group-hover:scale-105">
-                  <span class="bg-gradient-to-r from-primary via-pink-500 to-purple-600 bg-clip-text text-transparent">
+                  <span class="bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent">
                     Webert
                   </span>
                   <span class="text-white"> Fernandes</span>
                 </h3>
-                <div class="h-0.5 w-0 bg-gradient-to-r from-primary to-pink-500 transition-all duration-500 group-hover:w-full"></div>
+                <div class="h-0.5 w-0 bg-gradient-to-r from-primary to-secondary transition-all duration-500 group-hover:w-full"></div>
               </div>
               <p class="text-gray-400 text-sm leading-relaxed">
                 Desenvolvedor Full Stack focado em GenAIOps, IA generativa e produtos com observabilidade completa do código à experiência do usuário.
               </p>
               <div class="flex items-center space-x-2 pt-2">
-                <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <div class="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
                 <span class="text-sm text-gray-400">Disponível para novos projetos</span>
               </div>
             </div>
@@ -65,7 +65,7 @@
               <div class="pt-4">
                 <a
                   href="mailto:webertfernandes16@gmail.com"
-                  class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary to-pink-500 text-white text-sm font-medium rounded-lg hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105"
+                  class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white text-sm font-medium rounded-lg hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105"
                 >
                   <i class="fas fa-envelope mr-2"></i>
                   Entre em Contato
@@ -86,7 +86,7 @@
                 Feito com Vue.js
               </span>
               <span class="flex items-center">
-                <i class="fas fa-heart mr-2 text-pink-500 animate-pulse"></i>
+                <i class="fas fa-heart mr-2 text-secondary animate-pulse"></i>
                 e muito café
               </span>
             </div>

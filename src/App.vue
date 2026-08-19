@@ -28,6 +28,7 @@
 
 <script setup lang="ts">
 import { defineAsyncComponent, onMounted, ref, type ComponentPublicInstance } from 'vue'
+import loadingSpinner from './components/loadingSpinner.vue'
 
 const NavBar = defineAsyncComponent(() => import('@/components/NavBar.vue'))
 const HeroSection = defineAsyncComponent(() => import('@/components/HeroSection.vue'))
@@ -39,8 +40,6 @@ const ExperienceAndSkills = defineAsyncComponent(() => import('@/components/Expe
 const ContactSection = defineAsyncComponent(() => import('@/components/ContactSection.vue'))
 const Footer = defineAsyncComponent(() => import('@/components/Footer.vue'))
 const BackToTop = defineAsyncComponent(() => import('@/components/BackToTop.vue'))
-
-import loadingSpinner from './components/loadingSpinner.vue'
 
 const heroRef = ref<ComponentPublicInstance | null>(null)
 const codeMentorRef = ref<ComponentPublicInstance | null>(null)
@@ -61,9 +60,9 @@ const handleScroll = (sectionName: string) => {
   
   const targetRef = sectionRefs[sectionName];
   if (targetRef && targetRef.value) {
-    const el = (targetRef.value.$el || targetRef.value) as HTMLElement;
-    if (el && typeof el.scrollIntoView === 'function') {
-      el.scrollIntoView({ behavior: 'smooth' });
+    const el = targetRef.value.$el || targetRef.value;
+    if (el && typeof (el as Element).scrollIntoView === 'function') {
+      (el as Element).scrollIntoView({ behavior: 'smooth' });
     }
   }
 };
@@ -79,12 +78,16 @@ onMounted(() => {
   --scrollbar-track: #1f2937;
   --scrollbar-thumb: #374151;
   --scrollbar-thumb-hover: #4b5563;
+  --color-primary: 12 20 59;      /* #0C143B */
+  --color-secondary: 59 130 246;  /* #3b82f6 */
 }
 
 .dark {
   --scrollbar-track: #0f1419;
   --scrollbar-thumb: #2d3748;
   --scrollbar-thumb-hover: #4a5568;
+  --color-primary: 171 165 232;   /* #aba5e8 */
+  --color-secondary: 192 132 252; /* #c084fc */
 }
 
 * {

@@ -5,10 +5,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#f59e0b',
-        secondary: '#ec4899',
-        dark: '#1a233a',
-        light: '#f3f4f6',
+        primary: 'rgb(var(--color-primary) / <alpha-value>)',
+        secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+        dark: '#0f172a',
+        light: '#f8fafc',
       },
       spacing: {
         '128': '32rem',

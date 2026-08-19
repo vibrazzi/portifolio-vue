@@ -15,13 +15,13 @@
             class="text-xl sm:text-2xl lg:text-3xl font-bold transition-all duration-300 group-hover:scale-105"
           >
             <span
-              class="bg-gradient-to-r m-0 from-primary via-pink-500 to-purple-600 bg-clip-text text-transparent"
+              class="bg-gradient-to-r m-0 from-primary via-primary to-secondary bg-clip-text text-transparent"
             >
               Portifólio
             </span>
           </h1>
           <div
-            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-pink-500 transition-all duration-500 group-hover:w-full"
+            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-500 group-hover:w-full"
           ></div>
         </div>
       </button>
@@ -36,7 +36,7 @@
             >
               <span class="relative z-10">{{ item.name }}</span>
               <div
-                class="absolute inset-0 bg-gradient-to-r from-primary/10 to-pink-500/10 rounded-xl scale-0 group-hover:scale-100 transition-transform duration-300"
+                class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl scale-0 group-hover:scale-100 transition-transform duration-300"
               ></div>
             </a>
           </li>
@@ -92,7 +92,7 @@
                 @click.prevent="scrollToSection(item.href.replace('#', ''))"
               >
                 <div
-                  class="w-2 h-2 bg-gradient-to-r from-primary to-pink-500 rounded-full mr-3 scale-0 group-hover:scale-100 transition-transform duration-300"
+                  class="w-2 h-2 bg-gradient-to-r from-primary to-secondary rounded-full mr-3 scale-0 group-hover:scale-100 transition-transform duration-300"
                 ></div>
                 <span>{{ item.name }}</span>
                 <div

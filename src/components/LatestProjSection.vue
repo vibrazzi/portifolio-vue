@@ -2,14 +2,14 @@
   <section class="relative py-20 lg:py-32 bg-gray-50 dark:bg-gray-900 transition-colors duration-300" id="projects">
     <div class="absolute inset-0 overflow-auto">
       <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-1/4 left-1/4 w-80 h-80 bg-pink-500/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-1/4 left-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-3xl"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12 sm:mb-16" data-aos="fade-up">
         <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
           Meus
-          <span class="bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
+          <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Projetos
           </span>
         </h2>
@@ -81,7 +81,7 @@
                 :href="project.webURL"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="flex-1 inline-flex items-center justify-center px-4 sm:px-6 py-3 bg-gradient-to-r from-primary to-pink-500 text-white font-medium rounded-xl hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
+                class="flex-1 inline-flex items-center justify-center px-4 sm:px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-xl hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
               >
                 <i class="fas fa-external-link-alt mr-2"></i>
                 Ver Projeto
@@ -98,7 +98,7 @@
             </div>
           </div>
 
-          <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-pink-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-sm transform scale-105"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-sm transform scale-105"></div>
         </div>
       </div>
     </div>
