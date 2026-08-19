@@ -27,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineAsyncComponent, onMounted, ref } from 'vue'
+import { defineAsyncComponent, onMounted, ref, type ComponentPublicInstance } from 'vue'
 
 const NavBar = defineAsyncComponent(() => import('@/components/NavBar.vue'))
 const HeroSection = defineAsyncComponent(() => import('@/components/HeroSection.vue'))
@@ -42,16 +42,16 @@ const BackToTop = defineAsyncComponent(() => import('@/components/BackToTop.vue'
 
 import loadingSpinner from './components/loadingSpinner.vue'
 
-const heroRef = ref<any>(null)
-const codeMentorRef = ref<any>(null)
-const servicesRef = ref<any>(null)
-const aboutRef = ref<any>(null)
-const skillsRef = ref<any>(null)
-const projectsRef = ref<any>(null)
-const contactRef = ref<any>(null)
+const heroRef = ref<ComponentPublicInstance | null>(null)
+const codeMentorRef = ref<ComponentPublicInstance | null>(null)
+const servicesRef = ref<ComponentPublicInstance | null>(null)
+const aboutRef = ref<ComponentPublicInstance | null>(null)
+const skillsRef = ref<ComponentPublicInstance | null>(null)
+const projectsRef = ref<ComponentPublicInstance | null>(null)
+const contactRef = ref<ComponentPublicInstance | null>(null)
 
 const handleScroll = (sectionName: string) => {
-  const sectionRefs: Record<string, any> = {
+  const sectionRefs: Record<string, typeof servicesRef> = {
     services: servicesRef,
     about: aboutRef,
     skills: skillsRef,
@@ -61,7 +61,7 @@ const handleScroll = (sectionName: string) => {
   
   const targetRef = sectionRefs[sectionName];
   if (targetRef && targetRef.value) {
-    const el = targetRef.value.$el || targetRef.value;
+    const el = (targetRef.value.$el || targetRef.value) as HTMLElement;
     if (el && typeof el.scrollIntoView === 'function') {
       el.scrollIntoView({ behavior: 'smooth' });
     }
