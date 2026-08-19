@@ -9,60 +9,43 @@ export interface Skill {
 export const Skills: Skill[] = [
   {
     id: 1,
-    name: "JavaScript & TypeScript",
+    name: "React",
     width: "95%",
-    icon: "fab fa-js-square",
+    icon: "fab fa-react",
     description:
-      "Desenvolvimento de aplicações web dinâmicas e tipadas com foco em performance e manutenibilidade.",
+      "Criação de interfaces responsivas, SPA e componentização de alta performance.",
   },
   {
     id: 2,
-    name: "React & Vue.js",
-    width: "90%",
-    icon: "fab fa-vuejs",
+    name: "JavaScript",
+    width: "95%",
+    icon: "fab fa-js-square",
     description:
-      "Criação de interfaces responsivas e componentes reutilizáveis para experiências de usuário excepcionais.",
+      "Desenvolvimento de aplicações web dinâmicas com foco em interatividade e lógica de negócios.",
   },
   {
     id: 3,
-    name: "Integração de APIs",
-    width: "85%",
-    icon: "fas fa-plug",
+    name: "TypeScript",
+    width: "90%",
+    icon: "fas fa-code",
     description:
-      "Conexão eficiente de sistemas backend e frontend, garantindo segurança e otimização de dados.",
+      "Tipagem estática para construção de aplicações escaláveis, seguras e de fácil manutenção.",
   },
   {
     id: 4,
-    name: "Desenvolvimento Web",
-    width: "93%",
-    icon: "fas fa-layer-group",
+    name: "Desenvolvimento Front-end",
+    width: "95%",
+    icon: "fas fa-desktop",
     description:
-      "Análise de requisitos, arquitetura de sistemas e otimização de performance em projetos completos.",
-  },
-  {
-    id: 5,
-    name: "Desenvolvimento de Plataformas de IA",
-    width: "50%",
-    icon: "fas fa-brain",
-    description:
-      "Criação de sistemas de mentoria assistida por LLMs, como o CodeMentor AI, com streaming em tempo real.",
+      "Foco em layouts fiéis, acessibilidade e excelente experiência do usuário.",
   },
 ];
 
 export const additionalTechs: string[] = [
   "HTML5",
   "CSS3",
-  "Sass",
   "Tailwind CSS",
-  "Node.js",
-  "Express",
-  "MongoDB",
-  "PostgreSQL",
+  "Shopify",
   "Git",
-  "Docker",
-  "AWS",
-  "Vercel",
-  "ServiceNow",
   "Figma",
-  "Adobe XD",
 ];
