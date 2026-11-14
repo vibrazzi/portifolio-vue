@@ -1,198 +1,134 @@
-# 🌟 Portfólio Vue.js 🚀
+# Webert Fernandes — Portfólio
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen)](https://nodejs.org/)
-[![Vue.js](https://img.shields.io/badge/Vue.js-3.x-green.svg)](https://vuejs.org/)
-[![Vite](https://img.shields.io/badge/Vite-6.x-blue.svg)](https://vitejs.dev/)
+[![Vue.js](https://img.shields.io/badge/Vue.js-3.4-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white)](https://vuejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-6.x-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Vitest](https://img.shields.io/badge/Vitest-3.2-6E9F18?style=flat-square&logo=vitest&logoColor=white)](https://vitest.dev/)
 
-Bem-vindo ao **Portfólio Vue.js**! 🎉 Este é um portfólio pessoal moderno e responsivo, desenvolvido com Vue 3, Tailwind CSS e Vite. Apresenta seções para habilidades, projetos, experiências e contato, com suporte a modo escuro e animações suaves.
+Portfólio pessoal de **Webert Fernandes** — **Engenheiro Web**. Projetado com foco em estética minimalista tech, alta performance, acessibilidade e conversão para recrutadores e lideranças técnicas.
 
-## 📋 Índice
-
-- [Funcionalidades](#-funcionalidades)
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [Pré-requisitos](#-pré-requisitos)
-- [Instalação e Execução](#-instalação-e-execução)
-- [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Scripts Disponíveis](#-scripts-disponíveis)
-- [Demonstração](#-demonstração)
-- [Desenvolvimento](#-desenvolvimento)
-- [Contribuição](#-contribuição)
-- [Licença](#-licença)
-- [Contato](#-contato)
+**Demo em produção:** [portifolio-vue-delta.vercel.app](https://portifolio-vue-delta.vercel.app/)
 
 ---
 
-## ✨ Funcionalidades
+## Destaques da Arquitetura
 
-- 🎨 **Design Responsivo**: Adaptável para desktops, tablets e smartphones.
-- 🌙 **Modo Escuro**: Alternância entre temas claro e escuro, com persistência no localStorage e respeito às preferências do sistema.
-- ⚡ **Performance Otimizada**: Carregamento lazy dos componentes com Suspense para melhor experiência.
-- 🖼️ **Carrossel de Projetos**: Exibição dinâmica de projetos usando vue3-carousel.
-- 📬 **Formulário de Contato**: Formulário básico para contato.
-- 🎭 **Animações**: Efeitos de scroll com AOS (Animate On Scroll).
-- 🧪 **Testes Unitários**: Cobertura com Jest e Vue Test Utils.
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-| Tecnologia | Descrição |
-|------------|-----------|
-| 🌐 **[Vue.js 3](https://vuejs.org/)** | Framework reativo com Composition API e `<script setup>`. |
-| 🎨 **[Tailwind CSS](https://tailwindcss.com/)** | Framework CSS utilitário com cores customizadas. |
-| ⚙️ **[Vite](https://vitejs.dev/)** | Build tool rápida para desenvolvimento e produção. |
-| 📱 **[AOS](https://michalsnik.github.io/aos/)** | Biblioteca para animações de scroll. |
-| 🖼️ **[vue3-carousel](https://github.com/icebob/vue3-carousel)** | Componente para carrosséis. |
-| 🧪 **[Jest](https://jestjs.io/)** | Framework de testes com Vue Test Utils. |
+- **Design Minimalista & Dual-Theme:** Alternância fluida entre Modo Claro (`#1e3a8a`) e Modo Escuro (`#c084fc`) usando variáveis CSS semânticas e persistência automática no `localStorage`.
+- **CSS Moderno (Zero JS para Animações):**
+  - **Scroll-Driven Animations** nativas via `animation-timeline: view()` e `overflow-x: clip`, executadas diretamente no compositor da GPU com fallback progressivo (`@supports`).
+  - **Entrada nativa com `@starting-style`** no modal interativo de Live Demo.
+  - Respeito integral a `prefers-reduced-motion`.
+- **Carregamento Otimizado:** Componentes carregados sob demanda com `defineAsyncComponent` e `<Suspense>`.
+- **Conteúdo Direto e Orientado a Produto:**
+  - **Trajetória Profissional:** Atuação atual na **Cangooroo (T4W)** com Travel Tech e IA Generativa e experiência anterior na **87Labs** com aplicações Shopify (Web Components com **Lit**, **Liquid** e **JavaScript**).
+  - **Projetos em Destaque:** Grid simétrico apresentando **CodeMentor IA** (com Live Demo interativa integrada via modal), **App de Reviews & Widgets para Shopify** e **Vitrine de Vinhos Premium**.
+  - **Stack Técnica Estruturada:** React, TypeScript, JavaScript, Python, Shopify, Lit, ServiceNow e IA Generativa.
 
 ---
 
-## 📋 Pré-requisitos
+## Tecnologias Utilizadas
 
-Antes de começar, certifique-se de ter instalado:
-
-- **Node.js** (versão 16 ou superior) - [Download aqui](https://nodejs.org/)
-- **npm** ou **yarn** (gerenciadores de pacotes)
+| Tecnologia | Finalidade |
+| --- | --- |
+| **Vue 3** | Framework reativo com Composition API e `<script setup lang="ts">`. |
+| **TypeScript** | Tipagem estrita em componentes, composables e fontes de dados. |
+| **Tailwind CSS** | Estilização utilitária com tokens dinâmicos para Light/Dark Mode. |
+| **Vite** | Bundler e servidor de desenvolvimento rápido. |
+| **Vitest + Vue Test Utils** | Testes unitários em ambiente `jsdom`. |
+| **ESLint** | Padronização e análise estática de qualidade de código. |
 
 ---
 
-## 🚀 Instalação e Execução
+## Pré-requisitos
 
-### Passos
+- **Node.js** `20.x` ou superior ([download](https://nodejs.org/))
+- **npm** (ou **bun**)
 
-1. **Clone o repositório**:
+---
+
+## Instalação e Execução
+
+1. **Clone o repositório:**
    ```bash
    git clone https://github.com/vibrazzi/portifolio-vue.git
    cd portifolio-vue
    ```
 
-2. **Instale as dependências**:
+2. **Instale as dependências:**
    ```bash
    npm install
    ```
 
-3. **Execute o projeto**:
+3. **Inicie o servidor de desenvolvimento:**
    ```bash
    npm run dev
    ```
 
-4. **Acesse**:
-   Abra [http://localhost:5173](http://localhost:5173) no navegador.
+4. **Acesse no navegador:**
+   `http://localhost:3000`
 
 ---
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
-```
+```text
 portifolio-vue/
-├── public/                 # Arquivos estáticos (favicon, imagens públicas)
+├── public/
+│   ├── assets/aistudio/         # Currículo em PDF para download direto
+│   └── ...                      # Imagens e recursos estáticos públicos
 ├── src/
-│   ├── assets/             # Imagens e recursos estáticos
-│   ├── components/         # Componentes Vue modulares
-│   ├── composables/        # Lógica compartilhada (hooks customizados)
-│   ├── App.vue             # Componente raiz da aplicação
-│   └── main.js             # Ponto de entrada da aplicação
-├── tests/unit/             # Testes unitários com Jest
-├── .github/                # Configurações do GitHub (workflows, issues)
-├── vite.config.js          # Configuração do Vite
-├── tailwind.config.js      # Configuração do Tailwind CSS
-├── eslint.config.js        # Configuração do ESLint
-├── jest.config.cjs         # Configuração do Jest
-└── package.json            # Dependências e scripts do projeto
+│   ├── assets/                  # Imagens processadas pelo Vite
+│   ├── components/
+│   │   ├── AboutSection.vue     # Perfil, formação e trajetória profissional
+│   │   ├── BackToTop.vue        # Botão de retorno rápido ao topo
+│   │   ├── ContactSection.vue   # Canais diretos e download de currículo
+│   │   ├── ExperienceAndSkills.vue # Capacidades e stack técnica organizada
+│   │   ├── Footer.vue           # Rodapé minimalista com links principais
+│   │   ├── HeroSection.vue      # Posicionamento, CTAs e retrato
+│   │   ├── LatestProjSection.vue # Projetos padronizados e modal de Live Demo
+│   │   ├── NavBar.vue           # Navegação fixa responsiva e ThemeToggle
+│   │   ├── ThemeToggle.vue      # Alternador de tema claro/escuro
+│   │   └── loadingSpinner.vue   # Fallback de carregamento assíncrono
+│   ├── composables/
+│   │   └── useTheme.ts          # Gerenciamento de tema e localStorage
+│   ├── data/
+│   │   ├── experiences.ts       # Dados tipados de experiência profissional
+│   │   ├── projects.ts          # Dados tipados dos projetos em destaque
+│   │   └── skills.ts            # Grupos da stack técnica
+│   ├── App.vue                  # Layout raiz, scroll suave e tokens CSS
+│   ├── env.d.ts                 # Declarações TypeScript para módulos Vue
+│   ├── main.ts                  # Ponto de entrada da aplicação
+│   └── style.css                # Tailwind CSS e Scroll-Driven Animations
+├── tests/
+│   ├── setup.js                 # Setup global do ambiente Vitest
+│   └── unit/NavBar.test.js      # Testes unitários da barra de navegação
+├── eslint.config.js
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+├── tsconfig.json
+└── vite.config.js
 ```
 
 ---
 
-## 📜 Scripts Disponíveis
-
-Execute os comandos abaixo na raiz do projeto:
+## Scripts e Verificações
 
 | Comando | Descrição |
-|---------|-----------|
-| `npm run dev` | Inicia o servidor de desenvolvimento com hot reload. |
-| `npm run build` | Gera build otimizado para produção em `dist/`. |
-| `npm run preview` | Visualiza o build de produção localmente. |
-| `npm run test` | Executa os testes unitários com Jest. |
+| --- | --- |
+| `npm run dev` | Inicia o servidor Vite na porta `3000`. |
+| `npm run build` | Gera o build de produção otimizado em `dist/`. |
+| `npm run preview` | Visualiza localmente o build gerado em `dist/`. |
+| `npm test` | Executa a suíte de testes unitários com Vitest. |
+| `npx eslint .` | Executa a análise estática com ESLint. |
+| `npx tsc --noEmit` | Verifica a tipagem TypeScript de todo o projeto. |
 
 ---
 
-## 🌟 Demonstração
+## Contato
 
-Confira o projeto em ação: [Portfólio Vue.js](https://portifolio-vue-delta.vercel.app/)
-
----
-
-## ️ Desenvolvimento
-
-### Executando Testes
-```bash
-npm run test
-```
-
-### Linting
-O projeto usa ESLint para manter a qualidade do código. Para executar:
-```bash
-npx eslint src/
-```
-
-### Build para Produção
-```bash
-npm run build
-```
-Os arquivos otimizados serão gerados em `dist/`.
-
----
-
-## 🤝 Contribuição
-
-Contribuições são bem-vindas! 🎉 Siga estes passos:
-
-1. **Fork** o projeto.
-2. Crie uma branch para sua feature: `git checkout -b feature/nova-feature`.
-3. Faça suas alterações e commit: `git commit -m 'Adiciona nova feature'`.
-4. Push para a branch: `git push origin feature/nova-feature`.
-5. Abra um **Pull Request** descrevendo suas mudanças.
-
-### Diretrizes
-- Siga o estilo de código existente (ESLint).
-- Adicione testes para novas funcionalidades.
-- Atualize a documentação se necessário.
-
----
-
-## 📝 Licença
-
-Este projeto está licenciado sob a **MIT License**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-## 📬 Contato
-
-- **E-mail**: [webertfernandes16@gmail.com](mailto:webertfernandes16@gmail.com)
-- **GitHub**: [vibrazzi](https://github.com/vibrazzi)
-- **LinkedIn**: *(Adicione seu LinkedIn se houver)*
-
----
-
-💻 **Feito com ❤️ por Webert Fernandes** 🚀
-3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`).
-4. Push para a branch (`git push origin feature/nova-feature`).
-5. Abra um Pull Request.
-
----
-
-## 📬 Contato
-
-- **E-mail**: [webertfernandes16@gmail.com](mailto:webertfernandes16@gmail.com)
-- **GitHub**: [vibrazzi](https://github.com/vibrazzi)
-
----
-
-## 📝 Licença
-
-Este projeto está licenciado sob a **MIT License**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-💻 **Feito com ❤️ por Webert Fernandes** 🚀
+- **LinkedIn:** [linkedin.com/in/webert-fernandes-2b6463253](https://www.linkedin.com/in/webert-fernandes-2b6463253/)
+- **GitHub:** [github.com/vibrazzi](https://github.com/vibrazzi)
+- **E-mail:** [webertfernandes16@gmail.com](mailto:webertfernandes16@gmail.com)
+- **Portfólio:** [portifolio-vue-delta.vercel.app](https://portifolio-vue-delta.vercel.app/)

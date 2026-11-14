@@ -33,7 +33,7 @@
         </a>
         <a
           href="/assets/aistudio/Profile_8cea226e.pdf"
-          download="Curriculo_Webert_Fernandes.pdf"
+          download="Curriculo_Webert_Fernandes"
           class="hover:text-primary transition-colors duration-150 whitespace-nowrap"
         >
           Currículo (PDF)

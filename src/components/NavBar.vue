@@ -30,7 +30,7 @@
         <ThemeToggle />
         <a
           href="/assets/aistudio/Profile_8cea226e.pdf"
-          download="Curriculo_Webert_Fernandes.pdf"
+          download="Curriculo_Webert_Fernandes"
           class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold bg-primary text-white dark:text-zinc-950 hover:opacity-90 transition-opacity duration-150 whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-950"
         >
           <span>Currículo</span>
@@ -94,7 +94,7 @@
           <li class="pt-2">
             <a
               href="/assets/aistudio/Profile_8cea226e.pdf"
-              download="Curriculo_Webert_Fernandes.pdf"
+              download="Curriculo_Webert_Fernandes"
               class="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-lg text-sm font-semibold bg-primary text-white dark:text-zinc-950 hover:opacity-90 transition-opacity duration-150"
             >
               <span>Baixar Currículo (PDF)</span>
