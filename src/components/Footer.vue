@@ -32,8 +32,9 @@
           LinkedIn
         </a>
         <a
-          href="/assets/aistudio/Profile_8cea226e.pdf"
-          download="Curriculo_Webert_Fernandes"
+          :href="resumeUrl"
+          :download="resumeFilename"
+          @click.prevent="downloadResume"
           class="hover:text-primary transition-colors duration-150 whitespace-nowrap"
         >
           Currículo (PDF)
@@ -51,7 +52,9 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useResumeDownload } from '@/composables/useResumeDownload'
 
+const { resumeUrl, resumeFilename, downloadResume } = useResumeDownload()
 const currentYear = computed<number>(() => new Date().getFullYear())
 
 const scrollToTop = (): void => {

@@ -22,8 +22,9 @@
           <!-- Primary & Secondary Action Bar -->
           <div class="flex flex-wrap items-center gap-3 pt-2">
             <a
-              href="/assets/aistudio/Profile_8cea226e.pdf"
-              download="Curriculo_Webert_Fernandes"
+              :href="resumeUrl"
+              :download="resumeFilename"
+              @click.prevent="downloadResume"
               class="inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-lg text-sm font-semibold bg-primary text-white dark:text-zinc-950 hover:opacity-90 transition-opacity duration-150 whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-950"
             >
               <i class="fas fa-file-arrow-down text-sm" aria-hidden="true"></i>
@@ -99,8 +100,10 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useResumeDownload } from '@/composables/useResumeDownload'
 
 const imageError = ref<boolean>(false)
+const { resumeUrl, resumeFilename, downloadResume } = useResumeDownload()
 </script>
 
 <style scoped>

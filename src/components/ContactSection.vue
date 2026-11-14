@@ -19,8 +19,9 @@
 
           <div class="pt-2">
             <a
-              href="/assets/aistudio/Profile_8cea226e.pdf"
-              download="Curriculo_Webert_Fernandes"
+              :href="resumeUrl"
+              :download="resumeFilename"
+              @click.prevent="downloadResume"
               class="inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-lg text-sm font-semibold bg-primary text-white dark:text-zinc-950 hover:opacity-90 transition-opacity duration-150 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
               <i class="fas fa-file-arrow-down text-sm" aria-hidden="true"></i>
@@ -65,6 +66,10 @@
 </template>
 
 <script setup lang="ts">
+import { useResumeDownload } from '@/composables/useResumeDownload'
+
+const { resumeUrl, resumeFilename, downloadResume } = useResumeDownload()
+
 interface ContactChannel {
   name: string
   label: string
