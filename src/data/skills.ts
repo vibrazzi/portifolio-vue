@@ -1,51 +1,37 @@
-export interface Skill {
+export interface SkillGroup {
   id: number;
-  name: string;
-  width: string;
-  icon: string;
+  category: string;
   description: string;
+  items: string[];
 }
 
-export const Skills: Skill[] = [
+export const SkillGroups: SkillGroup[] = [
   {
     id: 1,
-    name: "React",
-    width: "95%",
-    icon: "fab fa-react",
+    category: "Front-end & Arquitetura UI",
     description:
-      "Criação de interfaces responsivas, SPA e componentização de alta performance.",
+      "Construção de interfaces escaláveis, componentização limpa e refatoração de código legado com foco em performance.",
+    items: ["React", "TypeScript", "JavaScript"],
   },
   {
     id: 2,
-    name: "JavaScript",
-    width: "95%",
-    icon: "fab fa-js-square",
+    category: "E-commerce & Plataformas",
     description:
-      "Desenvolvimento de aplicações web dinâmicas com foco em interatividade e lógica de negócios.",
+      "Desenvolvimento de widgets interativos, Web Components nativos e soluções integradas para ambientes corporativos.",
+    items: ["Shopify", "Lit", "Liquid", "ServiceNow"],
   },
   {
     id: 3,
-    name: "TypeScript",
-    width: "90%",
-    icon: "fas fa-code",
+    category: "IA Generativa & Back-end",
     description:
-      "Tipagem estática para construção de aplicações escaláveis, seguras e de fácil manutenção.",
+      "Orquestração de fluxos multiagente, streaming em tempo real (SSE) e APIs estruturadas para produtos baseados em LLMs.",
+    items: ["Python", "IA Generativa", "FastAPI", "Groq API"],
   },
   {
     id: 4,
-    name: "Desenvolvimento Front-end",
-    width: "95%",
-    icon: "fas fa-desktop",
+    category: "Engenharia & Entrega",
     description:
-      "Foco em layouts fiéis, acessibilidade e excelente experiência do usuário.",
+      "Padronização visual, containerização, versionamento e esteiras de deploy contínuo orientadas à confiabilidade.",
+    items: ["Tailwind CSS", "Docker", "Git", "CI/CD"],
   },
-];
-
-export const additionalTechs: string[] = [
-  "HTML5",
-  "CSS3",
-  "Tailwind CSS",
-  "Shopify",
-  "Git",
-  "Figma",
 ];

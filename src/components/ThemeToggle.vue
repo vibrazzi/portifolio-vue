@@ -1,44 +1,38 @@
 <template>
   <button
+    type="button"
     @click="toggleTheme"
-    class="theme-toggle-btn group relative p-3 rounded-xl transition-all duration-500 ease-in-out hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-lg hover:shadow-xl"
-    :class="isDark
-      ? 'bg-gradient-to-br from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800'
-      : 'bg-gradient-to-br from-yellow-100 to-orange-100 hover:from-yellow-200 hover:to-orange-200'"
-    aria-label="Alternar tema"
+    class="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 hover:border-zinc-300 dark:hover:border-zinc-700 hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+    :aria-label="isDark ? 'Ativar modo claro' : 'Ativar modo escuro'"
+    :title="isDark ? 'Modo claro' : 'Modo escuro'"
   >
-    <div class="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
-
-    <Transition name="icon-fade" mode="out-in">
-      <div v-if="!isDark" key="sun" class="relative z-10">
-        <svg
-          class="w-6 h-6 text-yellow-600 animate-spin-slow"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-            clip-rule="evenodd"
-          />
-        </svg>
-        <div class="absolute inset-0 flex items-center justify-center">
-          <div class="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
-        </div>
-      </div>
-
-      <div v-else key="moon" class="relative z-10">
-        <svg
-          class="w-6 h-6 text-blue-200"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-        </svg>
-        <div class="absolute top-1 right-1 w-1 h-1 bg-blue-100 rounded-full animate-twinkle"></div>
-        <div class="absolute bottom-1 left-0 w-1 h-1 bg-blue-100 rounded-full animate-twinkle" style="animation-delay: 0.3s;"></div>
-      </div>
-    </Transition>
+    <svg
+      v-if="isDark"
+      class="w-4 h-4"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.75"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="4" />
+      <path stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41" />
+    </svg>
+    <svg
+      v-else
+      class="w-4 h-4"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.75"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+      />
+    </svg>
   </button>
 </template>
 
@@ -47,89 +41,3 @@ import { useTheme } from '@/composables/useTheme'
 
 const { isDark, toggleTheme } = useTheme()
 </script>
-
-<style scoped>
-.icon-fade-enter-active,
-.icon-fade-leave-active {
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-fade-enter-from {
-  opacity: 0;
-  transform: rotate(180deg) scale(0.5);
-}
-
-.icon-fade-leave-to {
-  opacity: 0;
-  transform: rotate(-180deg) scale(0.5);
-}
-
-.theme-toggle-btn {
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  position: relative;
-  overflow: hidden;
-}
-
-.theme-toggle-btn::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 0.75rem;
-  padding: 1px;
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.3), rgba(236, 72, 153, 0.3));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.theme-toggle-btn:hover::before {
-  opacity: 1;
-}
-
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin-slow {
-  animation: spin-slow 20s linear infinite;
-}
-
-@keyframes twinkle {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.3;
-    transform: scale(0.8);
-  }
-}
-
-.animate-twinkle {
-  animation: twinkle 2s ease-in-out infinite;
-}
-
-.theme-toggle-btn:active {
-  transform: scale(0.95);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-spin-slow,
-  .animate-twinkle {
-    animation: none;
-  }
-
-  .icon-fade-enter-active,
-  .icon-fade-leave-active {
-    transition-duration: 0.01ms;
-  }
-}
-</style>

@@ -1,16 +1,14 @@
 <template>
-  <div class="bg-gray-900 dark:bg-gray-950 min-h-screen transition-colors duration-300">
+  <div class="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 transition-colors duration-200">
     <Suspense>
       <template #default>
         <div>
           <NavBar @scroll-to="handleScroll" />
           <main>
             <HeroSection ref="heroRef" />
-            <CodeMentorSection ref="codeMentorRef" />
-            <ServicesSection ref="servicesRef" />
             <AboutSection ref="aboutRef" />
-            <ExperienceAndSkills ref="skillsRef" />
             <LatestProjSection ref="projectsRef" />
+            <ExperienceAndSkills ref="skillsRef" />
             <ContactSection ref="contactRef" />
           </main>
           <Footer />
@@ -18,7 +16,7 @@
         </div>
       </template>
       <template #fallback>
-        <div class="flex justify-center items-center min-h-screen bg-gray-900 dark:bg-gray-950">
+        <div class="flex justify-center items-center min-h-screen bg-zinc-50 dark:bg-zinc-950">
           <loadingSpinner />
         </div>
       </template>
@@ -32,8 +30,6 @@ import loadingSpinner from './components/loadingSpinner.vue'
 
 const NavBar = defineAsyncComponent(() => import('@/components/NavBar.vue'))
 const HeroSection = defineAsyncComponent(() => import('@/components/HeroSection.vue'))
-const CodeMentorSection = defineAsyncComponent(() => import('@/components/CodeMentorSection.vue'))
-const ServicesSection = defineAsyncComponent(() => import('@/components/ServicesSection.vue'))
 const AboutSection = defineAsyncComponent(() => import('@/components/AboutSection.vue'))
 const LatestProjSection = defineAsyncComponent(() => import('@/components/LatestProjSection.vue'))
 const ExperienceAndSkills = defineAsyncComponent(() => import('@/components/ExperienceAndSkills.vue'))
@@ -42,30 +38,39 @@ const Footer = defineAsyncComponent(() => import('@/components/Footer.vue'))
 const BackToTop = defineAsyncComponent(() => import('@/components/BackToTop.vue'))
 
 const heroRef = ref<ComponentPublicInstance | null>(null)
-const codeMentorRef = ref<ComponentPublicInstance | null>(null)
-const servicesRef = ref<ComponentPublicInstance | null>(null)
 const aboutRef = ref<ComponentPublicInstance | null>(null)
-const skillsRef = ref<ComponentPublicInstance | null>(null)
 const projectsRef = ref<ComponentPublicInstance | null>(null)
+const skillsRef = ref<ComponentPublicInstance | null>(null)
 const contactRef = ref<ComponentPublicInstance | null>(null)
 
+interface ScrollableTarget {
+  scrollIntoView?: (options?: { behavior?: 'smooth' | 'auto' }) => void
+}
+
 const handleScroll = (sectionName: string) => {
-  const sectionRefs: Record<string, typeof servicesRef> = {
-    services: servicesRef,
-    about: aboutRef,
-    skills: skillsRef,
-    projects: projectsRef,
-    contact: contactRef,
-  };
-  
-  const targetRef = sectionRefs[sectionName];
-  if (targetRef && targetRef.value) {
-    const el = targetRef.value.$el || targetRef.value;
-    if (el && typeof (el as Element).scrollIntoView === 'function') {
-      (el as Element).scrollIntoView({ behavior: 'smooth' });
+  if (sectionName === 'experience') {
+    const experienceEl = document.getElementById('experience')
+    if (experienceEl) {
+      experienceEl.scrollIntoView({ behavior: 'smooth' })
+      return
     }
   }
-};
+
+  const sectionRefs: Record<string, typeof aboutRef> = {
+    about: aboutRef,
+    projects: projectsRef,
+    skills: skillsRef,
+    contact: contactRef,
+  }
+
+  const targetRef = sectionRefs[sectionName]
+  if (targetRef && targetRef.value) {
+    const el = (targetRef.value.$el || targetRef.value) as ScrollableTarget
+    if (el && typeof el.scrollIntoView === 'function') {
+      el.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+}
 
 onMounted(() => {
   document.documentElement.style.scrollBehavior = 'smooth'
@@ -75,19 +80,19 @@ onMounted(() => {
 <style>
 :root {
   --scrollbar-width: 8px;
-  --scrollbar-track: #1f2937;
-  --scrollbar-thumb: #374151;
-  --scrollbar-thumb-hover: #4b5563;
-  --color-primary: 12 20 59;      /* #0C143B */
-  --color-secondary: 59 130 246;  /* #3b82f6 */
+  --scrollbar-track: #f4f4f5;
+  --scrollbar-thumb: #d4d4d8;
+  --scrollbar-thumb-hover: #a1a1aa;
+  --color-primary: 30 58 138;      /* #1e3a8a */
+  --color-secondary: 37 99 235;    /* #2563eb */
 }
 
 .dark {
-  --scrollbar-track: #0f1419;
-  --scrollbar-thumb: #2d3748;
-  --scrollbar-thumb-hover: #4a5568;
-  --color-primary: 171 165 232;   /* #aba5e8 */
-  --color-secondary: 192 132 252; /* #c084fc */
+  --scrollbar-track: #09090b;
+  --scrollbar-thumb: #27272a;
+  --scrollbar-thumb-hover: #3f3f46;
+  --color-primary: 192 132 252;    /* #c084fc */
+  --color-secondary: 168 85 247;   /* #a855f7 */
 }
 
 * {
@@ -106,7 +111,6 @@ onMounted(() => {
 ::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb);
   border-radius: 4px;
-  transition: background-color 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -115,20 +119,10 @@ onMounted(() => {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-}
-
-body {
-  transition: background-color 0.3s ease, color 0.3s ease;
+  scroll-padding-top: 84px;
 }
 
 ::selection {
-  background: rgba(245, 158, 11, 0.3);
-  color: #ffffff;
-}
-
-.dark ::selection {
-  background: rgba(245, 158, 11, 0.4);
-  color: #ffffff;
+  background: rgb(var(--color-primary) / 0.2);
 }
 </style>

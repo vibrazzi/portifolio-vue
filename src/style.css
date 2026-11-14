@@ -1,92 +1,81 @@
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
 * {
   box-sizing: border-box;
 }
 
-html, body {
-  overflow-x: hidden;
+html,
+body {
+  overflow-x: clip;
   width: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #app {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
-.container {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@media (min-width: 640px) {
-  .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
-.max-w-7xl {
-  max-width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@media (min-width: 640px) {
-  .max-w-7xl {
-    max-width: 640px;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .max-w-7xl {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .max-w-7xl {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .max-w-7xl {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .max-w-7xl {
-    max-width: 1536px;
-  }
-}
-
-img, iframe, video, embed, object {
+img,
+iframe,
+video,
+embed,
+object {
   max-width: 100%;
   height: auto;
 }
 
-.absolute {
-  max-width: 100vw;
-  overflow: hidden;
+@keyframes scroll-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+@keyframes scroll-fade-scale {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .scroll-reveal {
+      animation: scroll-fade-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 65%;
+    }
+
+    .scroll-reveal-card {
+      animation: scroll-fade-scale linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 75%;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
