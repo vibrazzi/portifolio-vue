@@ -19,7 +19,7 @@
 
           <div class="pt-2">
             <a
-              href="/curriculo_Webert_Dev.pdf"
+              href="/assets/aistudio/Profile_8cea226e.pdf"
               download="Curriculo_Webert_Fernandes.pdf"
               class="inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-lg text-sm font-semibold bg-primary text-white dark:text-zinc-950 hover:opacity-90 transition-opacity duration-150 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >

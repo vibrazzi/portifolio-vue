@@ -32,7 +32,7 @@
           LinkedIn
         </a>
         <a
-          href="/curriculo_Webert_Dev.pdf"
+          href="/assets/aistudio/Profile_8cea226e.pdf"
           download="Curriculo_Webert_Fernandes.pdf"
           class="hover:text-primary transition-colors duration-150 whitespace-nowrap"
         >
